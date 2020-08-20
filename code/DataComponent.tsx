@@ -114,8 +114,8 @@ export function DataComponent(props: DataComponentProps) {
 }
 
 DataComponent.defaultProps = {
-    width: 240,
-    height: 128,
+    width: 500,
+    height: 320,
     searchTerm: "",
     debug: false,
     searchKeys: [],
