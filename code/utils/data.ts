@@ -180,8 +180,6 @@ function normalizeAirtableFields(
     return Object.keys(fields).reduce<DataItem>((acc, key) => {
         const value = fields[key]
 
-        console.log("VALUE ", value)
-
         // string fields are passed as-is
         if (typeof value === "string") {
             acc[key] = value
@@ -191,7 +189,7 @@ function normalizeAirtableFields(
             !!value[0].thumbnails
         ) {
             // If there is a photo field, extract the first photo's URL using the specified image size
-            // acc[key] = value[0]["thumbnails"][imageSize]["url"]
+            acc[key] = value[0]["thumbnails"][imageSize]["url"]
         }
 
         return acc

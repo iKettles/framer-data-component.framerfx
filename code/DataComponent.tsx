@@ -210,7 +210,7 @@ addPropertyControls(DataComponent, {
     airtableImageSize: {
         title: "↳ Image Size",
         type: ControlType.SegmentedEnum,
-        options: ["small", "medium", "large"],
+        options: ["small", "large", "full"],
         optionTitles: ["S", "M", "L"],
         defaultValue: "medium",
         hidden: (props) => props.dataSource !== "airtable",
