@@ -10,12 +10,15 @@
 		"react": "^16.8"
 	},
 	"framer": {
-		"id": "e945b865-ef93-4093-b694-88fbab85a638"
+		"id": "e945b865-ef93-4093-b694-88fbab85a638",
+		"displayName": "Data Component"
 	},
 	"author": "Iain Kettles",
 	"dependencies": {
 		"@framer/framer.default": "^1.76.0",
 		"fuse.js": "^6.4.1",
 		"papaparse": "^5.2.0"
-	}
+	},
+	"name": "@framer/iain.data-component",
+	"version": "1.0.0"
 }
