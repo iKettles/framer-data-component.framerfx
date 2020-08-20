@@ -193,11 +193,13 @@ addPropertyControls(DataComponent, {
     apiUrl: {
         title: "↳ URL",
         type: ControlType.String,
+        defaultValue: "https://reqres.in/api/users?page=1",
         hidden: (props) => props.dataSource !== "api",
     },
     apiResponseDataKey: {
         title: "↳ Data Key",
         type: ControlType.String,
+        defaultValue: "data",
         hidden: (props) => props.dataSource !== "api",
     },
     airtableUrl: {
