@@ -212,7 +212,7 @@ addPropertyControls(DataComponent, {
         type: ControlType.SegmentedEnum,
         options: ["small", "large", "full"],
         optionTitles: ["S", "M", "L"],
-        defaultValue: "medium",
+        defaultValue: "large",
         hidden: (props) => props.dataSource !== "airtable",
     },
     columns: {
