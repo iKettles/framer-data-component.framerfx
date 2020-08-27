@@ -157,7 +157,11 @@ async function parseResponse(
             return (await response.json()) as JSONResponse
         }
         if (dataSourceFileType === "csv") {
-            const parseResponse = Papa.parse(await response.text())
+            const parseResponse = Papa.parse(await response.text(), {
+                header: true,
+                dynamicTyping: true,
+            })
+            console.log("parse", parseResponse)
             if (parseResponse.errors.length) {
                 throw new Error(
                     `Failed to parse CSV: ${parseResponse.errors[0].code} ${parseResponse.errors[0].message}`
