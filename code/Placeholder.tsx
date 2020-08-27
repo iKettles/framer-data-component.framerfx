@@ -17,7 +17,24 @@ const instructionsStyle: React.CSSProperties = {
     textAlign: "center",
     color: "#bb88ff",
     backgroundColor: "#2f2546",
-    border: "1px solid #8855ff",
+    border: "4px solid #8855ff",
+    padding: 16,
+    overflow: "hidden",
+}
+
+const errorStyle: React.CSSProperties = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
+    width: "100%",
+    height: "100%",
+    fontSize: 32,
+    fontWeight: 500,
+    textAlign: "center",
+    color: "#fff",
+    backgroundColor: "#c20000",
+    border: "4px solid #9E0000",
     padding: 16,
     overflow: "hidden",
 }
@@ -82,6 +99,15 @@ function DesignComponentKeyHints(props) {
 }
 
 function Placeholder(props: PlaceholderProps) {
+    if (props.mode === "error") {
+        return (
+            <div style={errorStyle}>
+                <br />
+                {props.errorMessage}
+                <br />
+            </div>
+        )
+    }
     if (props.mode === "debug") {
         return (
             <pre style={codeStyle}>

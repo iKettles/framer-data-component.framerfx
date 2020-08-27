@@ -58,7 +58,7 @@ export function DataComponent(props: DataComponentProps) {
         onItemLongPress,
         ...rest
     } = props
-    const [data, isLoading] = useDataSource(
+    const [data, isLoading, errorMessage] = useDataSource(
         dataSource,
         dataSourceFileType,
         apiResponseDataKey,
@@ -119,6 +119,16 @@ export function DataComponent(props: DataComponentProps) {
         connectedListItem,
         direction,
     ])
+
+    if (errorMessage) {
+        return (
+            <Placeholder
+                {...props}
+                mode={"error"}
+                errorMessage={errorMessage}
+            />
+        )
+    }
 
     if (mode === "help") {
         return (
