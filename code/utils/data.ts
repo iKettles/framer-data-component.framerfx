@@ -45,6 +45,7 @@ export function useDataSource(
                 })
 
                 if (!url) {
+                    setData([])
                     return
                 }
 
