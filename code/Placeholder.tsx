@@ -75,7 +75,7 @@ function DesignComponentKeyHints(props) {
             <br />
             <br />
             {Object.keys(props.results[0]).map((key) => (
-                <div>{key}</div>
+                <div key={key}>{key}</div>
             ))}
         </>
     )
