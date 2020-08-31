@@ -358,9 +358,9 @@ addPropertyControls(DataComponent, {
     wrap: {
         title: "↳ Wrap",
         type: ControlType.SegmentedEnum,
-        options: ["no-wrap", "wrap", "wrap-reverse"],
+        options: ["nowrap", "wrap", "wrap-reverse"],
         optionTitles: ["None", "Wrap", "Reverse"],
-        defaultValue: "no-wrap",
+        defaultValue: "nowrap",
         hidden: (props) => props.direction === "vertical",
     },
     horizontalGap: {
