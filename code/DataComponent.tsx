@@ -27,6 +27,7 @@ import {
     DataSourceFileType,
     SortKey,
 } from "./utils/types"
+import { gapControl, uploadFileControl } from "./utils/propertyControls"
 
 export function DataComponent(props: DataComponentProps) {
     const {
@@ -250,27 +251,9 @@ addPropertyControls(DataComponent, {
         optionTitles: ["JSON", "CSV", "TSV"],
         hidden: (props) => props.dataSource !== "file",
     },
-    jsonFileUrl: {
-        title: "↳ File",
-        type: ControlType.File,
-        allowedFileTypes: ["json"],
-        hidden: (props) =>
-            props.dataSource !== "file" || props.dataSourceFileType !== "json",
-    },
-    csvFileUrl: {
-        title: "↳ File",
-        type: ControlType.File,
-        allowedFileTypes: ["csv"],
-        hidden: (props) =>
-            props.dataSource !== "file" || props.dataSourceFileType !== "csv",
-    },
-    tsvFileUrl: {
-        title: "↳ File",
-        type: ControlType.File,
-        allowedFileTypes: ["tsv"],
-        hidden: (props) =>
-            props.dataSource !== "file" || props.dataSourceFileType !== "tsv",
-    },
+    jsonFileUrl: uploadFileControl<DataComponentProps>("json"),
+    csvFileUrl: uploadFileControl<DataComponentProps>("csv"),
+    tsvFileUrl: uploadFileControl<DataComponentProps>("tsv"),
     apiUrl: {
         title: "↳ URL",
         type: ControlType.String,
@@ -343,18 +326,21 @@ addPropertyControls(DataComponent, {
         defaultValue: 1,
         hidden: (props) => props.direction !== "vertical",
     },
-    gap: {
-        title: "↳ Gap",
-        type: ControlType.Number,
-        displayStepper: true,
-        step: 2,
-        min: 0,
-        defaultValue: 0,
-        hidden: (props) =>
+    gap: gapControl<DataComponentProps>(
+        "↳ Gap",
+        (props) =>
             props.direction === "vertical" &&
             (props.columns > 1 ||
-                isVerticalGapControlledByContainer(props.verticalDistribution)),
-    },
+                isVerticalGapControlledByContainer(props.verticalDistribution))
+    ),
+    horizontalGap: gapControl<DataComponentProps>(
+        "↳ Gap (←)",
+        (props) => !(props.direction === "vertical" && props.columns > 1)
+    ),
+    verticalGap: gapControl<DataComponentProps>(
+        "↳ Gap (↓)",
+        (props) => !(props.direction === "vertical" && props.columns > 1)
+    ),
     wrap: {
         title: "↳ Wrap",
         type: ControlType.SegmentedEnum,
@@ -362,26 +348,6 @@ addPropertyControls(DataComponent, {
         optionTitles: ["None", "Wrap", "Reverse"],
         defaultValue: "nowrap",
         hidden: (props) => props.direction === "vertical",
-    },
-    horizontalGap: {
-        title: "↳ Gap (←)",
-        type: ControlType.Number,
-        displayStepper: true,
-        step: 2,
-        min: 0,
-        defaultValue: 0,
-        hidden: (props) =>
-            !(props.direction === "vertical" && props.columns > 1),
-    },
-    verticalGap: {
-        title: "↳ Gap (↓)",
-        type: ControlType.Number,
-        displayStepper: true,
-        step: 2,
-        min: 0,
-        defaultValue: 0,
-        hidden: (props) =>
-            !(props.direction === "vertical" && props.columns > 1),
     },
     listItem: {
         title: "List Item",
