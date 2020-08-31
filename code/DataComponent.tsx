@@ -310,7 +310,7 @@ addPropertyControls(DataComponent, {
         options: ["flex-start", "center", "flex-end"],
         optionTitles: ["Top", "Center", "Bottom"],
         defaultValue: "start",
-        hidden: (props) => props.direction !== "horizontal",
+        hidden: (props) => props.direction !== "vertical",
     },
     verticalDistribution: {
         title: "↳ Distribute",
