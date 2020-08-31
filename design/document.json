@@ -524,7 +524,7 @@
         "guidesY" : [
 
         ],
-        "height" : 98,
+        "height" : 100,
         "heightType" : 0,
         "id" : "DMHGHMu1P",
         "intrinsicHeight" : null,
@@ -532,7 +532,7 @@
         "isExternalMaster" : null,
         "isMaster" : true,
         "isTarget" : false,
-        "left" : -4094,
+        "left" : -4492,
         "locked" : false,
         "name" : "ListItem",
         "opacity" : 1,
@@ -549,9 +549,9 @@
         "replicaInfo" : null,
         "right" : null,
         "rotation" : 0,
-        "top" : -808,
+        "top" : -1400,
         "visible" : true,
-        "width" : 520,
+        "width" : 445,
         "widthType" : 0
       },
       {
@@ -783,6 +783,7 @@
                       "direction" : "vertical",
                       "gap" : 30,
                       "horizontalGap" : 6,
+                      "httpAuthorizationHeader" : "",
                       "listItem" : [
                         {
                           "enabled" : true,
@@ -791,6 +792,7 @@
                         }
                       ],
                       "mode" : "default",
+                      "overrideHttpHeaders" : false,
                       "shouldSort" : false,
                       "sortDirection" : "ascending",
                       "sortKey" : "price",
@@ -1100,6 +1102,7 @@
                       "direction" : "vertical",
                       "gap" : 30,
                       "horizontalGap" : 6,
+                      "httpAuthorizationHeader" : "",
                       "listItem" : [
                         {
                           "enabled" : true,
@@ -1108,6 +1111,7 @@
                         }
                       ],
                       "mode" : "default",
+                      "overrideHttpHeaders" : false,
                       "shouldSort" : false,
                       "sortDirection" : "ascending",
                       "sortKey" : "price",
@@ -1423,6 +1427,7 @@
                       "direction" : "vertical",
                       "gap" : 30,
                       "horizontalGap" : 6,
+                      "httpAuthorizationHeader" : "",
                       "listItem" : [
                         {
                           "enabled" : true,
@@ -1431,6 +1436,7 @@
                         }
                       ],
                       "mode" : "default",
+                      "overrideHttpHeaders" : false,
                       "shouldSort" : false,
                       "sortDirection" : "ascending",
                       "sortKey" : "price",
@@ -1749,6 +1755,7 @@
                       "direction" : "vertical",
                       "gap" : 30,
                       "horizontalGap" : 6,
+                      "httpAuthorizationHeader" : "",
                       "listItem" : [
                         {
                           "enabled" : true,
@@ -1757,6 +1764,7 @@
                         }
                       ],
                       "mode" : "default",
+                      "overrideHttpHeaders" : false,
                       "shouldSort" : false,
                       "sortDirection" : "ascending",
                       "sortKey" : "price",
@@ -2076,6 +2084,7 @@
                       "direction" : "vertical",
                       "gap" : 30,
                       "horizontalGap" : 6,
+                      "httpAuthorizationHeader" : "",
                       "listItem" : [
                         {
                           "enabled" : true,
@@ -2084,6 +2093,7 @@
                         }
                       ],
                       "mode" : "default",
+                      "overrideHttpHeaders" : false,
                       "shouldSort" : false,
                       "sortDirection" : "ascending",
                       "sortKey" : "price",
@@ -2406,6 +2416,7 @@
                       "direction" : "vertical",
                       "gap" : 30,
                       "horizontalGap" : 6,
+                      "httpAuthorizationHeader" : "",
                       "listItem" : [
                         {
                           "enabled" : true,
@@ -2414,6 +2425,7 @@
                         }
                       ],
                       "mode" : "default",
+                      "overrideHttpHeaders" : false,
                       "shouldSort" : false,
                       "sortDirection" : "ascending",
                       "sortKey" : "price",
@@ -2883,12 +2895,15 @@
                       "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs",
                       "apiResponseDataKey" : "data",
                       "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-                      "columns" : 2,
+                      "columns" : 1,
+                      "csvFileUrl" : "data:framer\/asset-reference,Si4jqtibRfs68Hec7JuMm0eNRE.csv?originalFilename=test-data-users.csv",
                       "dataSource" : "api",
                       "dataSourceFileType" : "json",
-                      "direction" : "vertical",
-                      "gap" : 30,
+                      "direction" : "horizontal",
+                      "gap" : 16,
                       "horizontalGap" : 8,
+                      "httpAuthorizationHeader" : "",
+                      "jsonFileUrl" : "data:framer\/asset-reference,SnyrPIJrVcV8aiJal0JPgbsSibE.json?originalFilename=test-data-users.json",
                       "listItem" : [
                         {
                           "enabled" : true,
@@ -2897,9 +2912,11 @@
                         }
                       ],
                       "mode" : "default",
+                      "overrideHttpHeaders" : true,
                       "shouldSort" : false,
                       "sortDirection" : "ascending",
                       "sortKey" : "price",
+                      "tsvFileUrl" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv",
                       "verticalAlignment" : "flex-start",
                       "verticalDistribution" : "space-between",
                       "verticalGap" : 8,

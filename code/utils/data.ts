@@ -23,15 +23,14 @@ export function useDataSource(
     tsvUrl: string | null,
     csvUrl: string | null,
     jsonUrl: string | null,
-    airtableImageSize: AirtableImageSize
+    airtableImageSize: AirtableImageSize,
+    httpHeaders?: {
+        Authorization?: string
+    }
 ): [any[], boolean, string | null] {
     const [errorMessage, setErrorMessage] = React.useState<string | null>(null)
     const [isLoading, setIsLoading] = React.useState(false)
     const [data, setData] = React.useState([])
-
-    // const fetchData = (url: string, source: DataSource, sourceFileType: DataSourceFileType) {
-
-    // }
 
     React.useEffect(() => {
         ;(async () => {
@@ -51,7 +50,9 @@ export function useDataSource(
 
                 setIsLoading(true)
 
-                const response = await fetch(url)
+                const response = await fetch(url, {
+                    headers: httpHeaders || {},
+                })
                 const body = await parseResponse(
                     response,
                     dataSource,

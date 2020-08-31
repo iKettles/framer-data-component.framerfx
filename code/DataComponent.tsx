@@ -39,6 +39,8 @@ export function DataComponent(props: DataComponentProps) {
         csvFileUrl,
         jsonFileUrl,
         dataSourceFileType,
+        overrideHttpHeaders,
+        httpAuthorizationHeader,
         listItem,
         searchTerm,
         searchKeys,
@@ -67,7 +69,10 @@ export function DataComponent(props: DataComponentProps) {
         tsvFileUrl,
         csvFileUrl,
         jsonFileUrl,
-        airtableImageSize
+        airtableImageSize,
+        overrideHttpHeaders && {
+            Authorization: httpAuthorizationHeader,
+        }
     )
     const [results] = useSortedSearchResults(
         data,
@@ -221,6 +226,10 @@ export interface DataComponentProps {
 
     // Component modes
     mode: ComponentMode
+
+    // HTTP
+    overrideHttpHeaders: boolean
+    httpAuthorizationHeader: string
 
     // Event handlers
     onItemTap: (item) => void
@@ -404,6 +413,18 @@ addPropertyControls(DataComponent, {
         options: ["default", "help", "debug"],
         optionTitles: ["Default", "Help", "Debug"],
         defaultValue: "default",
+    },
+    overrideHttpHeaders: {
+        title: "HTTP Headers",
+        type: ControlType.Boolean,
+        enabledTitle: "Custom",
+        disabledTitle: "Default",
+        defaultValue: false,
+    },
+    httpAuthorizationHeader: {
+        title: "↳ Authorization",
+        type: ControlType.String,
+        hidden: (props) => !props.overrideHttpHeaders,
     },
     onItemTap: {
         type: ControlType.EventHandler,
