@@ -120,6 +120,9 @@ export function DataComponent(props: DataComponentProps) {
                     ...layoutStyles,
                 },
                 ...result,
+                onTap() {
+                    onItemTap(result)
+                },
             })
         })
     }, [
@@ -130,6 +133,7 @@ export function DataComponent(props: DataComponentProps) {
         verticalGap,
         connectedListItem,
         direction,
+        onItemTap,
     ])
 
     if (errorMessage) {
