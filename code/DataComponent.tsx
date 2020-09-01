@@ -317,7 +317,7 @@ addPropertyControls(DataComponent, {
         options: ["flex-start", "center", "flex-end"],
         optionTitles: ["Top", "Center", "Bottom"],
         defaultValue: "start",
-        hidden: (props) => props.direction !== "vertical",
+        hidden: (props) => true,
     },
     verticalDistribution: {
         title: "↳ Distribute",
@@ -358,11 +358,11 @@ addPropertyControls(DataComponent, {
                 isVerticalGapControlledByContainer(props.verticalDistribution))
     ),
     horizontalGap: gapControl<DataComponentProps>(
-        "↳ Gap (←)",
+        "↳ Gap (↔)",
         (props) => !(props.direction === "vertical" && props.columns > 1)
     ),
     verticalGap: gapControl<DataComponentProps>(
-        "↳ Gap (↓)",
+        "↳ Gap (↕)",
         (props) => !(props.direction === "vertical" && props.columns > 1)
     ),
     wrap: {
