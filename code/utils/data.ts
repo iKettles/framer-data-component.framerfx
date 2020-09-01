@@ -103,9 +103,19 @@ export function useSortedSearchResults(
     sortDirection: SortDirection
 ) {
     const fuse = React.useMemo(() => {
+        const keysToSearch = (searchKeys.length === 0 && data.length > 0
+            ? Object.keys(data[0])
+            : searchKeys
+        ).filter((key) => {
+            // Do not search avatar/image fields
+            if (/avatar|image/g.test(key)) {
+                return false
+            }
+            return true
+        })
         return new Fuse(data, {
             includeScore: true,
-            keys: searchKeys,
+            keys: keysToSearch,
         })
     }, [data])
 

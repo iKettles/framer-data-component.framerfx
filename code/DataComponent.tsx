@@ -379,6 +379,11 @@ addPropertyControls(DataComponent, {
         optionTitles: ["Default", "Help", "Debug"],
         defaultValue: "default",
     },
+    searchTerm: {
+        title: "Search Term",
+        type: ControlType.String,
+        defaultValue: "",
+    },
     overrideHttpHeaders: {
         title: "HTTP Headers",
         type: ControlType.Boolean,
