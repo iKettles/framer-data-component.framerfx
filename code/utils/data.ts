@@ -13,6 +13,7 @@ import {
     SortDirection,
     SortKey,
 } from "./types"
+import { AUTH_ERROR_MESSAGE } from "./errors"
 
 export function useDataSource(
     dataSource: DataSource,
@@ -56,6 +57,14 @@ export function useDataSource(
                 const response = await fetch(url, {
                     headers: httpHeaders || {},
                 })
+
+                if (!response.ok) {
+                    if (response.status === 401 || response.status === 403) {
+                        throw new Error(AUTH_ERROR_MESSAGE)
+                    }
+                }
+
+                console.log(response.status)
                 const body = await parseResponse(
                     response,
                     dataSource,

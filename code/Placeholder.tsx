@@ -4,6 +4,8 @@ import {
     formatDataSourceTitle,
     formatFileTypeTitle,
 } from "./utils/data"
+import { AUTH_ERROR_MESSAGE } from "./utils/errors"
+import { DataSource } from "./utils/types"
 
 const instructionsStyle: React.CSSProperties = {
     display: "flex",
@@ -98,12 +100,19 @@ function DesignComponentKeyHints(props) {
     )
 }
 
+function displayErrorMessage(message: string, dataSource: DataSource): string {
+    if (message === AUTH_ERROR_MESSAGE && dataSource === "airtable") {
+        return `Authentication Error: Double check your Airtable API Key`
+    }
+    return message
+}
+
 function Placeholder(props: PlaceholderProps) {
     if (props.mode === "error") {
         return (
             <div style={errorStyle}>
                 <br />
-                {props.errorMessage}
+                {displayErrorMessage(props.errorMessage, props.dataSource)}
                 <br />
             </div>
         )
