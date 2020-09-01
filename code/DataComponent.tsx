@@ -269,8 +269,7 @@ addPropertyControls(DataComponent, {
     airtableUrl: {
         title: "↳ URL",
         type: ControlType.String,
-        defaultValue:
-            "https://api.airtable.com/v0/appJuy4S2EAMijkNg/Colors?api_key=keyQL4Up7cLcFgVUs",
+        defaultValue: "",
         hidden: (props) => props.dataSource !== "airtable",
     },
     airtableImageSize: {
