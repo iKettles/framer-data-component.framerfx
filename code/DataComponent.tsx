@@ -43,6 +43,8 @@ export function DataComponent(props: DataComponentProps) {
         overrideHttpHeaders,
         httpAuthorizationHeader,
         listItem,
+        loadingState,
+        loadingDelay,
         searchTerm,
         searchKeys,
         shouldSort,
@@ -71,6 +73,7 @@ export function DataComponent(props: DataComponentProps) {
         csvFileUrl,
         jsonFileUrl,
         airtableImageSize,
+        loadingDelay,
         overrideHttpHeaders && {
             Authorization: httpAuthorizationHeader,
         }
@@ -84,6 +87,7 @@ export function DataComponent(props: DataComponentProps) {
         sortDirection
     )
     const [connectedListItem] = useConnectedComponentInstance(listItem)
+    const [connectedLoadingState] = useConnectedComponentInstance(loadingState)
     const resultItems = React.useMemo(() => {
         if (!connectedListItem) {
             return []
@@ -160,6 +164,15 @@ export function DataComponent(props: DataComponentProps) {
     }
 
     if (isLoading) {
+        if (connectedLoadingState) {
+            return React.cloneElement(
+                connectedLoadingState as React.ReactElement,
+                {
+                    width: rest.width,
+                    height: rest.height,
+                }
+            )
+        }
         return <Placeholder mode={"loading"} />
     }
 
@@ -215,6 +228,8 @@ export interface DataComponentProps {
     horizontalGap: number
     verticalGap: number
     listItem?: React.ReactNode
+    loadingState?: React.ReactNode
+    loadingDelay: number
 
     // Search functionality
     searchTerm: string
@@ -351,6 +366,19 @@ addPropertyControls(DataComponent, {
     listItem: {
         title: "List Item",
         type: ControlType.ComponentInstance,
+    },
+    loadingState: {
+        title: "Loading State",
+        type: ControlType.ComponentInstance,
+    },
+    loadingDelay: {
+        title: "Loading Delay",
+        type: ControlType.Number,
+        min: 0,
+        defaultValue: 0,
+        displayStepper: true,
+        step: 0.5,
+        unit: "s",
     },
     shouldSort: {
         title: "Sort",

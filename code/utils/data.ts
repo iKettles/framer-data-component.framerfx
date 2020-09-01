@@ -24,6 +24,7 @@ export function useDataSource(
     csvUrl: string | null,
     jsonUrl: string | null,
     airtableImageSize: AirtableImageSize,
+    loadingDelay: number,
     httpHeaders?: {
         Authorization?: string
     }
@@ -60,6 +61,7 @@ export function useDataSource(
                     apiResponseDataKey,
                     airtableImageSize
                 )
+                await delay(loadingDelay * 1000)
                 setData(
                     body.map((item, index) => ({
                         id: item.id || index,
@@ -89,6 +91,7 @@ export function useDataSource(
         jsonUrl,
 
         airtableImageSize,
+        loadingDelay,
     ])
 
     return [data, isLoading, errorMessage]
@@ -281,4 +284,10 @@ export function sanitizePropertyName(name: string | null) {
         .replace(remainingCharactersRegex, "_")
         .replace(/_+/g, "_")
         .replace(/^\$_/, validFirstChar)
+}
+
+async function delay(duration: number) {
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, duration)
+    })
 }
