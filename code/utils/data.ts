@@ -51,6 +51,8 @@ export function useDataSource(
 
                 setIsLoading(true)
 
+                const timeStarted = Date.now()
+
                 const response = await fetch(url, {
                     headers: httpHeaders || {},
                 })
@@ -61,7 +63,17 @@ export function useDataSource(
                     apiResponseDataKey,
                     airtableImageSize
                 )
-                await delay(loadingDelay * 1000)
+
+                const timeFinished = Date.now()
+                const minimumLoadingDuration = loadingDelay * 1000
+                const roundTripDuration = timeFinished - timeStarted
+                const remainingLoadingDuration =
+                    minimumLoadingDuration - roundTripDuration
+
+                if (remainingLoadingDuration > 0) {
+                    await delay(remainingLoadingDuration)
+                }
+
                 setData(
                     body.map((item, index) => ({
                         id: item.id || index,
