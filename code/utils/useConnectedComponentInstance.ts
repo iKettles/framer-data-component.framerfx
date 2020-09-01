@@ -1,7 +1,7 @@
 import * as React from "react"
 import { RenderTarget } from "framer"
 
-export function useConnectedListItem(
+export function useConnectedComponentInstance(
     listItem: React.ReactNode
 ): [React.ReactNode] {
     const connectedListItem = React.useMemo(() => {

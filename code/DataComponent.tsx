@@ -7,7 +7,7 @@ import {
     RenderTarget,
 } from "framer"
 import Placeholder from "./Placeholder"
-import { useConnectedListItem } from "./utils/useConnectedListItem"
+import { useConnectedComponentInstance } from "./utils/useConnectedComponentInstance"
 import { useSortedSearchResults, useDataSource } from "./utils/data"
 import {
     getListItemStyle,
@@ -83,7 +83,7 @@ export function DataComponent(props: DataComponentProps) {
         sortKey,
         sortDirection
     )
-    const [connectedListItem] = useConnectedListItem(listItem)
+    const [connectedListItem] = useConnectedComponentInstance(listItem)
     const resultItems = React.useMemo(() => {
         if (!connectedListItem) {
             return []
