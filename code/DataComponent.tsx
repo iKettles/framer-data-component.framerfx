@@ -45,6 +45,7 @@ export function DataComponent(props: DataComponentProps) {
         listItem,
         loadingState,
         loadingDelay,
+        emptyState,
         searchTerm,
         searchKeys,
         shouldSort,
@@ -88,6 +89,7 @@ export function DataComponent(props: DataComponentProps) {
     )
     const [connectedListItem] = useConnectedComponentInstance(listItem)
     const [connectedLoadingState] = useConnectedComponentInstance(loadingState)
+    const [connectedEmptyState] = useConnectedComponentInstance(emptyState)
     const resultItems = React.useMemo(() => {
         if (!connectedListItem) {
             return []
@@ -176,6 +178,13 @@ export function DataComponent(props: DataComponentProps) {
         return <Placeholder mode={"loading"} />
     }
 
+    if (resultItems.length === 0 && !!connectedEmptyState) {
+        return React.cloneElement(connectedEmptyState as React.ReactElement, {
+            width: rest.width,
+            height: rest.height,
+        })
+    }
+
     return (
         <Scroll direction={direction} width={rest.width} height={rest.height}>
             {renderContainer(resultItems, {
@@ -230,6 +239,7 @@ export interface DataComponentProps {
     listItem?: React.ReactNode
     loadingState?: React.ReactNode
     loadingDelay: number
+    emptyState?: React.ReactNode
 
     // Search functionality
     searchTerm: string
@@ -369,6 +379,10 @@ addPropertyControls(DataComponent, {
     },
     loadingState: {
         title: "Loading State",
+        type: ControlType.ComponentInstance,
+    },
+    emptyState: {
+        title: "Empty State",
         type: ControlType.ComponentInstance,
     },
     loadingDelay: {
