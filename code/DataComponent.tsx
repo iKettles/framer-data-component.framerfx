@@ -119,7 +119,11 @@ export function DataComponent(props: DataComponentProps) {
                     position: "relative",
                     ...layoutStyles,
                 },
-                ...result,
+                ...Object.keys(result).reduce((acc, key) => {
+                    // Ensure value is a string
+                    acc[key] = String(result[key])
+                    return acc
+                }, {}),
                 onTap() {
                     onItemTap(result)
                 },
