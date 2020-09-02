@@ -220,7 +220,7 @@ function normalizeAirtableFields(
         const value = fields[key]
 
         // string fields are passed as-is
-        if (typeof value === "string") {
+        if (typeof value === "string" || typeof value === "number") {
             acc[key] = value
         } else if (
             Array.isArray(value) &&
