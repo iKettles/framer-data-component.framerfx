@@ -106,6 +106,7 @@ export function DataComponent(props: DataComponentProps) {
             )
             return React.cloneElement(connectedListItem as React.ReactElement, {
                 key: index,
+                id: `${(connectedListItem as any).props.id}—${index}`,
                 width:
                     direction === "vertical"
                         ? (rest.width -
@@ -196,7 +197,8 @@ export function DataComponent(props: DataComponentProps) {
     return (
         <Scroll direction={direction} width={rest.width} height={rest.height}>
             {renderContainer(resultItems, {
-                width: rest.width,
+                // @ts-ignore
+                width: direction === "horizontal" ? "100%" : rest.width,
                 height: rest.height,
                 direction,
                 wrap,
