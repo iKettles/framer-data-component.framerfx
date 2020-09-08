@@ -28,6 +28,7 @@ import {
     SortKey,
 } from "./utils/types"
 import { gapControl, uploadFileControl } from "./utils/propertyControls"
+import { PreventLayoutIdGeneration } from "./LayoutIdPrevention"
 
 export function DataComponent(props: DataComponentProps) {
     const {
@@ -196,16 +197,18 @@ export function DataComponent(props: DataComponentProps) {
 
     return (
         <Scroll direction={direction} width={rest.width} height={rest.height}>
-            {renderContainer(resultItems, {
-                // @ts-ignore
-                width: direction === "horizontal" ? "100%" : rest.width,
-                height: rest.height,
-                direction,
-                wrap,
-                columns,
-                verticalAlignment,
-                verticalDistribution,
-            })}
+            <PreventLayoutIdGeneration>
+                {renderContainer(resultItems, {
+                    // @ts-ignore
+                    width: direction === "horizontal" ? "100%" : rest.width,
+                    height: rest.height,
+                    direction,
+                    wrap,
+                    columns,
+                    verticalAlignment,
+                    verticalDistribution,
+                })}
+            </PreventLayoutIdGeneration>
         </Scroll>
     )
 }
