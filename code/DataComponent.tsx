@@ -104,9 +104,9 @@ export function DataComponent(props: DataComponentProps) {
                 index,
                 results.length
             )
+            console.log(connectedListItem.props)
             return React.cloneElement(connectedListItem as React.ReactElement, {
                 key: index,
-                id: `${(connectedListItem as any).props.id}—${index}`,
                 width:
                     direction === "vertical"
                         ? (rest.width -
@@ -125,6 +125,7 @@ export function DataComponent(props: DataComponentProps) {
                     acc[key] = String(result[key])
                     return acc
                 }, {}),
+                id: `${(connectedListItem as any).props.id}—${index}`,
                 onTap() {
                     onItemTap(result)
                 },
