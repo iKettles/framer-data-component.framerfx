@@ -10,7 +10,7 @@ const _PreventLayoutIdGeneration = (props: {
         top: false,
     }).current
 
-    // LayoutIdContext may not exist on Framer if Switch is used in an old version of Framer.
+    // LayoutIdContext may not exist on Framer if used in an old version of Framer.
     // @ts-ignore
     if (Framer.LayoutIdContext) {
         return (
