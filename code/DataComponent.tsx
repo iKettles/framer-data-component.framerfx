@@ -51,8 +51,8 @@ export function DataComponent(props: DataComponentProps) {
         loadingState,
         loadingDelay,
         emptyState,
+        isSearchEnabled,
         searchTerm,
-        searchKeys,
         shouldSort,
         sortDirection,
         sortKey,
@@ -86,8 +86,8 @@ export function DataComponent(props: DataComponentProps) {
     )
     const [results] = useSortedSearchResults(
         data,
+        isSearchEnabled,
         searchTerm,
-        searchKeys,
         shouldSort,
         sortKey,
         sortDirection
@@ -221,7 +221,6 @@ DataComponent.defaultProps = {
     height: 320,
     searchTerm: "",
     debug: false,
-    searchKeys: [],
     columns: 1,
     onItemTap: (item) => {},
     onItemLongPress: (item) => {},
@@ -258,8 +257,8 @@ export interface DataComponentProps {
     emptyState?: React.ReactNode
 
     // Search functionality
+    isSearchEnabled: boolean
     searchTerm: string
-    searchKeys: string[]
 
     // Sorting
     shouldSort: boolean
@@ -437,10 +436,18 @@ addPropertyControls(DataComponent, {
         optionTitles: ["Default", "Help", "Debug"],
         defaultValue: "default",
     },
+    isSearchEnabled: {
+        title: "Search",
+        type: ControlType.Boolean,
+        defaultValue: false,
+        enabledTitle: "Enabled",
+        disabledTitle: "Disabled",
+    },
     searchTerm: {
-        title: "Search Term",
+        title: indentPropertyControlTitle("Query"),
         type: ControlType.String,
         defaultValue: "",
+        hidden: (props) => !props.isSearchEnabled,
     },
     overrideHttpHeaders: {
         title: "HTTP Headers",

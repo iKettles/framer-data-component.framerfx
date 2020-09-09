@@ -119,18 +119,19 @@ export function useDataSource(
 }
 
 export function useSortedSearchResults(
-    data: Array<Record<any, any>>,
+    data: DataItem[],
+    isSearchEnabled: boolean,
     searchTerm: string | null,
-    searchKeys: string[],
     shouldSort: boolean,
     sortKey: SortKey,
     sortDirection: SortDirection
-) {
+): [DataItem[]] {
+    if (!isSearchEnabled || data.length === 0 || !searchTerm) {
+        return [data]
+    }
+
     const fuse = React.useMemo(() => {
-        const keysToSearch = (searchKeys.length === 0 && data.length > 0
-            ? Object.keys(data[0])
-            : searchKeys
-        ).filter((key) => {
+        const keysToSearch = Object.keys(data[0]).filter((key) => {
             // Do not search avatar/image fields
             if (/avatar|image/g.test(key)) {
                 return false
