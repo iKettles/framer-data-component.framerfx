@@ -21,7 +21,7 @@ export function uploadFileControl<T>(
     fileType: DataSourceFileType
 ): ControlDescription<Partial<T>> {
     return {
-        title: "↳ File",
+        title: indentPropertyControlTitle("File"),
         type: ControlType.File,
         allowedFileTypes: [fileType],
         hidden: (
