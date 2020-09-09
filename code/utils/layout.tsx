@@ -95,7 +95,7 @@ export function getContainerStyle({
 }) {
     let styles: React.CSSProperties = {
         ...containerStyle,
-        width,
+        width: direction === "horizontal" ? "100%" : width,
         height,
     }
 

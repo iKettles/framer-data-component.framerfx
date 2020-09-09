@@ -109,7 +109,6 @@ export function DataComponent(props: DataComponentProps) {
                 index,
                 results.length
             )
-            console.log(connectedListItem.props)
             return React.cloneElement(connectedListItem as React.ReactElement, {
                 key: index,
                 width:
@@ -204,8 +203,7 @@ export function DataComponent(props: DataComponentProps) {
         <Scroll direction={direction} width={rest.width} height={rest.height}>
             <PreventLayoutIdGeneration>
                 {renderContainer(resultItems, {
-                    // @ts-ignore
-                    width: direction === "horizontal" ? "100%" : rest.width,
+                    width: rest.width,
                     height: rest.height,
                     direction,
                     wrap,
