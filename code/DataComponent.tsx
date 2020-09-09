@@ -27,7 +27,11 @@ import {
     DataSourceFileType,
     SortKey,
 } from "./utils/types"
-import { gapControl, uploadFileControl } from "./utils/propertyControls"
+import {
+    gapControl,
+    uploadFileControl,
+    indentPropertyControlTitle,
+} from "./utils/propertyControls"
 import { PreventLayoutIdGeneration } from "./LayoutIdPrevention"
 
 export function DataComponent(props: DataComponentProps) {
@@ -284,7 +288,7 @@ addPropertyControls(DataComponent, {
         defaultValue: "api",
     },
     dataSourceFileType: {
-        title: "↳ Type",
+        title: indentPropertyControlTitle("Type"),
         type: ControlType.SegmentedEnum,
         options: ["json", "csv", "tsv"],
         optionTitles: ["JSON", "CSV", "TSV"],
@@ -294,25 +298,25 @@ addPropertyControls(DataComponent, {
     csvFileUrl: uploadFileControl<DataComponentProps>("csv"),
     tsvFileUrl: uploadFileControl<DataComponentProps>("tsv"),
     apiUrl: {
-        title: "↳ URL",
+        title: indentPropertyControlTitle("URL"),
         type: ControlType.String,
         defaultValue: "https://reqres.in/api/users?page=1",
         hidden: (props) => props.dataSource !== "api",
     },
     apiResponseDataKey: {
-        title: "↳ Data Key",
+        title: indentPropertyControlTitle("Data Key"),
         type: ControlType.String,
         defaultValue: "data",
         hidden: (props) => props.dataSource !== "api",
     },
     airtableUrl: {
-        title: "↳ URL",
+        title: indentPropertyControlTitle("URL"),
         type: ControlType.String,
         defaultValue: "",
         hidden: (props) => props.dataSource !== "airtable",
     },
     airtableImageSize: {
-        title: "↳ Image Size",
+        title: indentPropertyControlTitle("Image Size"),
         type: ControlType.SegmentedEnum,
         options: ["small", "large", "full"],
         optionTitles: ["S", "M", "L"],
@@ -326,7 +330,7 @@ addPropertyControls(DataComponent, {
         defaultValue: "vertical",
     },
     verticalAlignment: {
-        title: "↳ Align",
+        title: indentPropertyControlTitle("Align"),
         type: ControlType.SegmentedEnum,
         options: ["flex-start", "center", "flex-end"],
         optionTitles: ["Top", "Center", "Bottom"],
@@ -334,7 +338,7 @@ addPropertyControls(DataComponent, {
         hidden: (props) => true,
     },
     verticalDistribution: {
-        title: "↳ Distribute",
+        title: indentPropertyControlTitle("Distribute"),
         type: ControlType.Enum,
         optionTitles: [
             "Start",
@@ -356,7 +360,7 @@ addPropertyControls(DataComponent, {
         hidden: (props) => props.direction !== "vertical" || props.columns > 1,
     },
     columns: {
-        title: "↳ Columns",
+        title: indentPropertyControlTitle("Columns"),
         type: ControlType.Number,
         displayStepper: true,
         step: 1,
@@ -365,22 +369,22 @@ addPropertyControls(DataComponent, {
         hidden: (props) => props.direction !== "vertical",
     },
     gap: gapControl<DataComponentProps>(
-        "↳ Gap",
+        indentPropertyControlTitle("Gap"),
         (props) =>
             props.direction === "vertical" &&
             (props.columns > 1 ||
                 isVerticalGapControlledByContainer(props.verticalDistribution))
     ),
     horizontalGap: gapControl<DataComponentProps>(
-        "↳ Gap (↔)",
+        indentPropertyControlTitle("Gap (↔)"),
         (props) => !(props.direction === "vertical" && props.columns > 1)
     ),
     verticalGap: gapControl<DataComponentProps>(
-        "↳ Gap (↕)",
+        indentPropertyControlTitle("Gap (↕)"),
         (props) => !(props.direction === "vertical" && props.columns > 1)
     ),
     wrap: {
-        title: "↳ Wrap",
+        title: indentPropertyControlTitle("Wrap"),
         type: ControlType.SegmentedEnum,
         options: ["nowrap", "wrap", "wrap-reverse"],
         optionTitles: ["None", "Wrap", "Reverse"],
@@ -416,13 +420,13 @@ addPropertyControls(DataComponent, {
         defaultValue: false,
     },
     sortKey: {
-        title: "↳ Property",
+        title: indentPropertyControlTitle("Property"),
         type: ControlType.String,
         defaultValue: "price",
         hidden: (props) => !props.shouldSort,
     },
     sortDirection: {
-        title: "↳ Direction",
+        title: indentPropertyControlTitle("Direction"),
         type: ControlType.SegmentedEnum,
         options: ["ascending", "descending"],
         optionTitles: ["↑", "↓"],
@@ -448,7 +452,7 @@ addPropertyControls(DataComponent, {
         defaultValue: false,
     },
     httpAuthorizationHeader: {
-        title: "↳ Authorization",
+        title: indentPropertyControlTitle("Authorization"),
         type: ControlType.String,
         hidden: (props) => !props.overrideHttpHeaders,
     },

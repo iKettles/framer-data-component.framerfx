@@ -34,3 +34,7 @@ export function uploadFileControl<T>(
             props.dataSourceFileType !== fileType,
     }
 }
+
+export function indentPropertyControlTitle(title: string) {
+    return `• ${title}`
+}
