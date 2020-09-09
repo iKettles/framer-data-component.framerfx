@@ -280,14 +280,14 @@ export interface DataComponentProps {
 
 addPropertyControls(DataComponent, {
     dataSource: {
-        type: ControlType.SegmentedEnum,
+        type: ControlType.Enum,
         optionTitles: ["API", "File", "Airtable"],
         options: ["api", "file", "airtable"],
         defaultValue: "api",
     },
     dataSourceFileType: {
         title: indentPropertyControlTitle("Type"),
-        type: ControlType.SegmentedEnum,
+        type: ControlType.Enum,
         options: ["json", "csv", "tsv"],
         optionTitles: ["JSON", "CSV", "TSV"],
         hidden: (props) => props.dataSource !== "file",
@@ -432,7 +432,7 @@ addPropertyControls(DataComponent, {
     },
     mode: {
         title: "Mode",
-        type: ControlType.SegmentedEnum,
+        type: ControlType.Enum,
         options: ["default", "help", "debug"],
         optionTitles: ["Default", "Help", "Debug"],
         defaultValue: "default",
