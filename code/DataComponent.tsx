@@ -1,17 +1,10 @@
 import * as React from "react"
-import {
-    Scroll,
-    addPropertyControls,
-    ControlType,
-    Stack,
-    RenderTarget,
-} from "framer"
+import { Scroll, addPropertyControls, ControlType } from "framer"
 import Placeholder from "./Placeholder"
 import { useConnectedComponentInstance } from "./utils/useConnectedComponentInstance"
 import { useSortedSearchResults, useDataSource } from "./utils/data"
 import {
     getListItemStyle,
-    getContainerStyle,
     isVerticalGapControlledByContainer,
     renderContainer,
 } from "./utils/layout"
@@ -32,7 +25,6 @@ import {
     uploadFileControl,
     indentPropertyControlTitle,
 } from "./utils/propertyControls"
-import { PreventLayoutIdGeneration } from "./LayoutIdPrevention"
 
 export function DataComponent(props: DataComponentProps) {
     const {
@@ -201,17 +193,15 @@ export function DataComponent(props: DataComponentProps) {
 
     return (
         <Scroll direction={direction} width={rest.width} height={rest.height}>
-            <PreventLayoutIdGeneration>
-                {renderContainer(resultItems, {
-                    width: rest.width,
-                    height: rest.height,
-                    direction,
-                    wrap,
-                    columns,
-                    verticalAlignment,
-                    verticalDistribution,
-                })}
-            </PreventLayoutIdGeneration>
+            {renderContainer(resultItems, {
+                width: rest.width,
+                height: rest.height,
+                direction,
+                wrap,
+                columns,
+                verticalAlignment,
+                verticalDistribution,
+            })}
         </Scroll>
     )
 }
