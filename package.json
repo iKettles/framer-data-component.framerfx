@@ -1,24 +1,27 @@
 {
-	"main": "dist/index.js",
-	"license": "MIT",
-	"devDependencies": {
-		"@types/papaparse": "^5.0.6",
-		"@types/react": "^16.8"
-	},
-	"peerDependencies": {
-		"framer": "^1.0",
-		"react": "^16.8"
-	},
-	"framer": {
-		"id": "e945b865-ef93-4093-b694-88fbab85a638",
-		"displayName": "Data Component"
-	},
-	"author": "Iain Kettles",
-	"dependencies": {
-		"@framer/framer.default": "^1.76.0",
-		"fuse.js": "^6.4.1",
-		"papaparse": "^5.2.0"
-	},
-	"name": "@framer/iain.data-component",
-	"version": "1.7.0"
+    "main": "dist/index.js",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/papaparse": "^5.0.6",
+        "@types/react": "^16.8"
+    },
+    "peerDependencies": {
+        "framer": "^1.0",
+        "react": "^16.8"
+    },
+    "framer": {
+        "id": "e945b865-ef93-4093-b694-88fbab85a638",
+        "displayName": "Data Component"
+    },
+    "author": "Iain Kettles",
+    "dependencies": {
+        "@framer/framer.default": "^1.76.0",
+        "fuse.js": "^6.4.1",
+        "papaparse": "^5.2.0"
+    },
+    "name": "@framer/iain.data-component",
+    "version": "1.7.0",
+    "scripts": {
+        "fork": "scripts/fork"
+    }
 }

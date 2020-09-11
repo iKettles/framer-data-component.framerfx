@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# @NOTE We could use `sponge` to do this without writing to a file, but this would require users to install moreutils
+
+# Remove the framer/version/name keys from package.json and write to a temporary file
+cat package.json | jq 'del(.framer) | del(.version) | del(.name)' > package.json.temp
+
+# Remove current package.json
+rm package.json
+
+# Rename temp package.json
+mv package.json.temp package.json
