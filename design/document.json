@@ -235,6 +235,7 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isSearchEnabled" : false,
                           "listItem" : [
 
                           ],
@@ -552,6 +553,7 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isSearchEnabled" : false,
                           "listItem" : [
 
                           ],
@@ -875,6 +877,7 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isSearchEnabled" : false,
                           "listItem" : [
 
                           ],
@@ -1201,6 +1204,7 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isSearchEnabled" : false,
                           "listItem" : [
 
                           ],
@@ -1528,6 +1532,7 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isSearchEnabled" : false,
                           "listItem" : [
 
                           ],
@@ -1858,6 +1863,7 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isSearchEnabled" : false,
                           "listItem" : [
 
                           ],
@@ -2342,6 +2348,7 @@
                           "gap" : 22,
                           "horizontalGap" : 8,
                           "httpAuthorizationHeader" : "",
+                          "isSearchEnabled" : false,
                           "jsonFileUrl" : "data:framer\/asset-reference,SnyrPIJrVcV8aiJal0JPgbsSibE.json?originalFilename=test-data-users.json",
                           "listItem" : [
 
@@ -2606,7 +2613,7 @@
               "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
               "columns" : 2,
               "csvFileUrl" : "",
-              "dataSource" : "api",
+              "dataSource" : "file",
               "dataSourceFileType" : "json",
               "direction" : "vertical",
               "emptyState" : [
@@ -2619,6 +2626,7 @@
               "gap" : 16,
               "horizontalGap" : 42,
               "httpAuthorizationHeader" : "",
+              "isSearchEnabled" : false,
               "jsonFileUrl" : "",
               "listItem" : [
                 {
@@ -2748,12 +2756,12 @@
             "codeComponentPackageVersion" : "1.76.0",
             "codeComponentProps" : {
               "airtableImageSize" : "large",
-              "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appdq0f4599oR6cIr\/Table%201?api_key=keyQL4Up7cLcFgVUs",
+              "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs",
               "apiResponseDataKey" : "data",
               "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
               "columns" : 2,
               "csvFileUrl" : "",
-              "dataSource" : "airtable",
+              "dataSource" : "api",
               "dataSourceFileType" : "json",
               "direction" : "horizontal",
               "emptyState" : [
@@ -2766,7 +2774,164 @@
               "gap" : 16,
               "horizontalGap" : 42,
               "httpAuthorizationHeader" : "",
+              "isSearchEnabled" : false,
               "jsonFileUrl" : "",
+              "listItem" : [
+                {
+                  "enabled" : true,
+                  "type" : "componentinstance",
+                  "value" : "cQzEcIJIK"
+                }
+              ],
+              "loadingDelay" : 0.5,
+              "loadingState" : [
+                {
+                  "enabled" : true,
+                  "type" : "componentinstance",
+                  "value" : "Rq3aNxEw2"
+                }
+              ],
+              "mode" : "default",
+              "onItemTap" : [
+                {
+                  "actionIdentifier" : "framer\/useNavigate",
+                  "controls" : {
+                    "animation" : {
+                      "type" : "transition",
+                      "value" : {
+                        "damping" : 60,
+                        "delay" : 0,
+                        "duration" : 0.29999999999999999,
+                        "ease" : [
+                          0.44,
+                          0,
+                          0.56000000000000005,
+                          1
+                        ],
+                        "mass" : 1,
+                        "stiffness" : 500,
+                        "type" : "spring"
+                      }
+                    },
+                    "appearsFrom" : {
+                      "type" : "segmentedenum",
+                      "value" : "right"
+                    },
+                    "backdropColor" : {
+                      "type" : "color",
+                      "value" : "rgba(4,4,15,.4)"
+                    },
+                    "target" : {
+                      "type" : "componentinstance",
+                      "value" : "WB2xjWSnx"
+                    },
+                    "transition" : {
+                      "type" : "enum",
+                      "value" : "instant"
+                    },
+                    "type" : {
+                      "type" : "segmentedenum",
+                      "value" : "next"
+                    }
+                  },
+                  "identifier" : "67c06dcb-e884-4f3a-a650-b44883f7d803"
+                }
+              ],
+              "overrideHttpHeaders" : false,
+              "searchTerm" : "",
+              "shouldSort" : false,
+              "sortDirection" : "ascending",
+              "sortKey" : "price",
+              "tsvFileUrl" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv",
+              "verticalAlignment" : "center",
+              "verticalDistribution" : "flex-start",
+              "verticalGap" : 30,
+              "wrap" : "nowrap"
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "BgdyvAJb0",
+              "Paax8flqP",
+              "Tnq4U1lri",
+              "DcrPVPMd1",
+              "Rm98se736"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 1140,
+            "heightType" : 0,
+            "id" : "rNiB4RxyX",
+            "intrinsicHeight" : 128,
+            "intrinsicWidth" : 240,
+            "left" : -2296,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "V5lpMrB3K-page",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : -595,
+            "visible" : true,
+            "width" : 923,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.50043898156277433,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
+            "codeComponentPackageVersion" : "1.76.0",
+            "codeComponentProps" : {
+              "airtableImageSize" : "large",
+              "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appdq0f4599oR6cIr\/Table%201?api_key=keyQL4Up7cLcFgVUs",
+              "apiResponseDataKey" : "data",
+              "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
+              "columns" : 2,
+              "csvFileUrl" : "",
+              "dataSource" : "file",
+              "dataSourceFileType" : "csv",
+              "direction" : "horizontal",
+              "emptyState" : [
+                {
+                  "enabled" : true,
+                  "type" : "componentinstance",
+                  "value" : "IWz4eJNuv"
+                }
+              ],
+              "gap" : 16,
+              "horizontalGap" : 42,
+              "httpAuthorizationHeader" : "",
+              "isSearchEnabled" : false,
+              "jsonFileUrl" : "",
+              "listItem" : [
+                {
+                  "enabled" : true,
+                  "type" : "componentinstance",
+                  "value" : "c_j1qo9mM"
+                }
+              ],
               "loadingDelay" : 0.5,
               "loadingState" : [
                 {
@@ -3352,7 +3517,7 @@
             "guidesY" : [
 
             ],
-            "height" : 827,
+            "height" : 138,
             "heightType" : 0,
             "id" : "cQzEcIJIK",
             "intrinsicHeight" : null,
@@ -3406,10 +3571,10 @@
             "children" : [
               {
                 "__class" : "TextNode",
-                "autoSize" : false,
+                "autoSize" : true,
                 "bottom" : null,
-                "centerAnchorX" : 0.37734082397003743,
-                "centerAnchorY" : 0.13361547762998791,
+                "centerAnchorX" : 0.3258426966292135,
+                "centerAnchorY" : 0.35869565217391303,
                 "clip" : true,
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
@@ -3417,11 +3582,11 @@
                 "exportOptions" : [
 
                 ],
-                "height" : 109,
+                "height" : 19,
                 "heightType" : 0,
                 "id" : "bNcJggVMz",
                 "isTarget" : true,
-                "left" : 45,
+                "left" : 132,
                 "locked" : false,
                 "name" : "first_name",
                 "opacity" : 1,
@@ -3483,9 +3648,9 @@
                   }
                 },
                 "textVerticalAlignment" : "top",
-                "top" : 56,
+                "top" : 40,
                 "visible" : true,
-                "width" : 313,
+                "width" : 84,
                 "widthType" : 0
               }
             ],
@@ -3511,7 +3676,7 @@
             "guidesY" : [
 
             ],
-            "height" : 827,
+            "height" : 138,
             "heightType" : 0,
             "id" : "c_j1qo9mM",
             "intrinsicHeight" : null,
