@@ -64,7 +64,6 @@ export function useDataSource(
                     }
                 }
 
-                console.log(response.status)
                 const body = await parseResponse(
                     response,
                     dataSource,
