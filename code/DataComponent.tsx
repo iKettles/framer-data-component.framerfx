@@ -115,6 +115,7 @@ export function DataComponent(props: DataComponentProps) {
                 style: {
                     position: "relative",
                     ...layoutStyles,
+                    ...(connectedListItem as any).props.style,
                 },
                 ...Object.keys(result).reduce((acc, key) => {
                     // Ensure value is a string
