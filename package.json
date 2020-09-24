@@ -20,5 +20,5 @@
 		"papaparse": "^5.2.0"
 	},
 	"name": "@framer/iain.data-component",
-	"version": "1.9.0"
+	"version": "1.10.0"
 }
