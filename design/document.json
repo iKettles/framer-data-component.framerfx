@@ -2632,7 +2632,7 @@
                 {
                   "enabled" : true,
                   "type" : "componentinstance",
-                  "value" : "cQzEcIJIK"
+                  "value" : "mPcjIqVgO"
                 }
               ],
               "loadingDelay" : 0.5,
@@ -2780,7 +2780,7 @@
                 {
                   "enabled" : true,
                   "type" : "componentinstance",
-                  "value" : "cQzEcIJIK"
+                  "value" : "mPcjIqVgO"
                 }
               ],
               "loadingDelay" : 0.5,
@@ -2926,11 +2926,7 @@
               "isSearchEnabled" : false,
               "jsonFileUrl" : "",
               "listItem" : [
-                {
-                  "enabled" : true,
-                  "type" : "componentinstance",
-                  "value" : "c_j1qo9mM"
-                }
+
               ],
               "loadingDelay" : 0.5,
               "loadingState" : [
@@ -3491,84 +3487,6 @@
             "centerAnchorX" : 0,
             "centerAnchorY" : 0,
             "children" : [
-
-            ],
-            "clip" : true,
-            "codeOverrideEnabled" : false,
-            "constraintsLocked" : false,
-            "duplicatedFrom" : [
-              "c_j1qo9mM"
-            ],
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "white",
-            "fillEnabled" : true,
-            "fillImage" : null,
-            "fillImageOriginalName" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillType" : "color",
-            "framePreset" : null,
-            "guidesX" : [
-
-            ],
-            "guidesY" : [
-
-            ],
-            "height" : 138,
-            "heightType" : 0,
-            "id" : "cQzEcIJIK",
-            "intrinsicHeight" : null,
-            "intrinsicWidth" : null,
-            "isExternalMaster" : null,
-            "isMaster" : false,
-            "isTarget" : false,
-            "left" : -3080,
-            "locked" : false,
-            "name" : "Card",
-            "opacity" : 1,
-            "originalid" : "c_j1qo9mM",
-            "parentid" : "V5lpMrB3K-page",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "replicaInfo" : {
-              "master" : "c_j1qo9mM",
-              "overrides" : {
-                "c_j1qo9mM" : {
-                  "bottom" : null,
-                  "centerAnchorX" : 0,
-                  "centerAnchorY" : 0,
-                  "left" : -3080,
-                  "name" : "Card",
-                  "right" : null,
-                  "top" : 929
-                }
-              }
-            },
-            "right" : null,
-            "rotation" : 0,
-            "top" : 929,
-            "visible" : true,
-            "width" : 534,
-            "widthType" : 0
-          },
-          {
-            "__class" : "FrameNode",
-            "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
-            "bottom" : null,
-            "centerAnchorX" : 0,
-            "centerAnchorY" : 0,
-            "children" : [
               {
                 "__class" : "TextNode",
                 "autoSize" : true,
@@ -3578,20 +3496,22 @@
                 "clip" : true,
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
-                "duplicatedFrom" : null,
+                "duplicatedFrom" : [
+                  "bNcJggVMz"
+                ],
                 "exportOptions" : [
 
                 ],
                 "height" : 19,
                 "heightType" : 0,
-                "id" : "bNcJggVMz",
+                "id" : "bLf9pqptw",
                 "isTarget" : true,
                 "left" : 132,
                 "locked" : false,
                 "name" : "first_name",
                 "opacity" : 1,
                 "originalid" : null,
-                "parentid" : "c_j1qo9mM",
+                "parentid" : "mPcjIqVgO",
                 "right" : null,
                 "rotation" : 0,
                 "styledText" : {
@@ -3643,15 +3563,6 @@
                       "type" : "unstyled"
                     }
                   ],
-                  "cached" : {
-                    "html" : "<div data-offset-key=\"6r02s-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"6r02s-0-0\" style=\"tab-size:4;font-family:&quot;Inter&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:16px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">First_name<\/span><\/span><\/div>",
-                    "os" : "macos 10_15 framerx",
-                    "size" : {
-                      "height" : 19,
-                      "width" : 84
-                    },
-                    "width" : 0
-                  },
                   "entityMap" : {
 
                   }
@@ -3666,7 +3577,9 @@
             "clip" : true,
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
-            "duplicatedFrom" : null,
+            "duplicatedFrom" : [
+              "c_j1qo9mM"
+            ],
             "exportOptions" : [
 
             ],
@@ -3687,15 +3600,15 @@
             ],
             "height" : 138,
             "heightType" : 0,
-            "id" : "c_j1qo9mM",
+            "id" : "mPcjIqVgO",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
             "isExternalMaster" : null,
-            "isMaster" : true,
+            "isMaster" : false,
             "isTarget" : false,
-            "left" : -3959,
+            "left" : -3080,
             "locked" : false,
-            "name" : null,
+            "name" : "Card",
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "V5lpMrB3K-page",
