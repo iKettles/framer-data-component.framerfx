@@ -125,12 +125,8 @@ export function useSortedSearchResults(
     sortKey: SortKey,
     sortDirection: SortDirection
 ): [DataItem[]] {
-    if (!isSearchEnabled || data.length === 0 || !searchTerm) {
-        return [data]
-    }
-
     const fuse = React.useMemo(() => {
-        const keysToSearch = Object.keys(data[0]).filter((key) => {
+        const keysToSearch = Object.keys(data[0] || {}).filter((key) => {
             // Do not search avatar/image fields
             if (/avatar|image/g.test(key)) {
                 return false
