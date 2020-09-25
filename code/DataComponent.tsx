@@ -325,28 +325,6 @@ addPropertyControls(DataComponent, {
         defaultValue: "start",
         hidden: (props) => true,
     },
-    verticalDistribution: {
-        title: indentPropertyControlTitle("Distribute"),
-        type: ControlType.Enum,
-        optionTitles: [
-            "Start",
-            "Center",
-            "End",
-            "Space Between",
-            "Space Around",
-            "Space Evenly",
-        ],
-        options: [
-            "flex-start",
-            "center",
-            "flex-end",
-            "space-between",
-            "space-around",
-            "space-evenly",
-        ],
-        defaultValue: "space-around",
-        hidden: (props) => props.direction !== "vertical" || props.columns > 1,
-    },
     columns: {
         title: indentPropertyControlTitle("Columns"),
         type: ControlType.Number,
@@ -371,6 +349,28 @@ addPropertyControls(DataComponent, {
         indentPropertyControlTitle("Gap (↕)"),
         (props) => !(props.direction === "vertical" && props.columns > 1)
     ),
+    verticalDistribution: {
+        title: indentPropertyControlTitle("Distribute"),
+        type: ControlType.Enum,
+        optionTitles: [
+            "Start",
+            "Center",
+            "End",
+            "Space Between",
+            "Space Around",
+            "Space Evenly",
+        ],
+        options: [
+            "flex-start",
+            "center",
+            "flex-end",
+            "space-between",
+            "space-around",
+            "space-evenly",
+        ],
+        defaultValue: "space-around",
+        hidden: (props) => props.direction !== "vertical" || props.columns > 1,
+    },
     wrap: {
         title: indentPropertyControlTitle("Wrap"),
         type: ControlType.SegmentedEnum,
@@ -420,13 +420,6 @@ addPropertyControls(DataComponent, {
         optionTitles: ["↑", "↓"],
         hidden: (props) => !props.shouldSort,
     },
-    mode: {
-        title: "Mode",
-        type: ControlType.Enum,
-        options: ["default", "help", "debug"],
-        optionTitles: ["Default", "Help", "Debug"],
-        defaultValue: "default",
-    },
     isSearchEnabled: {
         title: "Search",
         type: ControlType.Boolean,
@@ -439,6 +432,13 @@ addPropertyControls(DataComponent, {
         type: ControlType.String,
         defaultValue: "",
         hidden: (props) => !props.isSearchEnabled,
+    },
+    mode: {
+        title: "Mode",
+        type: ControlType.Enum,
+        options: ["default", "help", "debug"],
+        optionTitles: ["Default", "Help", "Debug"],
+        defaultValue: "default",
     },
     overrideHttpHeaders: {
         title: "HTTP Headers",
