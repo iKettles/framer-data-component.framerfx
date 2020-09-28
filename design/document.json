@@ -235,7 +235,10 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isDragScrollEnabled" : true,
+                          "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
+                          "isWheelScrollEnabled" : true,
                           "listItem" : [
 
                           ],
@@ -553,7 +556,10 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isDragScrollEnabled" : true,
+                          "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
+                          "isWheelScrollEnabled" : true,
                           "listItem" : [
 
                           ],
@@ -877,7 +883,10 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isDragScrollEnabled" : true,
+                          "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
+                          "isWheelScrollEnabled" : true,
                           "listItem" : [
 
                           ],
@@ -1204,7 +1213,10 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isDragScrollEnabled" : true,
+                          "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
+                          "isWheelScrollEnabled" : true,
                           "listItem" : [
 
                           ],
@@ -1532,7 +1544,10 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isDragScrollEnabled" : true,
+                          "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
+                          "isWheelScrollEnabled" : true,
                           "listItem" : [
 
                           ],
@@ -1863,7 +1878,10 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "isDragScrollEnabled" : true,
+                          "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
+                          "isWheelScrollEnabled" : true,
                           "listItem" : [
 
                           ],
@@ -2348,7 +2366,10 @@
                           "gap" : 22,
                           "horizontalGap" : 8,
                           "httpAuthorizationHeader" : "",
+                          "isDragScrollEnabled" : true,
+                          "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
+                          "isWheelScrollEnabled" : true,
                           "jsonFileUrl" : "data:framer\/asset-reference,SnyrPIJrVcV8aiJal0JPgbsSibE.json?originalFilename=test-data-users.json",
                           "listItem" : [
 
@@ -2626,14 +2647,13 @@
               "gap" : 16,
               "horizontalGap" : 42,
               "httpAuthorizationHeader" : "",
+              "isDragScrollEnabled" : true,
+              "isScrollEnabled" : true,
               "isSearchEnabled" : false,
+              "isWheelScrollEnabled" : true,
               "jsonFileUrl" : "",
               "listItem" : [
-                {
-                  "enabled" : true,
-                  "type" : "componentinstance",
-                  "value" : "mPcjIqVgO"
-                }
+
               ],
               "loadingDelay" : 0.5,
               "loadingState" : [
@@ -2774,14 +2794,13 @@
               "gap" : 16,
               "horizontalGap" : 42,
               "httpAuthorizationHeader" : "",
+              "isDragScrollEnabled" : true,
+              "isScrollEnabled" : true,
               "isSearchEnabled" : false,
+              "isWheelScrollEnabled" : true,
               "jsonFileUrl" : "",
               "listItem" : [
-                {
-                  "enabled" : true,
-                  "type" : "componentinstance",
-                  "value" : "mPcjIqVgO"
-                }
+
               ],
               "loadingDelay" : 0.5,
               "loadingState" : [
@@ -2908,11 +2927,11 @@
               "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appdq0f4599oR6cIr\/Table%201?api_key=keyQL4Up7cLcFgVUs",
               "apiResponseDataKey" : "data",
               "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-              "columns" : 2,
+              "columns" : 1,
               "csvFileUrl" : "",
-              "dataSource" : "file",
+              "dataSource" : "api",
               "dataSourceFileType" : "csv",
-              "direction" : "horizontal",
+              "direction" : "vertical",
               "emptyState" : [
                 {
                   "enabled" : true,
@@ -2923,11 +2942,11 @@
               "gap" : 16,
               "horizontalGap" : 42,
               "httpAuthorizationHeader" : "",
+              "isDragScrollEnabled" : true,
+              "isScrollEnabled" : true,
               "isSearchEnabled" : false,
+              "isWheelScrollEnabled" : true,
               "jsonFileUrl" : "",
-              "listItem" : [
-
-              ],
               "loadingDelay" : 0.5,
               "loadingState" : [
                 {
@@ -3497,21 +3516,22 @@
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
                 "duplicatedFrom" : [
-                  "bNcJggVMz"
+                  "bNcJggVMz",
+                  "bLf9pqptw"
                 ],
                 "exportOptions" : [
 
                 ],
                 "height" : 19,
                 "heightType" : 0,
-                "id" : "bLf9pqptw",
+                "id" : "HRjI9neqh",
                 "isTarget" : true,
                 "left" : 132,
                 "locked" : false,
                 "name" : "first_name",
                 "opacity" : 1,
                 "originalid" : null,
-                "parentid" : "mPcjIqVgO",
+                "parentid" : "jX3wp80_x",
                 "right" : null,
                 "rotation" : 0,
                 "styledText" : {
@@ -3563,15 +3583,6 @@
                       "type" : "unstyled"
                     }
                   ],
-                  "cached" : {
-                    "html" : "<div data-offset-key=\"6r02s-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"6r02s-0-0\" style=\"tab-size:4;font-family:&quot;Inter&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:16px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">First_name<\/span><\/span><\/div>",
-                    "os" : "macos 10_15 framerx",
-                    "size" : {
-                      "height" : 19,
-                      "width" : 84
-                    },
-                    "width" : 0
-                  },
                   "entityMap" : {
 
                   }
@@ -3587,7 +3598,8 @@
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
             "duplicatedFrom" : [
-              "c_j1qo9mM"
+              "c_j1qo9mM",
+              "mPcjIqVgO"
             ],
             "exportOptions" : [
 
@@ -3609,13 +3621,13 @@
             ],
             "height" : 138,
             "heightType" : 0,
-            "id" : "mPcjIqVgO",
+            "id" : "jX3wp80_x",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
             "isExternalMaster" : null,
             "isMaster" : false,
             "isTarget" : false,
-            "left" : -3080,
+            "left" : -3082,
             "locked" : false,
             "name" : "Card",
             "opacity" : 1,
@@ -3632,7 +3644,7 @@
             "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
-            "top" : 929,
+            "top" : 940,
             "visible" : true,
             "width" : 534,
             "widthType" : 0

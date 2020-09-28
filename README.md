@@ -50,6 +50,16 @@ Lays the items out vertically from top to bottom. The width of the connected Des
 | Gap (↔)  | Sets the horizontal gap in pixels between elements |
 | Gap (↕)  | Sets the vertical gap in pixels between elements   |
 
+## Scrolling
+
+Using Framer's [Scroll](https://www.framer.com/api/scroll/) component, you can easily add a native feeling scroll interface to your prototype.
+
+| Scrolling    |                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------- |
+| Scrollable   | Whether the component is scrollable. The scrolling direction is inherited from the layout direction |
+| Drag scroll  | Enables/disables drag scrolling with built-in momentum and overdrag                                 |
+| Wheel scroll | Enables/disables scrolling with the mouse wheel                                                     |
+
 ## Empty/Loading States
 
 In the same fashion as connecting a Design Component on the canvas, you can also connect other layers to be used as empty/loading states within your component. As your prototype is now fetching data for real, depending on the user's internet connection you may want to show a helpful loading state. If your data source returns nothing, or perhaps the user is performing a search and doesn't get any results, you can connect an empty state.

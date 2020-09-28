@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Scroll, addPropertyControls, ControlType } from "framer"
+import { Scroll, Frame, addPropertyControls, ControlType } from "framer"
 import Placeholder from "./Placeholder"
 import { useConnectedComponentInstance } from "./utils/useConnectedComponentInstance"
 import { useSortedSearchResults, useDataSource } from "./utils/data"
@@ -57,6 +57,9 @@ export function DataComponent(props: DataComponentProps) {
         verticalGap,
         direction,
         mode,
+        isScrollEnabled,
+        isDragScrollEnabled,
+        isWheelScrollEnabled,
         onItemTap,
         onItemLongPress,
         ...rest
@@ -192,17 +195,37 @@ export function DataComponent(props: DataComponentProps) {
         })
     }
 
+    const renderedItems = renderContainer(resultItems, {
+        width: rest.width,
+        height: rest.height,
+        direction,
+        wrap,
+        columns,
+        verticalAlignment,
+        verticalDistribution,
+    })
+
+    if (!isScrollEnabled) {
+        return (
+            <Frame
+                background={"transparent"}
+                width={rest.width}
+                height={rest.height}
+            >
+                {renderedItems}
+            </Frame>
+        )
+    }
+
     return (
-        <Scroll direction={direction} width={rest.width} height={rest.height}>
-            {renderContainer(resultItems, {
-                width: rest.width,
-                height: rest.height,
-                direction,
-                wrap,
-                columns,
-                verticalAlignment,
-                verticalDistribution,
-            })}
+        <Scroll
+            direction={direction}
+            width={rest.width}
+            height={rest.height}
+            dragEnabled={isDragScrollEnabled}
+            wheelEnabled={isWheelScrollEnabled}
+        >
+            {renderedItems}
         </Scroll>
     )
 }
@@ -246,6 +269,11 @@ export interface DataComponentProps {
     loadingState?: React.ReactNode
     loadingDelay: number
     emptyState?: React.ReactNode
+
+    // Scrolling
+    isScrollEnabled: boolean
+    isDragScrollEnabled: boolean
+    isWheelScrollEnabled: boolean
 
     // Search functionality
     isSearchEnabled: boolean
@@ -378,6 +406,23 @@ addPropertyControls(DataComponent, {
         optionTitles: ["None", "Wrap", "Reverse"],
         defaultValue: "nowrap",
         hidden: (props) => props.direction === "vertical",
+    },
+    isScrollEnabled: {
+        title: "Scrollable",
+        type: ControlType.Boolean,
+        defaultValue: true,
+    },
+    isDragScrollEnabled: {
+        title: indentPropertyControlTitle("Drag scroll"),
+        type: ControlType.Boolean,
+        defaultValue: true,
+        hidden: (props) => !props.isScrollEnabled,
+    },
+    isWheelScrollEnabled: {
+        title: indentPropertyControlTitle("Wheel scroll"),
+        type: ControlType.Boolean,
+        defaultValue: true,
+        hidden: (props) => !props.isScrollEnabled,
     },
     listItem: {
         title: "List Item",
