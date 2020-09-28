@@ -1,6 +1,7 @@
 import * as React from "react"
 import Fuse from "fuse.js"
 import * as Papa from "papaparse"
+import { nanoid } from "nanoid"
 import {
     DataSource,
     DataSourceFileType,
@@ -14,7 +15,6 @@ import {
     SortKey,
 } from "./types"
 import { AUTH_ERROR_MESSAGE } from "./errors"
-import { uploadFileControl } from "./propertyControls"
 
 export function useDataSource(
     dataSource: DataSource,
@@ -84,8 +84,8 @@ export function useDataSource(
                 }
 
                 setData(
-                    body.map((item, index) => ({
-                        id: item.id || index,
+                    body.map((item) => ({
+                        id: item.id || nanoid(5),
                         ...Object.keys(item).reduce((acc, key) => {
                             acc[sanitizePropertyName(key)] = item[key]
                             return acc

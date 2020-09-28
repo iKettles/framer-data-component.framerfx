@@ -105,7 +105,7 @@ export function DataComponent(props: DataComponentProps) {
                 results.length
             )
             return React.cloneElement(connectedListItem as React.ReactElement, {
-                key: index,
+                key: result.id,
                 width:
                     direction === "vertical"
                         ? (rest.width -
