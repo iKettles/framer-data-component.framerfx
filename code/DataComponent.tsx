@@ -138,6 +138,9 @@ export function DataComponent(props: DataComponentProps) {
         horizontalGap,
         verticalGap,
         connectedListItem,
+        shouldSort,
+        sortDirection,
+        sortKey,
         direction,
         onItemTap,
     ])
