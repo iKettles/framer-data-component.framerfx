@@ -14,6 +14,7 @@ import {
     SortKey,
 } from "./types"
 import { AUTH_ERROR_MESSAGE } from "./errors"
+import { uploadFileControl } from "./propertyControls"
 
 export function useDataSource(
     dataSource: DataSource,
@@ -140,7 +141,7 @@ export function useSortedSearchResults(
     }, [data])
 
     const results = React.useMemo(() => {
-        return (searchTerm
+        return (!!searchTerm && isSearchEnabled
             ? fuse.search(searchTerm).map((result) => result.item)
             : data
         ).sort((a, b) => {
@@ -148,7 +149,15 @@ export function useSortedSearchResults(
                 return 0
             }
 
-            // @TODO implement alphanumeric sorting
+            const isSortingNumerically = typeof a[sortKey] === "number"
+
+            if (isSortingNumerically) {
+                return sortDirection === "ascending"
+                    ? a[sortKey] - b[sortKey]
+                    : b[sortKey] - a[sortKey]
+            }
+
+            // @TODO implement string sorting
 
             return 0
         })
