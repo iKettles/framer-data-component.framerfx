@@ -2947,7 +2947,10 @@
               "isSearchEnabled" : false,
               "isWheelScrollEnabled" : true,
               "jsonFileUrl" : "",
-              "loadingDelay" : 0.5,
+              "listItem" : [
+
+              ],
+              "loadingDelay" : 0,
               "loadingState" : [
                 {
                   "enabled" : true,
@@ -3503,6 +3506,19 @@
             "blendingEnabled" : 0,
             "blendingMode" : "normal",
             "bottom" : null,
+            "boxShadows" : [
+              {
+                "__class" : "BoxShadow",
+                "blur" : 5,
+                "color" : "rgba(0,0,0,0.25)",
+                "enabled" : true,
+                "id" : "lHkhNR0Iy",
+                "inset" : false,
+                "spread" : 0,
+                "x" : 0,
+                "y" : 2
+              }
+            ],
             "centerAnchorX" : 0,
             "centerAnchorY" : 0,
             "children" : [
@@ -3510,29 +3526,30 @@
                 "__class" : "TextNode",
                 "autoSize" : true,
                 "bottom" : null,
-                "centerAnchorX" : 0.3258426966292135,
-                "centerAnchorY" : 0.35869565217391303,
+                "centerAnchorX" : 0.6796875,
+                "centerAnchorY" : 0.12757731958762886,
                 "clip" : true,
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
                 "duplicatedFrom" : [
                   "bNcJggVMz",
-                  "bLf9pqptw"
+                  "bLf9pqptw",
+                  "HRjI9neqh"
                 ],
                 "exportOptions" : [
 
                 ],
                 "height" : 19,
                 "heightType" : 0,
-                "id" : "HRjI9neqh",
+                "id" : "j9M5iSGJd",
                 "isTarget" : true,
-                "left" : 132,
+                "left" : null,
                 "locked" : false,
                 "name" : "first_name",
                 "opacity" : 1,
                 "originalid" : null,
-                "parentid" : "jX3wp80_x",
-                "right" : null,
+                "parentid" : "fAltEO4SK",
+                "right" : 40,
                 "rotation" : 0,
                 "styledText" : {
                   "__class" : "StyledTextDraft",
@@ -3583,15 +3600,6 @@
                       "type" : "unstyled"
                     }
                   ],
-                  "cached" : {
-                    "html" : "<div data-offset-key=\"6r02s-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"6r02s-0-0\" style=\"tab-size:4;font-family:&quot;Inter&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:16px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">First_name<\/span><\/span><\/div>",
-                    "os" : "macos 10_15 framerx",
-                    "size" : {
-                      "height" : 19,
-                      "width" : 84
-                    },
-                    "width" : 0
-                  },
                   "entityMap" : {
 
                   }
@@ -3608,7 +3616,8 @@
             "constraintsLocked" : false,
             "duplicatedFrom" : [
               "c_j1qo9mM",
-              "mPcjIqVgO"
+              "mPcjIqVgO",
+              "jX3wp80_x"
             ],
             "exportOptions" : [
 
@@ -3628,34 +3637,34 @@
             "guidesY" : [
 
             ],
-            "height" : 138,
+            "height" : 388,
             "heightType" : 0,
-            "id" : "jX3wp80_x",
+            "id" : "fAltEO4SK",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
             "isExternalMaster" : null,
             "isMaster" : false,
             "isTarget" : false,
-            "left" : -4139,
+            "left" : -4203,
             "locked" : false,
             "name" : "Card",
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "V5lpMrB3K-page",
             "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
+            "radius" : 24,
+            "radiusBottomLeft" : 24,
+            "radiusBottomRight" : 24,
             "radiusIsRelative" : false,
             "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
+            "radiusTopLeft" : 24,
+            "radiusTopRight" : 24,
             "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
             "top" : 929,
             "visible" : true,
-            "width" : 534,
+            "width" : 256,
             "widthType" : 0
           }
         ],

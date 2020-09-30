@@ -53,6 +53,24 @@ export function getListItemStyle(
     return styles
 }
 
+export function getListItemWidth(
+    direction: FlexDirection,
+    width: number,
+    columns: number,
+    horizontalGap: number,
+    originalListItemWidth: number
+) {
+    if (direction === "horizontal") {
+        return originalListItemWidth
+    }
+    if (columns === 1) {
+        return width
+    } else {
+        const horizontalSpacingForRow = (columns - 1) * horizontalGap
+        return (width - horizontalSpacingForRow) / columns
+    }
+}
+
 export function renderContainer(
     resultItems: React.ReactElement[],
     layoutConfig: {

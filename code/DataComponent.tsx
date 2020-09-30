@@ -5,6 +5,7 @@ import { useConnectedComponentInstance } from "./utils/useConnectedComponentInst
 import { useSortedSearchResults, useDataSource } from "./utils/data"
 import {
     getListItemStyle,
+    getListItemWidth,
     isVerticalGapControlledByContainer,
     renderContainer,
 } from "./utils/layout"
@@ -104,28 +105,27 @@ export function DataComponent(props: DataComponentProps) {
                 index,
                 results.length
             )
+            const { props: connectedListItemProps } = connectedListItem as any
             return React.cloneElement(connectedListItem as React.ReactElement, {
                 key: result.id,
-                width:
-                    direction === "vertical"
-                        ? (rest.width -
-                              columns *
-                                  ((layoutStyles.marginRight as
-                                      | number
-                                      | undefined) || 0)) /
-                          columns
-                        : (connectedListItem as any).props.width,
+                width: getListItemWidth(
+                    direction,
+                    rest.width,
+                    columns,
+                    horizontalGap,
+                    connectedListItemProps.width
+                ),
                 style: {
                     position: "relative",
                     ...layoutStyles,
-                    ...(connectedListItem as any).props.style,
+                    ...connectedListItemProps.style,
                 },
                 ...Object.keys(result).reduce((acc, key) => {
                     // Ensure value is a string
                     acc[key] = String(result[key])
                     return acc
                 }, {}),
-                id: `${(connectedListItem as any).props.id}—${index}`,
+                id: `${connectedListItemProps.props.id}—${index}`,
                 onTap() {
                     onItemTap(result)
                 },
