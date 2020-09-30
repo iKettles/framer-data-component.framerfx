@@ -125,7 +125,7 @@ export function DataComponent(props: DataComponentProps) {
                     acc[key] = String(result[key])
                     return acc
                 }, {}),
-                id: `${connectedListItemProps.props.id}—${index}`,
+                id: `${result.id}—${index}`,
                 onTap() {
                     onItemTap(result)
                 },
