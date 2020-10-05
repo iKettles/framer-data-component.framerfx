@@ -2,7 +2,7 @@ import * as React from "react"
 import { Scroll, Frame, addPropertyControls, ControlType } from "framer"
 import Placeholder from "./Placeholder"
 import { useConnectedComponentInstance } from "./utils/useConnectedComponentInstance"
-import { useSortedSearchResults, useDataSource } from "./utils/data"
+import { useCuratedDataSource } from "./utils/data"
 import {
     getListItemStyle,
     getListItemWidth,
@@ -65,7 +65,7 @@ export function DataComponent(props: DataComponentProps) {
         onItemLongPress,
         ...rest
     } = props
-    const [data, isLoading, errorMessage] = useDataSource(
+    const [results, isLoading, errorMessage] = useCuratedDataSource(
         dataSource,
         dataSourceFileType,
         apiResponseDataKey,
@@ -76,17 +76,14 @@ export function DataComponent(props: DataComponentProps) {
         jsonFileUrl,
         airtableImageSize,
         loadingDelay,
-        overrideHttpHeaders && {
-            Authorization: httpAuthorizationHeader,
-        }
-    )
-    const [results] = useSortedSearchResults(
-        data,
         isSearchEnabled,
         searchTerm,
         shouldSort,
         sortKey,
-        sortDirection
+        sortDirection,
+        overrideHttpHeaders && {
+            Authorization: httpAuthorizationHeader,
+        }
     )
     const [connectedListItem] = useConnectedComponentInstance(listItem)
     const [connectedLoadingState] = useConnectedComponentInstance(loadingState)

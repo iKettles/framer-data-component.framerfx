@@ -16,7 +16,7 @@ import {
 } from "./types"
 import { AUTH_ERROR_MESSAGE } from "./errors"
 
-export function useDataSource(
+export function useCuratedDataSource(
     dataSource: DataSource,
     dataSourceFileType: DataSourceFileType,
     apiResponseDataKey: string | null,
@@ -27,6 +27,11 @@ export function useDataSource(
     jsonUrl: string | null,
     airtableImageSize: AirtableImageSize,
     loadingDelay: number,
+    isSearchEnabled: boolean,
+    searchTerm: string,
+    shouldSort: boolean,
+    sortKey: string,
+    sortDirection: SortDirection,
     httpHeaders?: {
         Authorization?: string
     }
@@ -34,6 +39,15 @@ export function useDataSource(
     const [errorMessage, setErrorMessage] = React.useState<string | null>(null)
     const [isLoading, setIsLoading] = React.useState(false)
     const [data, setData] = React.useState([])
+
+    const [results] = useSortedSearchResults(
+        data,
+        isSearchEnabled,
+        searchTerm,
+        shouldSort,
+        sortKey,
+        sortDirection
+    )
 
     React.useEffect(() => {
         ;(async () => {
@@ -115,7 +129,7 @@ export function useDataSource(
         loadingDelay,
     ])
 
-    return [data, isLoading, errorMessage]
+    return [results, isLoading, errorMessage]
 }
 
 export function useSortedSearchResults(
@@ -126,7 +140,7 @@ export function useSortedSearchResults(
     sortKey: SortKey,
     sortDirection: SortDirection
 ): [DataItem[]] {
-    const fuse = React.useMemo(() => {
+    const results = React.useMemo(() => {
         const keysToSearch = Object.keys(data[0] || {}).filter((key) => {
             // Do not search avatar/image fields
             if (/avatar|image/g.test(key)) {
@@ -134,17 +148,18 @@ export function useSortedSearchResults(
             }
             return true
         })
-        return new Fuse(data, {
+
+        // Copy array to stop Fuse from mutating the original data array
+        const fuse = new Fuse([...data], {
             includeScore: true,
             keys: keysToSearch,
         })
-    }, [data])
 
-    const results = React.useMemo(() => {
-        return (!!searchTerm && isSearchEnabled
-            ? fuse.search(searchTerm).map((result) => result.item)
-            : data
-        ).sort((a, b) => {
+        const dataToSort =
+            !!searchTerm && isSearchEnabled
+                ? fuse.search(searchTerm).map((result) => result.item)
+                : data
+        return dataToSort.sort((a, b) => {
             if (!shouldSort) {
                 return 0
             }
@@ -161,7 +176,7 @@ export function useSortedSearchResults(
 
             return 0
         })
-    }, [fuse, searchTerm, shouldSort, sortKey, sortDirection])
+    }, [data, searchTerm, shouldSort, sortKey, sortDirection])
 
     return [results]
 }
