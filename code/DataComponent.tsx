@@ -40,6 +40,7 @@ export function DataComponent(props: DataComponentProps) {
         dataSourceFileType,
         overrideHttpHeaders,
         httpAuthorizationHeader,
+        httpHeaders,
         listItem,
         loadingState,
         loadingDelay,
@@ -82,7 +83,10 @@ export function DataComponent(props: DataComponentProps) {
         sortKey,
         sortDirection,
         overrideHttpHeaders && {
-            Authorization: httpAuthorizationHeader,
+            parsedHeaders: {
+                Authorization: httpAuthorizationHeader,
+            },
+            unparsedHeaders: httpHeaders,
         }
     )
     const [connectedListItem] = useConnectedComponentInstance(listItem)
@@ -290,6 +294,7 @@ export interface DataComponentProps {
     // HTTP
     overrideHttpHeaders: boolean
     httpAuthorizationHeader: string
+    httpHeaders: string[]
 
     // Event handlers
     onItemTap: (item) => void
@@ -496,6 +501,15 @@ addPropertyControls(DataComponent, {
         title: indentPropertyControlTitle("Authorization"),
         type: ControlType.String,
         hidden: (props) => !props.overrideHttpHeaders,
+    },
+    httpHeaders: {
+        title: indentPropertyControlTitle("HTTP Headers"),
+        type: ControlType.Array,
+        propertyControl: {
+            type: ControlType.String,
+        },
+        hidden: (props) => !props.overrideHttpHeaders,
+        defaultValue: [`X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519`],
     },
     onItemTap: {
         type: ControlType.EventHandler,

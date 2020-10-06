@@ -15,6 +15,7 @@ import {
     SortKey,
 } from "./types"
 import { AUTH_ERROR_MESSAGE } from "./errors"
+import { parseHttpHeaders } from "./helpers"
 
 export function useCuratedDataSource(
     dataSource: DataSource,
@@ -33,7 +34,8 @@ export function useCuratedDataSource(
     sortKey: string,
     sortDirection: SortDirection,
     httpHeaders?: {
-        Authorization?: string
+        parsedHeaders: Record<string, string>
+        unparsedHeaders: string[]
     }
 ): [any[], boolean, string | null] {
     const [errorMessage, setErrorMessage] = React.useState<string | null>(null)
@@ -67,10 +69,19 @@ export function useCuratedDataSource(
 
                 setIsLoading(true)
 
+                let parsedHttpHeaders: Record<string, string>
+
+                if (httpHeaders) {
+                    parsedHttpHeaders = {
+                        ...httpHeaders.parsedHeaders,
+                        ...parseHttpHeaders(httpHeaders.unparsedHeaders),
+                    }
+                }
+
                 const timeStarted = Date.now()
 
                 const response = await fetch(url, {
-                    headers: httpHeaders || {},
+                    headers: parsedHttpHeaders,
                 })
 
                 if (!response.ok) {

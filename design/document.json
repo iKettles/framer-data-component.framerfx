@@ -235,6 +235,13 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "httpHeaders" : [
+                            {
+                              "enabled" : true,
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ],
                           "isDragScrollEnabled" : true,
                           "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
@@ -556,6 +563,13 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "httpHeaders" : [
+                            {
+                              "enabled" : true,
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ],
                           "isDragScrollEnabled" : true,
                           "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
@@ -883,6 +897,13 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "httpHeaders" : [
+                            {
+                              "enabled" : true,
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ],
                           "isDragScrollEnabled" : true,
                           "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
@@ -1213,6 +1234,13 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "httpHeaders" : [
+                            {
+                              "enabled" : true,
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ],
                           "isDragScrollEnabled" : true,
                           "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
@@ -1544,6 +1572,13 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "httpHeaders" : [
+                            {
+                              "enabled" : true,
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ],
                           "isDragScrollEnabled" : true,
                           "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
@@ -1878,6 +1913,13 @@
                           "gap" : 30,
                           "horizontalGap" : 6,
                           "httpAuthorizationHeader" : "",
+                          "httpHeaders" : [
+                            {
+                              "enabled" : true,
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ],
                           "isDragScrollEnabled" : true,
                           "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
@@ -2366,6 +2408,13 @@
                           "gap" : 22,
                           "horizontalGap" : 8,
                           "httpAuthorizationHeader" : "",
+                          "httpHeaders" : [
+                            {
+                              "enabled" : true,
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ],
                           "isDragScrollEnabled" : true,
                           "isScrollEnabled" : true,
                           "isSearchEnabled" : false,
@@ -2647,6 +2696,13 @@
               "gap" : 16,
               "horizontalGap" : 42,
               "httpAuthorizationHeader" : "",
+              "httpHeaders" : [
+                {
+                  "enabled" : true,
+                  "type" : "string",
+                  "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                }
+              ],
               "isDragScrollEnabled" : true,
               "isScrollEnabled" : true,
               "isSearchEnabled" : false,
@@ -2794,6 +2850,13 @@
               "gap" : 16,
               "horizontalGap" : 42,
               "httpAuthorizationHeader" : "",
+              "httpHeaders" : [
+                {
+                  "enabled" : true,
+                  "type" : "string",
+                  "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                }
+              ],
               "isDragScrollEnabled" : true,
               "isScrollEnabled" : true,
               "isSearchEnabled" : false,
@@ -3632,7 +3695,7 @@
                   "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
                   "columns" : 1,
                   "csvFileUrl" : "",
-                  "dataSource" : "airtable",
+                  "dataSource" : "api",
                   "dataSourceFileType" : "csv",
                   "direction" : "vertical",
                   "emptyState" : [
@@ -3645,6 +3708,13 @@
                   "gap" : 16,
                   "horizontalGap" : 42,
                   "httpAuthorizationHeader" : "",
+                  "httpHeaders" : [
+                    {
+                      "enabled" : true,
+                      "type" : "string",
+                      "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                    }
+                  ],
                   "isDragScrollEnabled" : true,
                   "isScrollEnabled" : true,
                   "isSearchEnabled" : true,
