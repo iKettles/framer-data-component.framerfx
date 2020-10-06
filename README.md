@@ -8,18 +8,17 @@ First, you need to decide your data source.
 
 ### Data Sources
 
-| Source   |                                                                                                                                                                                                         |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| API      | Integrate with any HTTP API. If your API requires authentication, you can provide a custom Authorization header using the HTTP Headers property control.                                                |
-| File     | Upload a JSON/CSV/TSV file. This component will take care of converting your file into a format your prototype can understand.                                                                          |
-| Airtable | Connect to an Airtable base. As requests to Airtable require an API key, you need to ensure there is an `api_key` query parameter in the URL property control. We'll tell you if you don't provide one! |
-|          |                                                                                                                                                                                                         |
+| Source   |                                                                                |
+| -------- | ------------------------------------------------------------------------------ |
+| API      | Connect to an API. Need authentication? Use the HTTP Headers property control. |
+| File     | Upload a JSON/CSV/TSV file. We'll convert it into machine-speak.               |
+| Airtable | Connect to Airtable. Make sure an api_key query parameter appears in your URL. |
 
 ### Connecting a Design Component
 
 Once you've decided on your data source, you're ready to start populating your prototype with real data. You'll first need to grab the frame you want to use as your list item—this will be the component that's repeated for each item in the data you provide to your prototype. This frame needs to be a [Design Component](https://www.framer.com/support/using-framer/design-components/) so you can assign a name to the properties of your component. This allows the text layers and images within your component to be populated and overridden by the Data Component.
 
-#### Design Component Property COntrols
+#### Design Component Property Controls
 
 For this component to function, it needs to be connected to a Design Component on Framer's canvas. When you create a Design Component, Framer will show some checkboxes in the properties panel that allow you to control which fields in your prototype can be populated. When you select these checkboxes, you also give them a name, which becomes the "variable" of that field. Providing that name matches the fields in the response from your chosen data source, Framer will populate that field with the value from the data. This works for text fields and for images too.
 
@@ -31,10 +30,10 @@ The layout controls at your disposal vary depending on which direction you choos
 
 Lays the items out horizontally from left to right. Preserves the original width of the connected Design Component.
 
-| Horizontal |                                                                                                                                                       |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Gap        | Sets the horizontal gap in pixels between elements                                                                                                    |
-| Wrap       | Allows items to wrap to the next line if they do not fit within the width available. Using the Reverse option makes elements flow from right to left. |
+| Horizontal |                                                                             |
+| ---------- | --------------------------------------------------------------------------- |
+| Gap        | Sets the horizontal gap in pixels between elements                          |
+| Wrap       | Items will wrap. The Reverse option makes elements flow from right to left. |
 
 ### Vertical
 
@@ -72,10 +71,10 @@ The minimum amount of time to wait before displaying data. Useful for user testi
 
 By default, this component will not sort your data. This means the order in which your data source returns data is preserved. If you'd like more control over how it's sorted, you can enable Manual sorting. This component will take care of sorting alphabetically or numerically.
 
-| Sorting   | (Manual)                                                                                   |
-| --------- | ------------------------------------------------------------------------------------------ |
-| Property  | The field in your data to sort upon                                                        |
-| Direction | The direction to order elements by. Defaults to ascending, showing the lowest values first |
+| Sorting                | (Manual)                                                                 |
+| ---------------------- | ------------------------------------------------------------------------ |
+| Property               | The field in your data to sort on                                        |
+| Direction              | The direction to order elements by. Defaults to ascending (lowest first) |
 
 ## Search
 
@@ -87,19 +86,19 @@ Once search is enabled, you can set a Search Query via the properties panel. In 
 
 This component has 3 separate modes which can be used for guidance & troubleshooting.
 
-| Mode    |                                                                                                   |
-| ------- | ------------------------------------------------------------------------------------------------- |
-| Default | The default behavior of this component                                                            |
-| Help    | Displays instructions for how to connect this component to your data source                       |
-| Debug   | Displays the raw JSON of your component's data. Useful when troubleshooting fields not populating |
+| Mode    |                                                                    |
+| ------- | ------------------------------------------------------------------ |
+| Default | The default behavior of this component                             |
+| Help    | Instructions for how to connect this component to your data source |
+| Debug   | Displays the raw JSON of your data. Useful during troubleshooting  |
 
 ## HTTP Headers
 
 Working with an API that requires authentication? This component allows you to attach custom HTTP Headers which will be included in the request to your chosen data source.
 
-| HTTP Headers  | (Custom)                                                                        |
-| ------------- | ------------------------------------------------------------------------------- |
-| Authorization | The HTTP Authorization header. Useful for data sources requiring authentication |
+| HTTP Headers  | (Custom)                                              |
+| ------------- | ----------------------------------------------------- |
+| Authorization | The HTTP Authorization header included in the request |
 
 ## Bugs/Questions/Improvements?
 
