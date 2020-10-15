@@ -107,6 +107,10 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
+### **1.22.0 - 15/10/2020**
+
+- Add alphabetical sorting
+
 ### **1.21.0 - 06/10/2020**
 
 - Add support for custom HTTP headers
