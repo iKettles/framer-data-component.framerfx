@@ -176,14 +176,19 @@ export function useSortedSearchResults(
             }
 
             const isSortingNumerically = typeof a[sortKey] === "number"
+            const isSortingAlphabetically = typeof a[sortKey] === "string"
 
             if (isSortingNumerically) {
                 return sortDirection === "ascending"
                     ? a[sortKey] - b[sortKey]
                     : b[sortKey] - a[sortKey]
+            } else if (isSortingAlphabetically) {
+                if (sortDirection === "ascending") {
+                    return (a[sortKey] as string).localeCompare(b[sortKey])
+                } else {
+                    return (b[sortKey] as string).localeCompare(a[sortKey])
+                }
             }
-
-            // @TODO implement string sorting
 
             return 0
         })

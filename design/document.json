@@ -8,8 +8,6 @@
           {
             "__class" : "FrameNode",
             "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0,
             "centerAnchorY" : 0,
@@ -107,8 +105,6 @@
               {
                 "__class" : "FrameNode",
                 "aspectRatio" : null,
-                "blendingEnabled" : 0,
-                "blendingMode" : "normal",
                 "bottom" : null,
                 "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.11162290803009366,
@@ -208,8 +204,6 @@
                   {
                     "__class" : "FrameNode",
                     "aspectRatio" : null,
-                    "blendingEnabled" : 0,
-                    "blendingMode" : "normal",
                     "bottom" : null,
                     "centerAnchorX" : 0.5,
                     "centerAnchorY" : 0.5423728813559322,
@@ -237,7 +231,7 @@
                           "httpAuthorizationHeader" : "",
                           "httpHeaders" : [
                             {
-                              "enabled" : true,
+                              "id" : "migrated_array_value_Tnq4U1lri_httpHeaders_0",
                               "type" : "string",
                               "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
                             }
@@ -424,8 +418,6 @@
               {
                 "__class" : "FrameNode",
                 "aspectRatio" : null,
-                "blendingEnabled" : 0,
-                "blendingMode" : "normal",
                 "bottom" : null,
                 "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.30109012743743285,
@@ -536,8 +528,6 @@
                   {
                     "__class" : "FrameNode",
                     "aspectRatio" : null,
-                    "blendingEnabled" : 0,
-                    "blendingMode" : "normal",
                     "bottom" : null,
                     "centerAnchorX" : 0.5,
                     "centerAnchorY" : 0.5423728813559322,
@@ -565,7 +555,7 @@
                           "httpAuthorizationHeader" : "",
                           "httpHeaders" : [
                             {
-                              "enabled" : true,
+                              "id" : "migrated_array_value_eGI_0LfgS_httpHeaders_0",
                               "type" : "string",
                               "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
                             }
@@ -757,8 +747,6 @@
               {
                 "__class" : "FrameNode",
                 "aspectRatio" : null,
-                "blendingEnabled" : 0,
-                "blendingMode" : "normal",
                 "bottom" : null,
                 "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.49055734684477198,
@@ -870,8 +858,6 @@
                   {
                     "__class" : "FrameNode",
                     "aspectRatio" : null,
-                    "blendingEnabled" : 0,
-                    "blendingMode" : "normal",
                     "bottom" : null,
                     "centerAnchorX" : 0.5,
                     "centerAnchorY" : 0.5423728813559322,
@@ -899,7 +885,7 @@
                           "httpAuthorizationHeader" : "",
                           "httpHeaders" : [
                             {
-                              "enabled" : true,
+                              "id" : "migrated_array_value_qroKYtg0C_httpHeaders_0",
                               "type" : "string",
                               "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
                             }
@@ -1094,8 +1080,6 @@
               {
                 "__class" : "FrameNode",
                 "aspectRatio" : null,
-                "blendingEnabled" : 0,
-                "blendingMode" : "normal",
                 "bottom" : 1720,
                 "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.66098572086596041,
@@ -1207,8 +1191,6 @@
                   {
                     "__class" : "FrameNode",
                     "aspectRatio" : null,
-                    "blendingEnabled" : 0,
-                    "blendingMode" : "normal",
                     "bottom" : null,
                     "centerAnchorX" : 0.5,
                     "centerAnchorY" : 0.5423728813559322,
@@ -1236,7 +1218,7 @@
                           "httpAuthorizationHeader" : "",
                           "httpHeaders" : [
                             {
-                              "enabled" : true,
+                              "id" : "migrated_array_value_XUYPzSZEi_httpHeaders_0",
                               "type" : "string",
                               "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
                             }
@@ -1431,8 +1413,6 @@
               {
                 "__class" : "FrameNode",
                 "aspectRatio" : null,
-                "blendingEnabled" : 0,
-                "blendingMode" : "normal",
                 "bottom" : 734,
                 "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.81237524950099804,
@@ -1545,8 +1525,6 @@
                   {
                     "__class" : "FrameNode",
                     "aspectRatio" : null,
-                    "blendingEnabled" : 0,
-                    "blendingMode" : "normal",
                     "bottom" : null,
                     "centerAnchorX" : 0.5,
                     "centerAnchorY" : 0.5423728813559322,
@@ -1574,7 +1552,7 @@
                           "httpAuthorizationHeader" : "",
                           "httpHeaders" : [
                             {
-                              "enabled" : true,
+                              "id" : "migrated_array_value_TyHxngOXB_httpHeaders_0",
                               "type" : "string",
                               "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
                             }
@@ -1772,8 +1750,6 @@
               {
                 "__class" : "FrameNode",
                 "aspectRatio" : null,
-                "blendingEnabled" : 0,
-                "blendingMode" : "normal",
                 "bottom" : -252,
                 "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.96376477813603567,
@@ -1886,8 +1862,6 @@
                   {
                     "__class" : "FrameNode",
                     "aspectRatio" : null,
-                    "blendingEnabled" : 0,
-                    "blendingMode" : "normal",
                     "bottom" : null,
                     "centerAnchorX" : 0.5,
                     "centerAnchorY" : 0.5423728813559322,
@@ -1915,7 +1889,7 @@
                           "httpAuthorizationHeader" : "",
                           "httpHeaders" : [
                             {
-                              "enabled" : true,
+                              "id" : "migrated_array_value_uincNNRvJ_httpHeaders_0",
                               "type" : "string",
                               "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
                             }
@@ -2177,8 +2151,6 @@
           {
             "__class" : "FrameNode",
             "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0,
             "centerAnchorY" : 0,
@@ -2278,8 +2250,6 @@
               {
                 "__class" : "FrameNode",
                 "aspectRatio" : null,
-                "blendingEnabled" : 0,
-                "blendingMode" : "normal",
                 "bottom" : null,
                 "centerAnchorX" : 0.52166847237269776,
                 "centerAnchorY" : 0.15773486656541549,
@@ -2380,8 +2350,6 @@
                   {
                     "__class" : "FrameNode",
                     "aspectRatio" : null,
-                    "blendingEnabled" : 0,
-                    "blendingMode" : "normal",
                     "bottom" : 0,
                     "centerAnchorX" : 0.5,
                     "centerAnchorY" : 0.53472222222222221,
@@ -2410,7 +2378,7 @@
                           "httpAuthorizationHeader" : "",
                           "httpHeaders" : [
                             {
-                              "enabled" : true,
+                              "id" : "migrated_array_value_DcrPVPMd1_httpHeaders_0",
                               "type" : "string",
                               "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
                             }
@@ -2688,7 +2656,7 @@
               "direction" : "vertical",
               "emptyState" : [
                 {
-                  "enabled" : true,
+                  "id" : "migrated_array_value_Rm98se736_emptyState_0",
                   "type" : "componentinstance",
                   "value" : "IWz4eJNuv"
                 }
@@ -2698,7 +2666,7 @@
               "httpAuthorizationHeader" : "",
               "httpHeaders" : [
                 {
-                  "enabled" : true,
+                  "id" : "migrated_array_value_Rm98se736_httpHeaders_0",
                   "type" : "string",
                   "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
                 }
@@ -2714,7 +2682,7 @@
               "loadingDelay" : 0.5,
               "loadingState" : [
                 {
-                  "enabled" : true,
+                  "id" : "migrated_array_value_Rm98se736_loadingState_0",
                   "type" : "componentinstance",
                   "value" : "Rq3aNxEw2"
                 }
@@ -2842,7 +2810,7 @@
               "direction" : "horizontal",
               "emptyState" : [
                 {
-                  "enabled" : true,
+                  "id" : "migrated_array_value_rNiB4RxyX_emptyState_0",
                   "type" : "componentinstance",
                   "value" : "IWz4eJNuv"
                 }
@@ -2852,7 +2820,7 @@
               "httpAuthorizationHeader" : "",
               "httpHeaders" : [
                 {
-                  "enabled" : true,
+                  "id" : "migrated_array_value_rNiB4RxyX_httpHeaders_0",
                   "type" : "string",
                   "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
                 }
@@ -2868,7 +2836,7 @@
               "loadingDelay" : 0.5,
               "loadingState" : [
                 {
-                  "enabled" : true,
+                  "id" : "migrated_array_value_rNiB4RxyX_loadingState_0",
                   "type" : "componentinstance",
                   "value" : "Rq3aNxEw2"
                 }
@@ -2979,8 +2947,6 @@
           {
             "__class" : "FrameNode",
             "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0,
             "centerAnchorY" : 0,
@@ -3134,8 +3100,6 @@
           {
             "__class" : "FrameNode",
             "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0,
             "centerAnchorY" : 0,
@@ -3293,8 +3257,6 @@
           {
             "__class" : "FrameNode",
             "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0,
             "centerAnchorY" : 0,
@@ -3302,8 +3264,6 @@
               {
                 "__class" : "FrameNode",
                 "aspectRatio" : null,
-                "blendingEnabled" : 0,
-                "blendingMode" : "normal",
                 "bottom" : null,
                 "centerAnchorX" : 0.40502793296089384,
                 "centerAnchorY" : 0.43407707910750509,
@@ -3418,8 +3378,6 @@
           {
             "__class" : "FrameNode",
             "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
             "bottom" : null,
             "boxShadows" : [
               {
@@ -3450,21 +3408,22 @@
                   "bNcJggVMz",
                   "bLf9pqptw",
                   "HRjI9neqh",
-                  "j9M5iSGJd"
+                  "j9M5iSGJd",
+                  "lSRz_19Oq"
                 ],
                 "exportOptions" : [
 
                 ],
                 "height" : 19,
                 "heightType" : 0,
-                "id" : "lSRz_19Oq",
+                "id" : "e0yRCKOG0",
                 "isTarget" : true,
                 "left" : 44,
                 "locked" : false,
                 "name" : "plant",
                 "opacity" : 1,
                 "originalid" : null,
-                "parentid" : "lAHGtUPU_",
+                "parentid" : "zD591b7jR",
                 "right" : null,
                 "rotation" : 0,
                 "styledText" : {
@@ -3536,21 +3495,22 @@
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
                 "duplicatedFrom" : [
-                  "X4UttYGVL"
+                  "X4UttYGVL",
+                  "zdWOP2O5m"
                 ],
                 "exportOptions" : [
 
                 ],
                 "height" : 24,
                 "heightType" : 0,
-                "id" : "zdWOP2O5m",
+                "id" : "KCG0id8DP",
                 "isTarget" : true,
                 "left" : null,
                 "locked" : false,
                 "name" : "price",
                 "opacity" : 1,
                 "originalid" : null,
-                "parentid" : "lAHGtUPU_",
+                "parentid" : "zD591b7jR",
                 "right" : 26,
                 "rotation" : 0,
                 "styledText" : {
@@ -3620,7 +3580,8 @@
               "c_j1qo9mM",
               "mPcjIqVgO",
               "jX3wp80_x",
-              "fAltEO4SK"
+              "fAltEO4SK",
+              "lAHGtUPU_"
             ],
             "exportOptions" : [
 
@@ -3642,13 +3603,13 @@
             ],
             "height" : 92,
             "heightType" : 0,
-            "id" : "lAHGtUPU_",
+            "id" : "zD591b7jR",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
             "isExternalMaster" : null,
             "isMaster" : false,
             "isTarget" : false,
-            "left" : -4857,
+            "left" : -4874,
             "locked" : false,
             "name" : "Card",
             "opacity" : 1,
@@ -3665,7 +3626,7 @@
             "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
-            "top" : 1495,
+            "top" : 1519,
             "visible" : true,
             "width" : 256,
             "widthType" : 0
@@ -3673,8 +3634,6 @@
           {
             "__class" : "FrameNode",
             "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
             "bottom" : null,
             "centerAnchorX" : 0,
             "centerAnchorY" : 0,
@@ -3695,12 +3654,12 @@
                   "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
                   "columns" : 1,
                   "csvFileUrl" : "",
-                  "dataSource" : "api",
+                  "dataSource" : "airtable",
                   "dataSourceFileType" : "csv",
                   "direction" : "vertical",
                   "emptyState" : [
                     {
-                      "enabled" : true,
+                      "id" : "migrated_array_value_qGofFZ5iD_emptyState_0",
                       "type" : "componentinstance",
                       "value" : "IWz4eJNuv"
                     }
@@ -3709,11 +3668,7 @@
                   "horizontalGap" : 42,
                   "httpAuthorizationHeader" : "",
                   "httpHeaders" : [
-                    {
-                      "enabled" : true,
-                      "type" : "string",
-                      "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
-                    }
+
                   ],
                   "isDragScrollEnabled" : true,
                   "isScrollEnabled" : true,
@@ -3726,7 +3681,7 @@
                   "loadingDelay" : 0,
                   "loadingState" : [
                     {
-                      "enabled" : true,
+                      "id" : "migrated_array_value_qGofFZ5iD_loadingState_0",
                       "type" : "componentinstance",
                       "value" : "Rq3aNxEw2"
                     }
@@ -3780,8 +3735,8 @@
                   "overrideHttpHeaders" : false,
                   "searchTerm" : "",
                   "shouldSort" : true,
-                  "sortDirection" : "ascending",
-                  "sortKey" : "price",
+                  "sortDirection" : "descending",
+                  "sortKey" : "plant",
                   "tsvFileUrl" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv",
                   "verticalAlignment" : "center",
                   "verticalDistribution" : "flex-start",
@@ -4004,5 +3959,5 @@
     ],
     "visible" : false
   },
-  "version" : 69
+  "version" : 70
 }
