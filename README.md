@@ -99,7 +99,20 @@ Working with an API that requires authentication? This component allows you to a
 | HTTP Headers  | (Custom)                                              |
 | ------------- | ----------------------------------------------------- |
 | Authorization | The HTTP Authorization header included in the request |
+| HTTP Headers  | A list of HTTP headers in the format `Key: Value`     |
 
 ## Bugs/Questions/Improvements?
 
 Feel free to leave questions/bugs on the [GitHub repository](https://github.com/iKettles/framer-data-component.framerfx) for this package. You can also contact me directly on Twitter [@iKettles](https://twitter.com/iKettles)
+
+## Latest Release
+
+### **1.21.0 - 06/10/2020**
+
+- Add support for custom HTTP headers
+
+## Previous Releases
+
+### **1.20.0 - 06/10/2020**
+
+- Initial release
