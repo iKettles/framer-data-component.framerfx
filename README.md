@@ -107,12 +107,15 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
+### **1.24.0 - 19/10/2020**
+
+- Ensure nested objects in a connected data source does not get converted to a string
+
+## Previous Releases
+
 ### **1.23.0 - 19/10/2020**
 
 - Fix an error that could be thrown when using a nested data struecture
-
-
-## Previous Releases
 
 ### **1.22.0 - 15/10/2020**
 
