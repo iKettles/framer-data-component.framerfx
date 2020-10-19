@@ -160,15 +160,14 @@ export function useSortedSearchResults(
             return true
         })
 
-        // Copy array to stop Fuse from mutating the original data array
-        const fuse = new Fuse([...data], {
-            includeScore: true,
-            keys: keysToSearch,
-        })
-
         const dataToSort =
             !!searchTerm && isSearchEnabled
-                ? fuse.search(searchTerm).map((result) => result.item)
+                ? new Fuse([...data], {
+                      includeScore: true,
+                      keys: keysToSearch,
+                  })
+                      .search(searchTerm)
+                      .map((result) => result.item)
                 : data
         return dataToSort.sort((a, b) => {
             if (!shouldSort) {
