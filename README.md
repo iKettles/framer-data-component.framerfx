@@ -107,6 +107,13 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
+### **1.23.0 - 19/10/2020**
+
+- Fix an error that could be thrown when using a nested data struecture
+
+
+## Previous Releases
+
 ### **1.22.0 - 15/10/2020**
 
 - Add alphabetical sorting
@@ -114,8 +121,6 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 ### **1.21.0 - 06/10/2020**
 
 - Add support for custom HTTP headers
-
-## Previous Releases
 
 ### **1.20.0 - 06/10/2020**
 
