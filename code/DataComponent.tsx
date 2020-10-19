@@ -122,8 +122,12 @@ export function DataComponent(props: DataComponentProps) {
                     ...connectedListItemProps.style,
                 },
                 ...Object.keys(result).reduce((acc, key) => {
-                    // Ensure value is a string
-                    acc[key] = String(result[key])
+                    // Ensure number becomes a string — Framer will error if it receives a number as a design component override
+                    if (typeof result[key] === "number") {
+                        acc[key] = String(result[key])
+                    } else {
+                        acc[key] = result[key]
+                    }
                     return acc
                 }, {}),
                 id: `${result.id}—${index}`,
