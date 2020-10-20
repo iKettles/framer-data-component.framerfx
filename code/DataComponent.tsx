@@ -130,6 +130,7 @@ export function DataComponent(props: DataComponentProps) {
                     }
                     return acc
                 }, {}),
+                index,
                 id: `${result.id}—${index}`,
                 onTap() {
                     onItemTap(result)
