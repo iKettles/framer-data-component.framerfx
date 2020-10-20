@@ -106,12 +106,15 @@ Working with an API that requires authentication? This component allows you to a
 Feel free to leave questions/bugs on the [GitHub repository](https://github.com/iKettles/framer-data-component.framerfx) for this package. You can also contact me directly on Twitter [@iKettles](https://twitter.com/iKettles)
 
 ## Latest Release
+### **1.25.0 - 20/10/2020**
+
+- The index of the result in the list is now automatically passed to the rendered component
+
+## Previous Releases
 
 ### **1.24.0 - 19/10/2020**
 
 - Ensure nested objects in a connected data source does not get converted to a string
-
-## Previous Releases
 
 ### **1.23.0 - 19/10/2020**
 
