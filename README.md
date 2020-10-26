@@ -14,6 +14,14 @@ First, you need to decide your data source.
 | File     | Upload a JSON/CSV/TSV file. We'll convert it into machine-speak.               |
 | Airtable | Connect to Airtable. Make sure an api_key query parameter appears in your URL. |
 
+### Need more control?
+
+If you're prototyping for a very specific use case, you may find the out of the box features with this component insufficient. Whilst we do our best to solve a wide array of use cases, you may find it easier to write your own adapter. This will give you more control over how data is formatted/searched/sorted whilst still relying on the functionality that comes with the component itself.
+
+#### Creating a custom adapter
+
+Dealing with a deeply nested data structure and wondering how to map those values to the fields in your components? Maybe you want more control over how sorting/searching is handled? You probably want a custom adapter that gives you full control over this. Don't worry, it's pretty easy to build! [Click here](https://framer.com/projects/new?duplicate=fXHamZqD4CB4e80R0Ldu) to open the example project in Framer Web and check out Example 6.
+
 ### Connecting a Design Component
 
 Once you've decided on your data source, you're ready to start populating your prototype with real data. You'll first need to grab the frame you want to use as your list item—this will be the component that's repeated for each item in the data you provide to your prototype. This frame needs to be a [Design Component](https://www.framer.com/support/using-framer/design-components/) so you can assign a name to the properties of your component. This allows the text layers and images within your component to be populated and overridden by the Data Component.
