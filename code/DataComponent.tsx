@@ -9,18 +9,7 @@ import {
     isVerticalGapControlledByContainer,
     renderContainer,
 } from "./utils/layout"
-import {
-    FlexWrap,
-    FlexDirection,
-    FlexDistribution,
-    FlexAlignment,
-    SortDirection,
-    ComponentMode,
-    DataSource,
-    AirtableImageSize,
-    DataSourceFileType,
-    SortKey,
-} from "./utils/types"
+import { DataComponentProps } from "./utils/types"
 import {
     gapControl,
     uploadFileControl,
@@ -247,63 +236,6 @@ DataComponent.defaultProps = {
     columns: 1,
     onItemTap: (item) => {},
     onItemLongPress: (item) => {},
-}
-
-export interface DataComponentProps {
-    // Component layout
-    width: number
-    height: number
-
-    // Data props
-    dataSource: DataSource
-    apiUrl: string | null
-    apiResponseDataKey: string | null
-    airtableUrl: string | null
-    airtableImageSize: AirtableImageSize
-    dataSourceFileType: DataSourceFileType
-    jsonFileUrl: string | null
-    csvFileUrl: string | null
-    tsvFileUrl: string | null
-
-    // List items layout
-    direction: FlexDirection
-    verticalAlignment: FlexAlignment
-    verticalDistribution: FlexDistribution
-    columns: number
-    gap: number
-    wrap: FlexWrap
-    horizontalGap: number
-    verticalGap: number
-    listItem?: React.ReactNode
-    loadingState?: React.ReactNode
-    loadingDelay: number
-    emptyState?: React.ReactNode
-
-    // Scrolling
-    isScrollEnabled: boolean
-    isDragScrollEnabled: boolean
-    isWheelScrollEnabled: boolean
-
-    // Search functionality
-    isSearchEnabled: boolean
-    searchTerm: string
-
-    // Sorting
-    shouldSort: boolean
-    sortKey: SortKey
-    sortDirection: SortDirection
-
-    // Component modes
-    mode: ComponentMode
-
-    // HTTP
-    overrideHttpHeaders: boolean
-    httpAuthorizationHeader: string
-    httpHeaders: string[]
-
-    // Event handlers
-    onItemTap: (item) => void
-    onItemLongPress: (item) => void
 }
 
 addPropertyControls(DataComponent, {
