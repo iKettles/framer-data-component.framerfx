@@ -210,6 +210,147 @@
                     "children" : [
                       {
                         "__class" : "CodeComponentNode",
+                        "$control__airtableImageSize" : {
+                          "type" : "segmentedenum",
+                          "value" : "large"
+                        },
+                        "$control__airtableUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs"
+                        },
+                        "$control__apiResponseDataKey" : {
+                          "type" : "string",
+                          "value" : "data"
+                        },
+                        "$control__apiUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/reqres.in\/api\/users?page=1"
+                        },
+                        "$control__columns" : {
+                          "type" : "number",
+                          "value" : 1
+                        },
+                        "$control__csvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__dataSource" : {
+                          "type" : "enum",
+                          "value" : "api"
+                        },
+                        "$control__dataSourceFileType" : {
+                          "type" : "enum",
+                          "value" : "json"
+                        },
+                        "$control__direction" : {
+                          "type" : "segmentedenum",
+                          "value" : "vertical"
+                        },
+                        "$control__emptyState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__gap" : {
+                          "type" : "number",
+                          "value" : 30
+                        },
+                        "$control__horizontalGap" : {
+                          "type" : "number",
+                          "value" : 6
+                        },
+                        "$control__httpAuthorizationHeader" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__httpHeaders" : {
+                          "type" : "array",
+                          "value" : [
+                            {
+                              "id" : "sAbojsdJO",
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ]
+                        },
+                        "$control__isDragScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isSearchEnabled" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__isWheelScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__jsonFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__listItem" : {
+                          "type" : "componentinstance",
+                          "value" : [
+
+                          ]
+                        },
+                        "$control__loadingDelay" : {
+                          "type" : "number",
+                          "value" : 0
+                        },
+                        "$control__loadingState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__mode" : {
+                          "type" : "enum",
+                          "value" : "default"
+                        },
+                        "$control__onItemLongPress" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__onItemTap" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__overrideHttpHeaders" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__searchTerm" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__shouldSort" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__sortDirection" : {
+                          "type" : "segmentedenum",
+                          "value" : "ascending"
+                        },
+                        "$control__sortKey" : {
+                          "type" : "string",
+                          "value" : "price"
+                        },
+                        "$control__tsvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__verticalAlignment" : {
+                          "type" : "segmentedenum",
+                          "value" : "flex-start"
+                        },
+                        "$control__verticalDistribution" : {
+                          "type" : "enum",
+                          "value" : "space-between"
+                        },
+                        "$control__verticalGap" : {
+                          "type" : "number",
+                          "value" : 8
+                        },
+                        "$control__wrap" : {
+                          "type" : "segmentedenum",
+                          "value" : "wrap"
+                        },
                         "aspectRatio" : null,
                         "bottom" : 0,
                         "centerAnchorX" : 0.5,
@@ -217,44 +358,6 @@
                         "clip" : true,
                         "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
                         "codeComponentPackageVersion" : "1.76.0",
-                        "codeComponentProps" : {
-                          "airtableImageSize" : "large",
-                          "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs",
-                          "apiResponseDataKey" : "data",
-                          "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-                          "columns" : 1,
-                          "dataSource" : "api",
-                          "dataSourceFileType" : "json",
-                          "direction" : "vertical",
-                          "gap" : 30,
-                          "horizontalGap" : 6,
-                          "httpAuthorizationHeader" : "",
-                          "httpHeaders" : [
-                            {
-                              "id" : "migrated_array_value_Tnq4U1lri_httpHeaders_0",
-                              "type" : "string",
-                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
-                            }
-                          ],
-                          "isDragScrollEnabled" : true,
-                          "isScrollEnabled" : true,
-                          "isSearchEnabled" : false,
-                          "isWheelScrollEnabled" : true,
-                          "listItem" : [
-
-                          ],
-                          "loadingDelay" : 0,
-                          "mode" : "default",
-                          "overrideHttpHeaders" : false,
-                          "searchTerm" : "",
-                          "shouldSort" : false,
-                          "sortDirection" : "ascending",
-                          "sortKey" : "price",
-                          "verticalAlignment" : "flex-start",
-                          "verticalDistribution" : "space-between",
-                          "verticalGap" : 8,
-                          "wrap" : "wrap"
-                        },
                         "codeOverrideEnabled" : false,
                         "constraintsLocked" : false,
                         "duplicatedFrom" : [
@@ -534,6 +637,147 @@
                     "children" : [
                       {
                         "__class" : "CodeComponentNode",
+                        "$control__airtableImageSize" : {
+                          "type" : "segmentedenum",
+                          "value" : "large"
+                        },
+                        "$control__airtableUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs"
+                        },
+                        "$control__apiResponseDataKey" : {
+                          "type" : "string",
+                          "value" : "data"
+                        },
+                        "$control__apiUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/reqres.in\/api\/users?page=1"
+                        },
+                        "$control__columns" : {
+                          "type" : "number",
+                          "value" : 1
+                        },
+                        "$control__csvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__dataSource" : {
+                          "type" : "enum",
+                          "value" : "api"
+                        },
+                        "$control__dataSourceFileType" : {
+                          "type" : "enum",
+                          "value" : "json"
+                        },
+                        "$control__direction" : {
+                          "type" : "segmentedenum",
+                          "value" : "vertical"
+                        },
+                        "$control__emptyState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__gap" : {
+                          "type" : "number",
+                          "value" : 30
+                        },
+                        "$control__horizontalGap" : {
+                          "type" : "number",
+                          "value" : 6
+                        },
+                        "$control__httpAuthorizationHeader" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__httpHeaders" : {
+                          "type" : "array",
+                          "value" : [
+                            {
+                              "id" : "a_MJ4Ihi6",
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ]
+                        },
+                        "$control__isDragScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isSearchEnabled" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__isWheelScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__jsonFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__listItem" : {
+                          "type" : "componentinstance",
+                          "value" : [
+
+                          ]
+                        },
+                        "$control__loadingDelay" : {
+                          "type" : "number",
+                          "value" : 0
+                        },
+                        "$control__loadingState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__mode" : {
+                          "type" : "enum",
+                          "value" : "default"
+                        },
+                        "$control__onItemLongPress" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__onItemTap" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__overrideHttpHeaders" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__searchTerm" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__shouldSort" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__sortDirection" : {
+                          "type" : "segmentedenum",
+                          "value" : "ascending"
+                        },
+                        "$control__sortKey" : {
+                          "type" : "string",
+                          "value" : "price"
+                        },
+                        "$control__tsvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__verticalAlignment" : {
+                          "type" : "segmentedenum",
+                          "value" : "flex-start"
+                        },
+                        "$control__verticalDistribution" : {
+                          "type" : "enum",
+                          "value" : "space-around"
+                        },
+                        "$control__verticalGap" : {
+                          "type" : "number",
+                          "value" : 8
+                        },
+                        "$control__wrap" : {
+                          "type" : "segmentedenum",
+                          "value" : "wrap"
+                        },
                         "aspectRatio" : null,
                         "bottom" : 0,
                         "centerAnchorX" : 0.5,
@@ -541,44 +785,6 @@
                         "clip" : true,
                         "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
                         "codeComponentPackageVersion" : "1.76.0",
-                        "codeComponentProps" : {
-                          "airtableImageSize" : "large",
-                          "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs",
-                          "apiResponseDataKey" : "data",
-                          "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-                          "columns" : 1,
-                          "dataSource" : "api",
-                          "dataSourceFileType" : "json",
-                          "direction" : "vertical",
-                          "gap" : 30,
-                          "horizontalGap" : 6,
-                          "httpAuthorizationHeader" : "",
-                          "httpHeaders" : [
-                            {
-                              "id" : "migrated_array_value_eGI_0LfgS_httpHeaders_0",
-                              "type" : "string",
-                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
-                            }
-                          ],
-                          "isDragScrollEnabled" : true,
-                          "isScrollEnabled" : true,
-                          "isSearchEnabled" : false,
-                          "isWheelScrollEnabled" : true,
-                          "listItem" : [
-
-                          ],
-                          "loadingDelay" : 0,
-                          "mode" : "default",
-                          "overrideHttpHeaders" : false,
-                          "searchTerm" : "",
-                          "shouldSort" : false,
-                          "sortDirection" : "ascending",
-                          "sortKey" : "price",
-                          "verticalAlignment" : "flex-start",
-                          "verticalDistribution" : "space-around",
-                          "verticalGap" : 8,
-                          "wrap" : "wrap"
-                        },
                         "codeOverrideEnabled" : false,
                         "constraintsLocked" : false,
                         "duplicatedFrom" : [
@@ -864,6 +1070,147 @@
                     "children" : [
                       {
                         "__class" : "CodeComponentNode",
+                        "$control__airtableImageSize" : {
+                          "type" : "segmentedenum",
+                          "value" : "large"
+                        },
+                        "$control__airtableUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs"
+                        },
+                        "$control__apiResponseDataKey" : {
+                          "type" : "string",
+                          "value" : "data"
+                        },
+                        "$control__apiUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/reqres.in\/api\/users?page=1"
+                        },
+                        "$control__columns" : {
+                          "type" : "number",
+                          "value" : 1
+                        },
+                        "$control__csvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__dataSource" : {
+                          "type" : "enum",
+                          "value" : "api"
+                        },
+                        "$control__dataSourceFileType" : {
+                          "type" : "enum",
+                          "value" : "json"
+                        },
+                        "$control__direction" : {
+                          "type" : "segmentedenum",
+                          "value" : "vertical"
+                        },
+                        "$control__emptyState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__gap" : {
+                          "type" : "number",
+                          "value" : 30
+                        },
+                        "$control__horizontalGap" : {
+                          "type" : "number",
+                          "value" : 6
+                        },
+                        "$control__httpAuthorizationHeader" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__httpHeaders" : {
+                          "type" : "array",
+                          "value" : [
+                            {
+                              "id" : "bHh4z_icI",
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ]
+                        },
+                        "$control__isDragScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isSearchEnabled" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__isWheelScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__jsonFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__listItem" : {
+                          "type" : "componentinstance",
+                          "value" : [
+
+                          ]
+                        },
+                        "$control__loadingDelay" : {
+                          "type" : "number",
+                          "value" : 0
+                        },
+                        "$control__loadingState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__mode" : {
+                          "type" : "enum",
+                          "value" : "default"
+                        },
+                        "$control__onItemLongPress" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__onItemTap" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__overrideHttpHeaders" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__searchTerm" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__shouldSort" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__sortDirection" : {
+                          "type" : "segmentedenum",
+                          "value" : "ascending"
+                        },
+                        "$control__sortKey" : {
+                          "type" : "string",
+                          "value" : "price"
+                        },
+                        "$control__tsvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__verticalAlignment" : {
+                          "type" : "segmentedenum",
+                          "value" : "flex-start"
+                        },
+                        "$control__verticalDistribution" : {
+                          "type" : "enum",
+                          "value" : "space-evenly"
+                        },
+                        "$control__verticalGap" : {
+                          "type" : "number",
+                          "value" : 8
+                        },
+                        "$control__wrap" : {
+                          "type" : "segmentedenum",
+                          "value" : "wrap"
+                        },
                         "aspectRatio" : null,
                         "bottom" : 0,
                         "centerAnchorX" : 0.5,
@@ -871,44 +1218,6 @@
                         "clip" : true,
                         "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
                         "codeComponentPackageVersion" : "1.76.0",
-                        "codeComponentProps" : {
-                          "airtableImageSize" : "large",
-                          "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs",
-                          "apiResponseDataKey" : "data",
-                          "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-                          "columns" : 1,
-                          "dataSource" : "api",
-                          "dataSourceFileType" : "json",
-                          "direction" : "vertical",
-                          "gap" : 30,
-                          "horizontalGap" : 6,
-                          "httpAuthorizationHeader" : "",
-                          "httpHeaders" : [
-                            {
-                              "id" : "migrated_array_value_qroKYtg0C_httpHeaders_0",
-                              "type" : "string",
-                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
-                            }
-                          ],
-                          "isDragScrollEnabled" : true,
-                          "isScrollEnabled" : true,
-                          "isSearchEnabled" : false,
-                          "isWheelScrollEnabled" : true,
-                          "listItem" : [
-
-                          ],
-                          "loadingDelay" : 0,
-                          "mode" : "default",
-                          "overrideHttpHeaders" : false,
-                          "searchTerm" : "",
-                          "shouldSort" : false,
-                          "sortDirection" : "ascending",
-                          "sortKey" : "price",
-                          "verticalAlignment" : "flex-start",
-                          "verticalDistribution" : "space-evenly",
-                          "verticalGap" : 8,
-                          "wrap" : "wrap"
-                        },
                         "codeOverrideEnabled" : false,
                         "constraintsLocked" : false,
                         "duplicatedFrom" : [
@@ -1197,6 +1506,147 @@
                     "children" : [
                       {
                         "__class" : "CodeComponentNode",
+                        "$control__airtableImageSize" : {
+                          "type" : "segmentedenum",
+                          "value" : "large"
+                        },
+                        "$control__airtableUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs"
+                        },
+                        "$control__apiResponseDataKey" : {
+                          "type" : "string",
+                          "value" : "data"
+                        },
+                        "$control__apiUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/reqres.in\/api\/users?page=1"
+                        },
+                        "$control__columns" : {
+                          "type" : "number",
+                          "value" : 1
+                        },
+                        "$control__csvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__dataSource" : {
+                          "type" : "enum",
+                          "value" : "api"
+                        },
+                        "$control__dataSourceFileType" : {
+                          "type" : "enum",
+                          "value" : "json"
+                        },
+                        "$control__direction" : {
+                          "type" : "segmentedenum",
+                          "value" : "vertical"
+                        },
+                        "$control__emptyState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__gap" : {
+                          "type" : "number",
+                          "value" : 30
+                        },
+                        "$control__horizontalGap" : {
+                          "type" : "number",
+                          "value" : 6
+                        },
+                        "$control__httpAuthorizationHeader" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__httpHeaders" : {
+                          "type" : "array",
+                          "value" : [
+                            {
+                              "id" : "N26Cg5bdC",
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ]
+                        },
+                        "$control__isDragScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isSearchEnabled" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__isWheelScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__jsonFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__listItem" : {
+                          "type" : "componentinstance",
+                          "value" : [
+
+                          ]
+                        },
+                        "$control__loadingDelay" : {
+                          "type" : "number",
+                          "value" : 0
+                        },
+                        "$control__loadingState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__mode" : {
+                          "type" : "enum",
+                          "value" : "default"
+                        },
+                        "$control__onItemLongPress" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__onItemTap" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__overrideHttpHeaders" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__searchTerm" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__shouldSort" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__sortDirection" : {
+                          "type" : "segmentedenum",
+                          "value" : "ascending"
+                        },
+                        "$control__sortKey" : {
+                          "type" : "string",
+                          "value" : "price"
+                        },
+                        "$control__tsvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__verticalAlignment" : {
+                          "type" : "segmentedenum",
+                          "value" : "flex-start"
+                        },
+                        "$control__verticalDistribution" : {
+                          "type" : "enum",
+                          "value" : "flex-start"
+                        },
+                        "$control__verticalGap" : {
+                          "type" : "number",
+                          "value" : 8
+                        },
+                        "$control__wrap" : {
+                          "type" : "segmentedenum",
+                          "value" : "wrap"
+                        },
                         "aspectRatio" : null,
                         "bottom" : 0,
                         "centerAnchorX" : 0.5,
@@ -1204,44 +1654,6 @@
                         "clip" : true,
                         "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
                         "codeComponentPackageVersion" : "1.76.0",
-                        "codeComponentProps" : {
-                          "airtableImageSize" : "large",
-                          "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs",
-                          "apiResponseDataKey" : "data",
-                          "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-                          "columns" : 1,
-                          "dataSource" : "api",
-                          "dataSourceFileType" : "json",
-                          "direction" : "vertical",
-                          "gap" : 30,
-                          "horizontalGap" : 6,
-                          "httpAuthorizationHeader" : "",
-                          "httpHeaders" : [
-                            {
-                              "id" : "migrated_array_value_XUYPzSZEi_httpHeaders_0",
-                              "type" : "string",
-                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
-                            }
-                          ],
-                          "isDragScrollEnabled" : true,
-                          "isScrollEnabled" : true,
-                          "isSearchEnabled" : false,
-                          "isWheelScrollEnabled" : true,
-                          "listItem" : [
-
-                          ],
-                          "loadingDelay" : 0,
-                          "mode" : "default",
-                          "overrideHttpHeaders" : false,
-                          "searchTerm" : "",
-                          "shouldSort" : false,
-                          "sortDirection" : "ascending",
-                          "sortKey" : "price",
-                          "verticalAlignment" : "flex-start",
-                          "verticalDistribution" : "flex-start",
-                          "verticalGap" : 8,
-                          "wrap" : "wrap"
-                        },
                         "codeOverrideEnabled" : false,
                         "constraintsLocked" : false,
                         "duplicatedFrom" : [
@@ -1531,6 +1943,147 @@
                     "children" : [
                       {
                         "__class" : "CodeComponentNode",
+                        "$control__airtableImageSize" : {
+                          "type" : "segmentedenum",
+                          "value" : "large"
+                        },
+                        "$control__airtableUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs"
+                        },
+                        "$control__apiResponseDataKey" : {
+                          "type" : "string",
+                          "value" : "data"
+                        },
+                        "$control__apiUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/reqres.in\/api\/users?page=1"
+                        },
+                        "$control__columns" : {
+                          "type" : "number",
+                          "value" : 1
+                        },
+                        "$control__csvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__dataSource" : {
+                          "type" : "enum",
+                          "value" : "api"
+                        },
+                        "$control__dataSourceFileType" : {
+                          "type" : "enum",
+                          "value" : "json"
+                        },
+                        "$control__direction" : {
+                          "type" : "segmentedenum",
+                          "value" : "vertical"
+                        },
+                        "$control__emptyState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__gap" : {
+                          "type" : "number",
+                          "value" : 30
+                        },
+                        "$control__horizontalGap" : {
+                          "type" : "number",
+                          "value" : 6
+                        },
+                        "$control__httpAuthorizationHeader" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__httpHeaders" : {
+                          "type" : "array",
+                          "value" : [
+                            {
+                              "id" : "ZvQuIzD5o",
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ]
+                        },
+                        "$control__isDragScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isSearchEnabled" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__isWheelScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__jsonFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__listItem" : {
+                          "type" : "componentinstance",
+                          "value" : [
+
+                          ]
+                        },
+                        "$control__loadingDelay" : {
+                          "type" : "number",
+                          "value" : 0
+                        },
+                        "$control__loadingState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__mode" : {
+                          "type" : "enum",
+                          "value" : "default"
+                        },
+                        "$control__onItemLongPress" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__onItemTap" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__overrideHttpHeaders" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__searchTerm" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__shouldSort" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__sortDirection" : {
+                          "type" : "segmentedenum",
+                          "value" : "ascending"
+                        },
+                        "$control__sortKey" : {
+                          "type" : "string",
+                          "value" : "price"
+                        },
+                        "$control__tsvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__verticalAlignment" : {
+                          "type" : "segmentedenum",
+                          "value" : "flex-start"
+                        },
+                        "$control__verticalDistribution" : {
+                          "type" : "enum",
+                          "value" : "center"
+                        },
+                        "$control__verticalGap" : {
+                          "type" : "number",
+                          "value" : 8
+                        },
+                        "$control__wrap" : {
+                          "type" : "segmentedenum",
+                          "value" : "wrap"
+                        },
                         "aspectRatio" : null,
                         "bottom" : 0,
                         "centerAnchorX" : 0.5,
@@ -1538,44 +2091,6 @@
                         "clip" : true,
                         "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
                         "codeComponentPackageVersion" : "1.76.0",
-                        "codeComponentProps" : {
-                          "airtableImageSize" : "large",
-                          "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs",
-                          "apiResponseDataKey" : "data",
-                          "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-                          "columns" : 1,
-                          "dataSource" : "api",
-                          "dataSourceFileType" : "json",
-                          "direction" : "vertical",
-                          "gap" : 30,
-                          "horizontalGap" : 6,
-                          "httpAuthorizationHeader" : "",
-                          "httpHeaders" : [
-                            {
-                              "id" : "migrated_array_value_TyHxngOXB_httpHeaders_0",
-                              "type" : "string",
-                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
-                            }
-                          ],
-                          "isDragScrollEnabled" : true,
-                          "isScrollEnabled" : true,
-                          "isSearchEnabled" : false,
-                          "isWheelScrollEnabled" : true,
-                          "listItem" : [
-
-                          ],
-                          "loadingDelay" : 0,
-                          "mode" : "default",
-                          "overrideHttpHeaders" : false,
-                          "searchTerm" : "",
-                          "shouldSort" : false,
-                          "sortDirection" : "ascending",
-                          "sortKey" : "price",
-                          "verticalAlignment" : "flex-start",
-                          "verticalDistribution" : "center",
-                          "verticalGap" : 8,
-                          "wrap" : "wrap"
-                        },
                         "codeOverrideEnabled" : false,
                         "constraintsLocked" : false,
                         "duplicatedFrom" : [
@@ -1868,6 +2383,147 @@
                     "children" : [
                       {
                         "__class" : "CodeComponentNode",
+                        "$control__airtableImageSize" : {
+                          "type" : "segmentedenum",
+                          "value" : "large"
+                        },
+                        "$control__airtableUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs"
+                        },
+                        "$control__apiResponseDataKey" : {
+                          "type" : "string",
+                          "value" : "data"
+                        },
+                        "$control__apiUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/reqres.in\/api\/users?page=1"
+                        },
+                        "$control__columns" : {
+                          "type" : "number",
+                          "value" : 1
+                        },
+                        "$control__csvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__dataSource" : {
+                          "type" : "enum",
+                          "value" : "api"
+                        },
+                        "$control__dataSourceFileType" : {
+                          "type" : "enum",
+                          "value" : "json"
+                        },
+                        "$control__direction" : {
+                          "type" : "segmentedenum",
+                          "value" : "vertical"
+                        },
+                        "$control__emptyState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__gap" : {
+                          "type" : "number",
+                          "value" : 30
+                        },
+                        "$control__horizontalGap" : {
+                          "type" : "number",
+                          "value" : 6
+                        },
+                        "$control__httpAuthorizationHeader" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__httpHeaders" : {
+                          "type" : "array",
+                          "value" : [
+                            {
+                              "id" : "EPJq74BtL",
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ]
+                        },
+                        "$control__isDragScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isSearchEnabled" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__isWheelScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__jsonFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__listItem" : {
+                          "type" : "componentinstance",
+                          "value" : [
+
+                          ]
+                        },
+                        "$control__loadingDelay" : {
+                          "type" : "number",
+                          "value" : 0
+                        },
+                        "$control__loadingState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__mode" : {
+                          "type" : "enum",
+                          "value" : "default"
+                        },
+                        "$control__onItemLongPress" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__onItemTap" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__overrideHttpHeaders" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__searchTerm" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__shouldSort" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__sortDirection" : {
+                          "type" : "segmentedenum",
+                          "value" : "ascending"
+                        },
+                        "$control__sortKey" : {
+                          "type" : "string",
+                          "value" : "price"
+                        },
+                        "$control__tsvFileUrl" : {
+                          "type" : "file"
+                        },
+                        "$control__verticalAlignment" : {
+                          "type" : "segmentedenum",
+                          "value" : "flex-start"
+                        },
+                        "$control__verticalDistribution" : {
+                          "type" : "enum",
+                          "value" : "flex-end"
+                        },
+                        "$control__verticalGap" : {
+                          "type" : "number",
+                          "value" : 8
+                        },
+                        "$control__wrap" : {
+                          "type" : "segmentedenum",
+                          "value" : "wrap"
+                        },
                         "aspectRatio" : null,
                         "bottom" : 0,
                         "centerAnchorX" : 0.5,
@@ -1875,44 +2531,6 @@
                         "clip" : true,
                         "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
                         "codeComponentPackageVersion" : "1.76.0",
-                        "codeComponentProps" : {
-                          "airtableImageSize" : "large",
-                          "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs",
-                          "apiResponseDataKey" : "data",
-                          "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-                          "columns" : 1,
-                          "dataSource" : "api",
-                          "dataSourceFileType" : "json",
-                          "direction" : "vertical",
-                          "gap" : 30,
-                          "horizontalGap" : 6,
-                          "httpAuthorizationHeader" : "",
-                          "httpHeaders" : [
-                            {
-                              "id" : "migrated_array_value_uincNNRvJ_httpHeaders_0",
-                              "type" : "string",
-                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
-                            }
-                          ],
-                          "isDragScrollEnabled" : true,
-                          "isScrollEnabled" : true,
-                          "isSearchEnabled" : false,
-                          "isWheelScrollEnabled" : true,
-                          "listItem" : [
-
-                          ],
-                          "loadingDelay" : 0,
-                          "mode" : "default",
-                          "overrideHttpHeaders" : false,
-                          "searchTerm" : "",
-                          "shouldSort" : false,
-                          "sortDirection" : "ascending",
-                          "sortKey" : "price",
-                          "verticalAlignment" : "flex-start",
-                          "verticalDistribution" : "flex-end",
-                          "verticalGap" : 8,
-                          "wrap" : "wrap"
-                        },
                         "codeOverrideEnabled" : false,
                         "constraintsLocked" : false,
                         "duplicatedFrom" : [
@@ -2356,6 +2974,150 @@
                     "children" : [
                       {
                         "__class" : "CodeComponentNode",
+                        "$control__airtableImageSize" : {
+                          "type" : "segmentedenum",
+                          "value" : "large"
+                        },
+                        "$control__airtableUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs"
+                        },
+                        "$control__apiResponseDataKey" : {
+                          "type" : "string",
+                          "value" : "data"
+                        },
+                        "$control__apiUrl" : {
+                          "type" : "string",
+                          "value" : "https:\/\/reqres.in\/api\/users?page=1"
+                        },
+                        "$control__columns" : {
+                          "type" : "number",
+                          "value" : 2
+                        },
+                        "$control__csvFileUrl" : {
+                          "type" : "file",
+                          "value" : "data:framer\/asset-reference,Si4jqtibRfs68Hec7JuMm0eNRE.csv?originalFilename=test-data-users.csv"
+                        },
+                        "$control__dataSource" : {
+                          "type" : "enum",
+                          "value" : "api"
+                        },
+                        "$control__dataSourceFileType" : {
+                          "type" : "enum",
+                          "value" : "json"
+                        },
+                        "$control__direction" : {
+                          "type" : "segmentedenum",
+                          "value" : "vertical"
+                        },
+                        "$control__emptyState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__gap" : {
+                          "type" : "number",
+                          "value" : 22
+                        },
+                        "$control__horizontalGap" : {
+                          "type" : "number",
+                          "value" : 8
+                        },
+                        "$control__httpAuthorizationHeader" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__httpHeaders" : {
+                          "type" : "array",
+                          "value" : [
+                            {
+                              "id" : "HafXQ8oOo",
+                              "type" : "string",
+                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                            }
+                          ]
+                        },
+                        "$control__isDragScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__isSearchEnabled" : {
+                          "type" : "boolean",
+                          "value" : false
+                        },
+                        "$control__isWheelScrollEnabled" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__jsonFileUrl" : {
+                          "type" : "file",
+                          "value" : "data:framer\/asset-reference,SnyrPIJrVcV8aiJal0JPgbsSibE.json?originalFilename=test-data-users.json"
+                        },
+                        "$control__listItem" : {
+                          "type" : "componentinstance",
+                          "value" : [
+
+                          ]
+                        },
+                        "$control__loadingDelay" : {
+                          "type" : "number",
+                          "value" : 1.5
+                        },
+                        "$control__loadingState" : {
+                          "type" : "componentinstance"
+                        },
+                        "$control__mode" : {
+                          "type" : "enum",
+                          "value" : "default"
+                        },
+                        "$control__onItemLongPress" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__onItemTap" : {
+                          "type" : "eventhandler"
+                        },
+                        "$control__overrideHttpHeaders" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__searchTerm" : {
+                          "type" : "string",
+                          "value" : ""
+                        },
+                        "$control__shouldSort" : {
+                          "type" : "boolean",
+                          "value" : true
+                        },
+                        "$control__sortDirection" : {
+                          "type" : "segmentedenum",
+                          "value" : "ascending"
+                        },
+                        "$control__sortKey" : {
+                          "type" : "string",
+                          "value" : "price"
+                        },
+                        "$control__tsvFileUrl" : {
+                          "type" : "file",
+                          "value" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv"
+                        },
+                        "$control__verticalAlignment" : {
+                          "type" : "segmentedenum",
+                          "value" : "flex-start"
+                        },
+                        "$control__verticalDistribution" : {
+                          "type" : "enum",
+                          "value" : "flex-start"
+                        },
+                        "$control__verticalGap" : {
+                          "type" : "number",
+                          "value" : 8
+                        },
+                        "$control__wrap" : {
+                          "type" : "segmentedenum",
+                          "value" : "wrap"
+                        },
                         "aspectRatio" : null,
                         "bottom" : 116,
                         "centerAnchorX" : 0.5,
@@ -2363,47 +3125,6 @@
                         "clip" : true,
                         "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
                         "codeComponentPackageVersion" : "1.76.0",
-                        "codeComponentProps" : {
-                          "airtableImageSize" : "large",
-                          "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs",
-                          "apiResponseDataKey" : "data",
-                          "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-                          "columns" : 2,
-                          "csvFileUrl" : "data:framer\/asset-reference,Si4jqtibRfs68Hec7JuMm0eNRE.csv?originalFilename=test-data-users.csv",
-                          "dataSource" : "api",
-                          "dataSourceFileType" : "json",
-                          "direction" : "vertical",
-                          "gap" : 22,
-                          "horizontalGap" : 8,
-                          "httpAuthorizationHeader" : "",
-                          "httpHeaders" : [
-                            {
-                              "id" : "migrated_array_value_DcrPVPMd1_httpHeaders_0",
-                              "type" : "string",
-                              "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
-                            }
-                          ],
-                          "isDragScrollEnabled" : true,
-                          "isScrollEnabled" : true,
-                          "isSearchEnabled" : false,
-                          "isWheelScrollEnabled" : true,
-                          "jsonFileUrl" : "data:framer\/asset-reference,SnyrPIJrVcV8aiJal0JPgbsSibE.json?originalFilename=test-data-users.json",
-                          "listItem" : [
-
-                          ],
-                          "loadingDelay" : 1.5,
-                          "mode" : "default",
-                          "overrideHttpHeaders" : true,
-                          "searchTerm" : "",
-                          "shouldSort" : true,
-                          "sortDirection" : "ascending",
-                          "sortKey" : "price",
-                          "tsvFileUrl" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv",
-                          "verticalAlignment" : "flex-start",
-                          "verticalDistribution" : "flex-start",
-                          "verticalGap" : 8,
-                          "wrap" : "wrap"
-                        },
                         "codeOverrideEnabled" : false,
                         "constraintsLocked" : false,
                         "duplicatedFrom" : [
@@ -2637,58 +3358,124 @@
           },
           {
             "__class" : "CodeComponentNode",
-            "aspectRatio" : null,
-            "bottom" : null,
-            "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.50043898156277433,
-            "clip" : true,
-            "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
-            "codeComponentPackageVersion" : "1.76.0",
-            "codeComponentProps" : {
-              "airtableImageSize" : "large",
-              "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs",
-              "apiResponseDataKey" : "data",
-              "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-              "columns" : 2,
-              "csvFileUrl" : "",
-              "dataSource" : "file",
-              "dataSourceFileType" : "json",
-              "direction" : "vertical",
-              "emptyState" : [
+            "$control__airtableImageSize" : {
+              "type" : "segmentedenum",
+              "value" : "large"
+            },
+            "$control__airtableUrl" : {
+              "type" : "string",
+              "value" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs"
+            },
+            "$control__apiResponseDataKey" : {
+              "type" : "string",
+              "value" : "data"
+            },
+            "$control__apiUrl" : {
+              "type" : "string",
+              "value" : "https:\/\/reqres.in\/api\/users?page=1"
+            },
+            "$control__columns" : {
+              "type" : "number",
+              "value" : 2
+            },
+            "$control__csvFileUrl" : {
+              "type" : "file",
+              "value" : ""
+            },
+            "$control__dataSource" : {
+              "type" : "enum",
+              "value" : "file"
+            },
+            "$control__dataSourceFileType" : {
+              "type" : "enum",
+              "value" : "json"
+            },
+            "$control__direction" : {
+              "type" : "segmentedenum",
+              "value" : "vertical"
+            },
+            "$control__emptyState" : {
+              "type" : "componentinstance",
+              "value" : [
                 {
                   "id" : "migrated_array_value_Rm98se736_emptyState_0",
                   "type" : "componentinstance",
                   "value" : "IWz4eJNuv"
                 }
-              ],
-              "gap" : 16,
-              "horizontalGap" : 42,
-              "httpAuthorizationHeader" : "",
-              "httpHeaders" : [
+              ]
+            },
+            "$control__gap" : {
+              "type" : "number",
+              "value" : 16
+            },
+            "$control__horizontalGap" : {
+              "type" : "number",
+              "value" : 42
+            },
+            "$control__httpAuthorizationHeader" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "$control__httpHeaders" : {
+              "type" : "array",
+              "value" : [
                 {
-                  "id" : "migrated_array_value_Rm98se736_httpHeaders_0",
+                  "id" : "SLlV8m2jM",
                   "type" : "string",
                   "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
                 }
-              ],
-              "isDragScrollEnabled" : true,
-              "isScrollEnabled" : true,
-              "isSearchEnabled" : false,
-              "isWheelScrollEnabled" : true,
-              "jsonFileUrl" : "",
-              "listItem" : [
+              ]
+            },
+            "$control__isDragScrollEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__isScrollEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__isSearchEnabled" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "$control__isWheelScrollEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__jsonFileUrl" : {
+              "type" : "file",
+              "value" : ""
+            },
+            "$control__listItem" : {
+              "type" : "componentinstance",
+              "value" : [
 
-              ],
-              "loadingDelay" : 0.5,
-              "loadingState" : [
+              ]
+            },
+            "$control__loadingDelay" : {
+              "type" : "number",
+              "value" : 0.5
+            },
+            "$control__loadingState" : {
+              "type" : "componentinstance",
+              "value" : [
                 {
                   "id" : "migrated_array_value_Rm98se736_loadingState_0",
                   "type" : "componentinstance",
                   "value" : "Rq3aNxEw2"
                 }
-              ],
-              "mode" : "default",
-              "onItemTap" : [
+              ]
+            },
+            "$control__mode" : {
+              "type" : "enum",
+              "value" : "default"
+            },
+            "$control__onItemLongPress" : {
+              "type" : "eventhandler"
+            },
+            "$control__onItemTap" : {
+              "type" : "eventhandler",
+              "value" : [
                 {
                   "actionIdentifier" : "framer\/useNavigate",
                   "controls" : {
@@ -2732,18 +3519,55 @@
                   },
                   "identifier" : "67c06dcb-e884-4f3a-a650-b44883f7d803"
                 }
-              ],
-              "overrideHttpHeaders" : false,
-              "searchTerm" : "",
-              "shouldSort" : false,
-              "sortDirection" : "ascending",
-              "sortKey" : "price",
-              "tsvFileUrl" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv",
-              "verticalAlignment" : "center",
-              "verticalDistribution" : "flex-start",
-              "verticalGap" : 30,
-              "wrap" : "nowrap"
+              ]
             },
+            "$control__overrideHttpHeaders" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "$control__searchTerm" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "$control__shouldSort" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "$control__sortDirection" : {
+              "type" : "segmentedenum",
+              "value" : "ascending"
+            },
+            "$control__sortKey" : {
+              "type" : "string",
+              "value" : "price"
+            },
+            "$control__tsvFileUrl" : {
+              "type" : "file",
+              "value" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv"
+            },
+            "$control__verticalAlignment" : {
+              "type" : "segmentedenum",
+              "value" : "center"
+            },
+            "$control__verticalDistribution" : {
+              "type" : "enum",
+              "value" : "flex-start"
+            },
+            "$control__verticalGap" : {
+              "type" : "number",
+              "value" : 30
+            },
+            "$control__wrap" : {
+              "type" : "segmentedenum",
+              "value" : "nowrap"
+            },
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.50043898156277433,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
+            "codeComponentPackageVersion" : "1.76.0",
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
             "duplicatedFrom" : [
@@ -2791,58 +3615,124 @@
           },
           {
             "__class" : "CodeComponentNode",
-            "aspectRatio" : null,
-            "bottom" : null,
-            "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.50043898156277433,
-            "clip" : true,
-            "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
-            "codeComponentPackageVersion" : "1.76.0",
-            "codeComponentProps" : {
-              "airtableImageSize" : "large",
-              "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs",
-              "apiResponseDataKey" : "data",
-              "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-              "columns" : 2,
-              "csvFileUrl" : "",
-              "dataSource" : "api",
-              "dataSourceFileType" : "json",
-              "direction" : "horizontal",
-              "emptyState" : [
+            "$control__airtableImageSize" : {
+              "type" : "segmentedenum",
+              "value" : "large"
+            },
+            "$control__airtableUrl" : {
+              "type" : "string",
+              "value" : "https:\/\/api.airtable.com\/v0\/appJuy4S2EAMijkNg\/Colors?api_key=keyQL4Up7cLcFgVUs"
+            },
+            "$control__apiResponseDataKey" : {
+              "type" : "string",
+              "value" : "data"
+            },
+            "$control__apiUrl" : {
+              "type" : "string",
+              "value" : "https:\/\/reqres.in\/api\/users?page=1"
+            },
+            "$control__columns" : {
+              "type" : "number",
+              "value" : 2
+            },
+            "$control__csvFileUrl" : {
+              "type" : "file",
+              "value" : ""
+            },
+            "$control__dataSource" : {
+              "type" : "enum",
+              "value" : "api"
+            },
+            "$control__dataSourceFileType" : {
+              "type" : "enum",
+              "value" : "json"
+            },
+            "$control__direction" : {
+              "type" : "segmentedenum",
+              "value" : "horizontal"
+            },
+            "$control__emptyState" : {
+              "type" : "componentinstance",
+              "value" : [
                 {
                   "id" : "migrated_array_value_rNiB4RxyX_emptyState_0",
                   "type" : "componentinstance",
                   "value" : "IWz4eJNuv"
                 }
-              ],
-              "gap" : 16,
-              "horizontalGap" : 42,
-              "httpAuthorizationHeader" : "",
-              "httpHeaders" : [
+              ]
+            },
+            "$control__gap" : {
+              "type" : "number",
+              "value" : 16
+            },
+            "$control__horizontalGap" : {
+              "type" : "number",
+              "value" : 42
+            },
+            "$control__httpAuthorizationHeader" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "$control__httpHeaders" : {
+              "type" : "array",
+              "value" : [
                 {
-                  "id" : "migrated_array_value_rNiB4RxyX_httpHeaders_0",
+                  "id" : "Yrs5ewz0K",
                   "type" : "string",
                   "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
                 }
-              ],
-              "isDragScrollEnabled" : true,
-              "isScrollEnabled" : true,
-              "isSearchEnabled" : false,
-              "isWheelScrollEnabled" : true,
-              "jsonFileUrl" : "",
-              "listItem" : [
+              ]
+            },
+            "$control__isDragScrollEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__isScrollEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__isSearchEnabled" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "$control__isWheelScrollEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__jsonFileUrl" : {
+              "type" : "file",
+              "value" : ""
+            },
+            "$control__listItem" : {
+              "type" : "componentinstance",
+              "value" : [
 
-              ],
-              "loadingDelay" : 0.5,
-              "loadingState" : [
+              ]
+            },
+            "$control__loadingDelay" : {
+              "type" : "number",
+              "value" : 0.5
+            },
+            "$control__loadingState" : {
+              "type" : "componentinstance",
+              "value" : [
                 {
                   "id" : "migrated_array_value_rNiB4RxyX_loadingState_0",
                   "type" : "componentinstance",
                   "value" : "Rq3aNxEw2"
                 }
-              ],
-              "mode" : "default",
-              "onItemTap" : [
+              ]
+            },
+            "$control__mode" : {
+              "type" : "enum",
+              "value" : "default"
+            },
+            "$control__onItemLongPress" : {
+              "type" : "eventhandler"
+            },
+            "$control__onItemTap" : {
+              "type" : "eventhandler",
+              "value" : [
                 {
                   "actionIdentifier" : "framer\/useNavigate",
                   "controls" : {
@@ -2886,18 +3776,55 @@
                   },
                   "identifier" : "67c06dcb-e884-4f3a-a650-b44883f7d803"
                 }
-              ],
-              "overrideHttpHeaders" : false,
-              "searchTerm" : "",
-              "shouldSort" : false,
-              "sortDirection" : "ascending",
-              "sortKey" : "price",
-              "tsvFileUrl" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv",
-              "verticalAlignment" : "center",
-              "verticalDistribution" : "flex-start",
-              "verticalGap" : 30,
-              "wrap" : "nowrap"
+              ]
             },
+            "$control__overrideHttpHeaders" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "$control__searchTerm" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "$control__shouldSort" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "$control__sortDirection" : {
+              "type" : "segmentedenum",
+              "value" : "ascending"
+            },
+            "$control__sortKey" : {
+              "type" : "string",
+              "value" : "price"
+            },
+            "$control__tsvFileUrl" : {
+              "type" : "file",
+              "value" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv"
+            },
+            "$control__verticalAlignment" : {
+              "type" : "segmentedenum",
+              "value" : "center"
+            },
+            "$control__verticalDistribution" : {
+              "type" : "enum",
+              "value" : "flex-start"
+            },
+            "$control__verticalGap" : {
+              "type" : "number",
+              "value" : 30
+            },
+            "$control__wrap" : {
+              "type" : "segmentedenum",
+              "value" : "nowrap"
+            },
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.50043898156277433,
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
+            "codeComponentPackageVersion" : "1.76.0",
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
             "duplicatedFrom" : [
@@ -3384,54 +4311,124 @@
             "children" : [
               {
                 "__class" : "CodeComponentNode",
-                "aspectRatio" : null,
-                "bottom" : 16,
-                "centerAnchorX" : 0.5,
-                "centerAnchorY" : 0.54422788605697148,
-                "clip" : true,
-                "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
-                "codeComponentPackageVersion" : "1.76.0",
-                "codeComponentProps" : {
-                  "airtableImageSize" : "large",
-                  "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appdq0f4599oR6cIr\/Table%201?api_key=keyQL4Up7cLcFgVUs",
-                  "apiResponseDataKey" : "data",
-                  "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-                  "columns" : 1,
-                  "csvFileUrl" : "",
-                  "dataSource" : "airtable",
-                  "dataSourceFileType" : "csv",
-                  "direction" : "vertical",
-                  "emptyState" : [
+                "$control__airtableImageSize" : {
+                  "type" : "segmentedenum",
+                  "value" : "large"
+                },
+                "$control__airtableUrl" : {
+                  "type" : "string",
+                  "value" : "https:\/\/api.airtable.com\/v0\/appdq0f4599oR6cIr\/Table%201?api_key=keyQL4Up7cLcFgVUs"
+                },
+                "$control__apiResponseDataKey" : {
+                  "type" : "string",
+                  "value" : "data"
+                },
+                "$control__apiUrl" : {
+                  "type" : "string",
+                  "value" : "https:\/\/reqres.in\/api\/users?page=1"
+                },
+                "$control__columns" : {
+                  "type" : "number",
+                  "value" : 1
+                },
+                "$control__csvFileUrl" : {
+                  "type" : "file",
+                  "value" : ""
+                },
+                "$control__dataSource" : {
+                  "type" : "enum",
+                  "value" : "airtable"
+                },
+                "$control__dataSourceFileType" : {
+                  "type" : "enum",
+                  "value" : "csv"
+                },
+                "$control__direction" : {
+                  "type" : "segmentedenum",
+                  "value" : "vertical"
+                },
+                "$control__emptyState" : {
+                  "type" : "componentinstance",
+                  "value" : [
                     {
                       "id" : "migrated_array_value_qGofFZ5iD_emptyState_0",
                       "type" : "componentinstance",
                       "value" : "IWz4eJNuv"
                     }
-                  ],
-                  "gap" : 16,
-                  "horizontalGap" : 42,
-                  "httpAuthorizationHeader" : "",
-                  "httpHeaders" : [
+                  ]
+                },
+                "$control__gap" : {
+                  "type" : "number",
+                  "value" : 16
+                },
+                "$control__horizontalGap" : {
+                  "type" : "number",
+                  "value" : 42
+                },
+                "$control__httpAuthorizationHeader" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "$control__httpHeaders" : {
+                  "type" : "array",
+                  "value" : [
+                    {
+                      "id" : "nc6E066y7",
+                      "type" : "string",
+                      "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                    }
+                  ]
+                },
+                "$control__isDragScrollEnabled" : {
+                  "type" : "boolean",
+                  "value" : true
+                },
+                "$control__isScrollEnabled" : {
+                  "type" : "boolean",
+                  "value" : true
+                },
+                "$control__isSearchEnabled" : {
+                  "type" : "boolean",
+                  "value" : true
+                },
+                "$control__isWheelScrollEnabled" : {
+                  "type" : "boolean",
+                  "value" : true
+                },
+                "$control__jsonFileUrl" : {
+                  "type" : "file",
+                  "value" : ""
+                },
+                "$control__listItem" : {
+                  "type" : "componentinstance",
+                  "value" : [
 
-                  ],
-                  "isDragScrollEnabled" : true,
-                  "isScrollEnabled" : true,
-                  "isSearchEnabled" : true,
-                  "isWheelScrollEnabled" : true,
-                  "jsonFileUrl" : "",
-                  "listItem" : [
-
-                  ],
-                  "loadingDelay" : 0,
-                  "loadingState" : [
+                  ]
+                },
+                "$control__loadingDelay" : {
+                  "type" : "number",
+                  "value" : 0
+                },
+                "$control__loadingState" : {
+                  "type" : "componentinstance",
+                  "value" : [
                     {
                       "id" : "migrated_array_value_qGofFZ5iD_loadingState_0",
                       "type" : "componentinstance",
                       "value" : "Rq3aNxEw2"
                     }
-                  ],
-                  "mode" : "default",
-                  "onItemTap" : [
+                  ]
+                },
+                "$control__mode" : {
+                  "type" : "enum",
+                  "value" : "default"
+                },
+                "$control__onItemLongPress" : {
+                  "type" : "eventhandler"
+                },
+                "$control__onItemTap" : {
+                  "type" : "eventhandler",
+                  "value" : [
                     {
                       "actionIdentifier" : "framer\/useNavigate",
                       "controls" : {
@@ -3475,18 +4472,55 @@
                       },
                       "identifier" : "67c06dcb-e884-4f3a-a650-b44883f7d803"
                     }
-                  ],
-                  "overrideHttpHeaders" : false,
-                  "searchTerm" : "",
-                  "shouldSort" : true,
-                  "sortDirection" : "descending",
-                  "sortKey" : "plant",
-                  "tsvFileUrl" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv",
-                  "verticalAlignment" : "center",
-                  "verticalDistribution" : "flex-start",
-                  "verticalGap" : 30,
-                  "wrap" : "nowrap"
+                  ]
                 },
+                "$control__overrideHttpHeaders" : {
+                  "type" : "boolean",
+                  "value" : false
+                },
+                "$control__searchTerm" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "$control__shouldSort" : {
+                  "type" : "boolean",
+                  "value" : true
+                },
+                "$control__sortDirection" : {
+                  "type" : "segmentedenum",
+                  "value" : "descending"
+                },
+                "$control__sortKey" : {
+                  "type" : "string",
+                  "value" : "plant"
+                },
+                "$control__tsvFileUrl" : {
+                  "type" : "file",
+                  "value" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv"
+                },
+                "$control__verticalAlignment" : {
+                  "type" : "segmentedenum",
+                  "value" : "center"
+                },
+                "$control__verticalDistribution" : {
+                  "type" : "enum",
+                  "value" : "flex-start"
+                },
+                "$control__verticalGap" : {
+                  "type" : "number",
+                  "value" : 30
+                },
+                "$control__wrap" : {
+                  "type" : "segmentedenum",
+                  "value" : "nowrap"
+                },
+                "aspectRatio" : null,
+                "bottom" : 16,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.54422788605697148,
+                "clip" : true,
+                "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
+                "codeComponentPackageVersion" : "1.76.0",
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Examples.tsx",
                 "codeOverrideIdentifier" : ".\/Examples.tsx_SearchProductList",
@@ -3538,6 +4572,148 @@
               },
               {
                 "__class" : "CodeComponentNode",
+                "$control__backgroundColor" : {
+                  "type" : "color",
+                  "value" : "#EBEBEB"
+                },
+                "$control__border" : {
+                  "type" : "color",
+                  "value" : "rgba(0,0,0,0)"
+                },
+                "$control__borderWidth" : {
+                  "type" : "number",
+                  "value" : 1
+                },
+                "$control__bottomLeft" : {
+                  "type" : null,
+                  "value" : 10
+                },
+                "$control__bottomRight" : {
+                  "type" : null,
+                  "value" : 10
+                },
+                "$control__focusColor" : {
+                  "type" : "color",
+                  "value" : "#09F"
+                },
+                "$control__focused" : {
+                  "type" : "boolean",
+                  "value" : false
+                },
+                "$control__font" : {
+                  "type" : "boolean",
+                  "value" : false
+                },
+                "$control__fontFamily" : {
+                  "type" : "string",
+                  "value" : ""
+                },
+                "$control__fontSize" : {
+                  "type" : "number",
+                  "value" : 15
+                },
+                "$control__fontWeight" : {
+                  "type" : "enum",
+                  "value" : 400
+                },
+                "$control__isMixed" : {
+                  "type" : null,
+                  "value" : false
+                },
+                "$control__keyboard" : {
+                  "type" : "enum",
+                  "value" : ""
+                },
+                "$control__multiLine" : {
+                  "type" : "boolean",
+                  "value" : false
+                },
+                "$control__onBlur" : {
+                  "type" : "eventhandler"
+                },
+                "$control__onChange" : {
+                  "type" : "eventhandler"
+                },
+                "$control__onFocus" : {
+                  "type" : "eventhandler"
+                },
+                "$control__onSubmit" : {
+                  "type" : "eventhandler"
+                },
+                "$control__padding" : {
+                  "isFused" : false,
+                  "type" : "fusednumber",
+                  "value" : {
+                    "fused" : [
+                      12,
+                      12,
+                      12,
+                      12
+                    ],
+                    "single" : 12
+                  }
+                },
+                "$control__paddingBottom" : {
+                  "type" : null,
+                  "value" : 12
+                },
+                "$control__paddingLeft" : {
+                  "type" : null,
+                  "value" : 12
+                },
+                "$control__paddingPerSide" : {
+                  "type" : null,
+                  "value" : false
+                },
+                "$control__paddingRight" : {
+                  "type" : null,
+                  "value" : 12
+                },
+                "$control__paddingTop" : {
+                  "type" : null,
+                  "value" : 12
+                },
+                "$control__password" : {
+                  "type" : "boolean",
+                  "value" : false
+                },
+                "$control__placeholder" : {
+                  "type" : "string",
+                  "value" : "Type something…"
+                },
+                "$control__placeholderColor" : {
+                  "type" : "color",
+                  "value" : "#aaa"
+                },
+                "$control__radius" : {
+                  "isFused" : false,
+                  "type" : "fusednumber",
+                  "value" : {
+                    "fused" : [
+                      10,
+                      10,
+                      10,
+                      10
+                    ],
+                    "single" : 10
+                  }
+                },
+                "$control__textColor" : {
+                  "type" : "color",
+                  "value" : "#333"
+                },
+                "$control__topLeft" : {
+                  "type" : null,
+                  "value" : 10
+                },
+                "$control__topRight" : {
+                  "type" : null,
+                  "value" : 10
+                },
+                "$control__value" : {
+                  "type" : "string",
+                  "value" : ""
+                },
                 "aspectRatio" : null,
                 "bottom" : null,
                 "centerAnchorX" : 0.51066666666666671,
@@ -3545,36 +4721,6 @@
                 "clip" : true,
                 "codeComponentIdentifier" : "@framer\/framer.default\/.\/Input.tsx_Input",
                 "codeComponentPackageVersion" : "1.76.0",
-                "codeComponentProps" : {
-                  "backgroundColor" : "#EBEBEB",
-                  "border" : "rgba(0,0,0,0)",
-                  "borderWidth" : 1,
-                  "bottomLeft" : 10,
-                  "bottomRight" : 10,
-                  "focusColor" : "#09F",
-                  "focused" : false,
-                  "font" : false,
-                  "fontFamily" : "",
-                  "fontSize" : 15,
-                  "fontWeight" : 400,
-                  "isMixed" : false,
-                  "keyboard" : "",
-                  "multiLine" : false,
-                  "padding" : 12,
-                  "paddingBottom" : 12,
-                  "paddingLeft" : 12,
-                  "paddingPerSide" : false,
-                  "paddingRight" : 12,
-                  "paddingTop" : 12,
-                  "password" : false,
-                  "placeholder" : "Type something…",
-                  "placeholderColor" : "#aaa",
-                  "radius" : 10,
-                  "textColor" : "#333",
-                  "topLeft" : 10,
-                  "topRight" : 10,
-                  "value" : ""
-                },
                 "codeOverrideEnabled" : true,
                 "codeOverrideFile" : ".\/Examples.tsx",
                 "codeOverrideIdentifier" : ".\/Examples.tsx_SearchInput",
@@ -3675,6 +4821,153 @@
           },
           {
             "__class" : "CodeComponentNode",
+            "$control__airtableImageSize" : {
+              "type" : "segmentedenum",
+              "value" : "large"
+            },
+            "$control__airtableUrl" : {
+              "type" : "string",
+              "value" : "https:\/\/api.airtable.com\/v0\/appdq0f4599oR6cIr\/Table%201?api_key=keyQL4Up7cLcFgVUs"
+            },
+            "$control__apiResponseDataKey" : {
+              "type" : "string",
+              "value" : "data"
+            },
+            "$control__apiUrl" : {
+              "type" : "string",
+              "value" : "https:\/\/reqres.in\/api\/users?page=1"
+            },
+            "$control__columns" : {
+              "type" : "number",
+              "value" : 1
+            },
+            "$control__csvFileUrl" : {
+              "type" : "file",
+              "value" : ""
+            },
+            "$control__dataSource" : {
+              "type" : "enum",
+              "value" : "file"
+            },
+            "$control__dataSourceFileType" : {
+              "type" : "enum",
+              "value" : "json"
+            },
+            "$control__direction" : {
+              "type" : "segmentedenum",
+              "value" : "vertical"
+            },
+            "$control__emptyState" : {
+              "type" : "componentinstance"
+            },
+            "$control__gap" : {
+              "type" : "number",
+              "value" : 16
+            },
+            "$control__horizontalGap" : {
+              "type" : "number",
+              "value" : 42
+            },
+            "$control__httpAuthorizationHeader" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "$control__httpHeaders" : {
+              "type" : "array",
+              "value" : [
+                {
+                  "id" : "T_gk3NOe8",
+                  "type" : "string",
+                  "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
+                }
+              ]
+            },
+            "$control__isDragScrollEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__isScrollEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__isSearchEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__isWheelScrollEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__jsonFileUrl" : {
+              "type" : "file",
+              "value" : "data:framer\/asset-reference,fgExJgVpOdMTgzXF7GuaWbnh9w.json?originalFilename=formatted-tv-hub.json"
+            },
+            "$control__listItem" : {
+              "type" : "componentinstance",
+              "value" : [
+
+              ]
+            },
+            "$control__loadingDelay" : {
+              "type" : "number",
+              "value" : 0
+            },
+            "$control__loadingState" : {
+              "type" : "componentinstance"
+            },
+            "$control__mode" : {
+              "type" : "enum",
+              "value" : "default"
+            },
+            "$control__onItemLongPress" : {
+              "type" : "eventhandler"
+            },
+            "$control__onItemTap" : {
+              "type" : "eventhandler",
+              "value" : [
+
+              ]
+            },
+            "$control__overrideHttpHeaders" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "$control__searchTerm" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "$control__shouldSort" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__sortDirection" : {
+              "type" : "segmentedenum",
+              "value" : "descending"
+            },
+            "$control__sortKey" : {
+              "type" : "string",
+              "value" : "plant"
+            },
+            "$control__tsvFileUrl" : {
+              "type" : "file",
+              "value" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv"
+            },
+            "$control__verticalAlignment" : {
+              "type" : "segmentedenum",
+              "value" : "center"
+            },
+            "$control__verticalDistribution" : {
+              "type" : "enum",
+              "value" : "flex-start"
+            },
+            "$control__verticalGap" : {
+              "type" : "number",
+              "value" : 30
+            },
+            "$control__wrap" : {
+              "type" : "segmentedenum",
+              "value" : "nowrap"
+            },
             "aspectRatio" : null,
             "bottom" : null,
             "centerAnchorX" : 0.5,
@@ -3682,46 +4975,6 @@
             "clip" : true,
             "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
             "codeComponentPackageVersion" : "1.76.0",
-            "codeComponentProps" : {
-              "airtableImageSize" : "large",
-              "airtableUrl" : "https:\/\/api.airtable.com\/v0\/appdq0f4599oR6cIr\/Table%201?api_key=keyQL4Up7cLcFgVUs",
-              "apiResponseDataKey" : "data",
-              "apiUrl" : "https:\/\/reqres.in\/api\/users?page=1",
-              "columns" : 1,
-              "csvFileUrl" : "",
-              "dataSource" : "file",
-              "dataSourceFileType" : "json",
-              "direction" : "vertical",
-              "gap" : 16,
-              "horizontalGap" : 42,
-              "httpAuthorizationHeader" : "",
-              "httpHeaders" : [
-
-              ],
-              "isDragScrollEnabled" : true,
-              "isScrollEnabled" : true,
-              "isSearchEnabled" : true,
-              "isWheelScrollEnabled" : true,
-              "jsonFileUrl" : "data:framer\/asset-reference,fgExJgVpOdMTgzXF7GuaWbnh9w.json?originalFilename=formatted-tv-hub.json",
-              "listItem" : [
-
-              ],
-              "loadingDelay" : 0,
-              "mode" : "default",
-              "onItemTap" : [
-
-              ],
-              "overrideHttpHeaders" : false,
-              "searchTerm" : "",
-              "shouldSort" : true,
-              "sortDirection" : "descending",
-              "sortKey" : "plant",
-              "tsvFileUrl" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv",
-              "verticalAlignment" : "center",
-              "verticalDistribution" : "flex-start",
-              "verticalGap" : 30,
-              "wrap" : "nowrap"
-            },
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/Examples.tsx",
             "codeOverrideIdentifier" : ".\/Examples.tsx_SearchProductList",
@@ -3802,5 +5055,5 @@
     ],
     "visible" : false
   },
-  "version" : 70
+  "version" : 74
 }
