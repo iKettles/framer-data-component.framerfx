@@ -114,11 +114,16 @@ Working with an API that requires authentication? This component allows you to a
 Feel free to leave questions/bugs on the [GitHub repository](https://github.com/iKettles/framer-data-component.framerfx) for this package. You can also contact me directly on Twitter [@iKettles](https://twitter.com/iKettles)
 
 ## Latest Release
+
+### **1.26.0 - 26/10/2020**
+
+- Added support for a custom adapter that allows you to override the behavior of searching, sorting and formatting your data.
+
+## Previous Releases
+
 ### **1.25.0 - 20/10/2020**
 
 - The index of the result in the list is now automatically passed to the rendered component
-
-## Previous Releases
 
 ### **1.24.0 - 19/10/2020**
 
