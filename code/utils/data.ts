@@ -13,6 +13,9 @@ import {
     CSVResponse,
     SortDirection,
     SortKey,
+    FormatDataCallback,
+    SortDataCallback,
+    SearchDataCallback,
 } from "./types"
 import { AUTH_ERROR_MESSAGE } from "./errors"
 import { parseHttpHeaders } from "./helpers"
@@ -33,6 +36,9 @@ export function useCuratedDataSource(
     shouldSort: boolean,
     sortKey: string,
     sortDirection: SortDirection,
+    onFormatData?: FormatDataCallback,
+    onSortData?: SortDataCallback,
+    onSearchData?: SearchDataCallback,
     httpHeaders?: {
         parsedHeaders: Record<string, string>
         unparsedHeaders: string[]
@@ -48,7 +54,9 @@ export function useCuratedDataSource(
         searchTerm,
         shouldSort,
         sortKey,
-        sortDirection
+        sortDirection,
+        onSortData,
+        onSearchData
     )
 
     React.useEffect(() => {
@@ -108,15 +116,20 @@ export function useCuratedDataSource(
                     await delay(remainingLoadingDuration)
                 }
 
-                setData(
-                    body.map((item) => ({
-                        id: item.id || nanoid(5),
-                        ...Object.keys(item).reduce((acc, key) => {
-                            acc[sanitizePropertyName(key)] = item[key]
-                            return acc
-                        }, {}),
-                    }))
-                )
+                if (onFormatData) {
+                    setData(onFormatData(body))
+                } else {
+                    setData(
+                        body.map((item) => ({
+                            id: item.id || nanoid(5),
+                            ...Object.keys(item).reduce((acc, key) => {
+                                acc[sanitizePropertyName(key)] = item[key]
+                                return acc
+                            }, {}),
+                        }))
+                    )
+                }
+
                 setErrorMessage(null)
             } catch (err) {
                 setErrorMessage(err.message)
@@ -138,6 +151,8 @@ export function useCuratedDataSource(
 
         airtableImageSize,
         loadingDelay,
+
+        onFormatData,
     ])
 
     return [results, isLoading, errorMessage]
@@ -149,7 +164,9 @@ export function useSortedSearchResults(
     searchTerm: string | null,
     shouldSort: boolean,
     sortKey: SortKey,
-    sortDirection: SortDirection
+    sortDirection: SortDirection,
+    onSortData?: SortDataCallback,
+    onSearchData?: SearchDataCallback
 ): [DataItem[]] {
     const results = React.useMemo(() => {
         const keysToSearch = Object.keys(data[0] || {}).filter((key) => {
@@ -160,15 +177,25 @@ export function useSortedSearchResults(
             return true
         })
 
-        const dataToSort =
-            !!searchTerm && isSearchEnabled
-                ? new Fuse([...data], {
-                      includeScore: true,
-                      keys: keysToSearch,
-                  })
-                      .search(searchTerm)
-                      .map((result) => result.item)
-                : data
+        let dataToSort = data
+
+        if (!!searchTerm && isSearchEnabled) {
+            if (onSearchData) {
+                dataToSort = onSearchData(data, searchTerm)
+            } else {
+                dataToSort = new Fuse([...data], {
+                    includeScore: true,
+                    keys: keysToSearch,
+                })
+                    .search(searchTerm)
+                    .map((result) => result.item)
+            }
+        }
+
+        if (onSortData) {
+            return onSortData(dataToSort, sortDirection, sortKey)
+        }
+
         return dataToSort.sort((a, b) => {
             if (!shouldSort) {
                 return 0
@@ -191,7 +218,15 @@ export function useSortedSearchResults(
 
             return 0
         })
-    }, [data, searchTerm, shouldSort, sortKey, sortDirection])
+    }, [
+        data,
+        searchTerm,
+        shouldSort,
+        sortKey,
+        sortDirection,
+        onSortData,
+        onSearchData,
+    ])
 
     return [results]
 }
