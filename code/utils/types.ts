@@ -33,6 +33,15 @@ export type AirtableResponse = {
 export type JSONResponse = DataItem[]
 export type CSVResponse = DataItem[]
 
+// Adapters
+export type FormatDataCallback = (data: any) => any
+export type SortDataCallback = (
+    data: any,
+    sortDirection: SortDirection,
+    sortKey: SortKey
+) => any
+export type SearchDataCallback = (data: any, searchTerm: string) => any
+
 // Component
 export interface DataComponentProps {
     // Component layout
@@ -85,6 +94,11 @@ export interface DataComponentProps {
     overrideHttpHeaders: boolean
     httpAuthorizationHeader: string
     httpHeaders: string[]
+
+    // Adapters
+    onFormatData?: FormatDataCallback
+    onSortData?: SortDataCallback
+    onSearchData?: SearchDataCallback
 
     // Event handlers
     onItemTap: (item) => void

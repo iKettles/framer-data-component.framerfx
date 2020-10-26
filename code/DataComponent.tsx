@@ -53,6 +53,9 @@ export function DataComponent(props: DataComponentProps) {
         isWheelScrollEnabled,
         onItemTap,
         onItemLongPress,
+        onFormatData,
+        onSortData,
+        onSearchData,
         ...rest
     } = props
     const [results, isLoading, errorMessage] = useCuratedDataSource(
@@ -71,6 +74,9 @@ export function DataComponent(props: DataComponentProps) {
         shouldSort,
         sortKey,
         sortDirection,
+        onFormatData,
+        onSortData,
+        onSearchData,
         overrideHttpHeaders && {
             parsedHeaders: {
                 Authorization: httpAuthorizationHeader,
