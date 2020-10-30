@@ -115,11 +115,15 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
+### **1.27.0 - 30/10/2020**
+
+- Fixes the component not having a fluid width when used with the responsive preview mode in Framer
+
+## Previous Releases
+
 ### **1.26.0 - 26/10/2020**
 
 - Added support for a custom adapter that allows you to override the behavior of searching, sorting and formatting your data.
-
-## Previous Releases
 
 ### **1.25.0 - 20/10/2020**
 
