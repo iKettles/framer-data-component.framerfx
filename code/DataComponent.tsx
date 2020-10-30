@@ -31,6 +31,7 @@ export function DataComponent(props: DataComponentProps) {
         httpAuthorizationHeader,
         httpHeaders,
         listItem,
+        hoverListItem,
         loadingState,
         loadingDelay,
         emptyState,
@@ -84,6 +85,9 @@ export function DataComponent(props: DataComponentProps) {
             unparsedHeaders: httpHeaders,
         }
     )
+    const [connectedHoverListItem] = useConnectedComponentInstance(
+        hoverListItem
+    )
     const [connectedListItem] = useConnectedComponentInstance(listItem)
     const [connectedLoadingState] = useConnectedComponentInstance(loadingState)
     const [connectedEmptyState] = useConnectedComponentInstance(emptyState)
@@ -102,35 +106,113 @@ export function DataComponent(props: DataComponentProps) {
                 results.length
             )
             const { props: connectedListItemProps } = connectedListItem as any
-            return React.cloneElement(connectedListItem as React.ReactElement, {
-                key: result.id,
-                width: getListItemWidth(
-                    direction,
-                    rest.width,
-                    columns,
-                    horizontalGap,
-                    connectedListItemProps.width
-                ),
-                style: {
-                    position: "relative",
-                    ...layoutStyles,
-                    ...connectedListItemProps.style,
-                },
-                ...Object.keys(result).reduce((acc, key) => {
-                    // Ensure number becomes a string — Framer will error if it receives a number as a design component override
-                    if (typeof result[key] === "number") {
-                        acc[key] = String(result[key])
-                    } else {
-                        acc[key] = result[key]
+            const listItemWidth = getListItemWidth(
+                direction,
+                rest.width,
+                columns,
+                horizontalGap,
+                connectedListItemProps.width
+            )
+
+            const resultData = Object.keys(result).reduce((acc, key) => {
+                // Ensure number becomes a string — Framer will error if it receives a number as a design component override
+                if (typeof result[key] === "number") {
+                    acc[key] = String(result[key])
+                } else {
+                    acc[key] = result[key]
+                }
+                return acc
+            }, {})
+
+            if (!connectedHoverListItem) {
+                return React.cloneElement(
+                    connectedListItem as React.ReactElement,
+                    {
+                        key: result.id,
+                        width: listItemWidth,
+                        style: {
+                            position: "relative",
+                            ...layoutStyles,
+                            ...connectedListItemProps.style,
+                        },
+                        ...resultData,
+                        index,
+                        id: `${result.id}—${index}`,
+                        onTap() {
+                            onItemTap(result)
+                        },
                     }
-                    return acc
-                }, {}),
-                index,
-                id: `${result.id}—${index}`,
-                onTap() {
-                    onItemTap(result)
-                },
-            })
+                )
+            }
+
+            const {
+                props: connectedHoverListItemProps,
+            } = connectedHoverListItem as any
+
+            return (
+                <Frame
+                    key={`wrapper-${result.id}`}
+                    width={listItemWidth}
+                    height={connectedListItemProps.height}
+                    background={"transparent"}
+                    whileHover={"hover"}
+                    initial={"default"}
+                    style={{
+                        position: "relative",
+                    }}
+                >
+                    {React.cloneElement(
+                        connectedListItem as React.ReactElement,
+                        {
+                            key: result.id,
+                            width: listItemWidth,
+                            style: {
+                                ...layoutStyles,
+                                ...connectedListItemProps.style,
+                            },
+                            ...resultData,
+                            index,
+                            id: `${result.id}—${index}`,
+                            variants: {
+                                hover: {
+                                    visibility: "hidden",
+                                },
+                                default: {
+                                    visibility: "visible",
+                                },
+                            },
+                            onTap() {
+                                onItemTap(result)
+                            },
+                        }
+                    )}
+                    {React.cloneElement(
+                        connectedHoverListItem as React.ReactElement,
+                        {
+                            key: result.id,
+                            width: listItemWidth,
+                            style: {
+                                ...layoutStyles,
+                                ...connectedHoverListItemProps.style,
+                            },
+                            ...resultData,
+                            index,
+                            id: `${result.id}—${index}-hover`,
+                            variants: {
+                                hover: {
+                                    visibility: "visible",
+                                },
+                                default: {
+                                    visibility: "hidden",
+                                },
+                            },
+                            onTap() {
+                                onItemTap(result)
+                            },
+                        }
+                    )}
+                </Frame>
+            )
         })
     }, [
         results,
@@ -139,6 +221,7 @@ export function DataComponent(props: DataComponentProps) {
         horizontalGap,
         verticalGap,
         connectedListItem,
+        connectedHoverListItem,
         shouldSort,
         sortDirection,
         sortKey,
@@ -374,6 +457,10 @@ addPropertyControls(DataComponent, {
     },
     listItem: {
         title: "List Item",
+        type: ControlType.ComponentInstance,
+    },
+    hoverListItem: {
+        title: "Hover List Item",
         type: ControlType.ComponentInstance,
     },
     loadingState: {
