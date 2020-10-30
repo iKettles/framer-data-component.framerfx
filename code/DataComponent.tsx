@@ -213,7 +213,7 @@ export function DataComponent(props: DataComponentProps) {
         return (
             <Frame
                 background={"transparent"}
-                width={rest.width}
+                width={"100%"}
                 height={rest.height}
             >
                 {renderedItems}
@@ -224,7 +224,7 @@ export function DataComponent(props: DataComponentProps) {
     return (
         <Scroll
             direction={direction}
-            width={rest.width}
+            width={"100%"}
             height={rest.height}
             dragEnabled={isDragScrollEnabled}
             wheelEnabled={isWheelScrollEnabled}
