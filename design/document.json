@@ -4363,7 +4363,7 @@
                 },
                 "$control__horizontalGap" : {
                   "type" : "number",
-                  "value" : 42
+                  "value" : 12
                 },
                 "$control__httpAuthorizationHeader" : {
                   "type" : "string",
@@ -4402,7 +4402,11 @@
                 "$control__listItem" : {
                   "type" : "componentinstance",
                   "value" : [
-
+                    {
+                      "id" : "j1vv9gQHH",
+                      "type" : "componentinstance",
+                      "value" : "h_8NqVXhz"
+                    }
                   ]
                 },
                 "$control__loadingDelay" : {
@@ -4508,7 +4512,7 @@
                 },
                 "$control__verticalGap" : {
                   "type" : "number",
-                  "value" : 30
+                  "value" : 12
                 },
                 "$control__wrap" : {
                   "type" : "segmentedenum",
@@ -4803,7 +4807,11 @@
             "opacity" : 1,
             "originalid" : null,
             "parentid" : "V5lpMrB3K-page",
-            "previewSettings" : null,
+            "previewSettings" : {
+              "__class" : "PreviewSettings",
+              "responsive" : true,
+              "touch" : false
+            },
             "radius" : 0,
             "radiusBottomLeft" : 0,
             "radiusBottomRight" : 0,
@@ -4820,191 +4828,132 @@
             "widthType" : 0
           },
           {
-            "__class" : "CodeComponentNode",
-            "$control__airtableImageSize" : {
-              "type" : "segmentedenum",
-              "value" : "large"
-            },
-            "$control__airtableUrl" : {
-              "type" : "string",
-              "value" : "https:\/\/api.airtable.com\/v0\/appdq0f4599oR6cIr\/Table%201?api_key=keyQL4Up7cLcFgVUs"
-            },
-            "$control__apiResponseDataKey" : {
-              "type" : "string",
-              "value" : "data"
-            },
-            "$control__apiUrl" : {
-              "type" : "string",
-              "value" : "https:\/\/reqres.in\/api\/users?page=1"
-            },
-            "$control__columns" : {
-              "type" : "number",
-              "value" : 1
-            },
-            "$control__csvFileUrl" : {
-              "type" : "file",
-              "value" : ""
-            },
-            "$control__dataSource" : {
-              "type" : "enum",
-              "value" : "file"
-            },
-            "$control__dataSourceFileType" : {
-              "type" : "enum",
-              "value" : "json"
-            },
-            "$control__direction" : {
-              "type" : "segmentedenum",
-              "value" : "vertical"
-            },
-            "$control__emptyState" : {
-              "type" : "componentinstance"
-            },
-            "$control__gap" : {
-              "type" : "number",
-              "value" : 16
-            },
-            "$control__horizontalGap" : {
-              "type" : "number",
-              "value" : 42
-            },
-            "$control__httpAuthorizationHeader" : {
-              "type" : "string",
-              "value" : ""
-            },
-            "$control__httpHeaders" : {
-              "type" : "array",
-              "value" : [
-                {
-                  "id" : "T_gk3NOe8",
-                  "type" : "string",
-                  "value" : "X-API-Key: 14a96448-1ae1-4de3-94c7-6f6e828e4519"
-                }
-              ]
-            },
-            "$control__isDragScrollEnabled" : {
-              "type" : "boolean",
-              "value" : true
-            },
-            "$control__isScrollEnabled" : {
-              "type" : "boolean",
-              "value" : true
-            },
-            "$control__isSearchEnabled" : {
-              "type" : "boolean",
-              "value" : true
-            },
-            "$control__isWheelScrollEnabled" : {
-              "type" : "boolean",
-              "value" : true
-            },
-            "$control__jsonFileUrl" : {
-              "type" : "file",
-              "value" : "data:framer\/asset-reference,fgExJgVpOdMTgzXF7GuaWbnh9w.json?originalFilename=formatted-tv-hub.json"
-            },
-            "$control__listItem" : {
-              "type" : "componentinstance",
-              "value" : [
-
-              ]
-            },
-            "$control__loadingDelay" : {
-              "type" : "number",
-              "value" : 0
-            },
-            "$control__loadingState" : {
-              "type" : "componentinstance"
-            },
-            "$control__mode" : {
-              "type" : "enum",
-              "value" : "default"
-            },
-            "$control__onItemLongPress" : {
-              "type" : "eventhandler"
-            },
-            "$control__onItemTap" : {
-              "type" : "eventhandler",
-              "value" : [
-
-              ]
-            },
-            "$control__overrideHttpHeaders" : {
-              "type" : "boolean",
-              "value" : false
-            },
-            "$control__searchTerm" : {
-              "type" : "string",
-              "value" : ""
-            },
-            "$control__shouldSort" : {
-              "type" : "boolean",
-              "value" : true
-            },
-            "$control__sortDirection" : {
-              "type" : "segmentedenum",
-              "value" : "descending"
-            },
-            "$control__sortKey" : {
-              "type" : "string",
-              "value" : "plant"
-            },
-            "$control__tsvFileUrl" : {
-              "type" : "file",
-              "value" : "data:framer\/asset-reference,C0vpwUgQJTjKbi9orYTErCcROaI.tsv?originalFilename=test-data-users.tsv"
-            },
-            "$control__verticalAlignment" : {
-              "type" : "segmentedenum",
-              "value" : "center"
-            },
-            "$control__verticalDistribution" : {
-              "type" : "enum",
-              "value" : "flex-start"
-            },
-            "$control__verticalGap" : {
-              "type" : "number",
-              "value" : 30
-            },
-            "$control__wrap" : {
-              "type" : "segmentedenum",
-              "value" : "nowrap"
-            },
+            "__class" : "FrameNode",
             "aspectRatio" : null,
             "bottom" : null,
-            "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.54422788605697148,
+            "centerAnchorX" : 0,
+            "centerAnchorY" : 0,
+            "children" : [
+              {
+                "__class" : "TextNode",
+                "autoSize" : false,
+                "bottom" : null,
+                "centerAnchorX" : 0.50666666666666671,
+                "centerAnchorY" : 0.44117647058823528,
+                "clip" : true,
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "duplicatedFrom" : [
+                  "HxmP9Uo_O"
+                ],
+                "exportOptions" : [
+
+                ],
+                "height" : 27,
+                "heightType" : 0,
+                "id" : "Sf8yBlbZR",
+                "isTarget" : true,
+                "left" : 59,
+                "locked" : false,
+                "name" : "plant",
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "h_8NqVXhz",
+                "right" : 54,
+                "rotation" : 0,
+                "styledText" : {
+                  "__class" : "StyledTextDraft",
+                  "blocks" : [
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "FONT:Inter",
+                          "COLOR:rgb(0, 0, 0)",
+                          "SIZE:16",
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 5,
+                          "offset" : 0,
+                          "style" : "FONT:Inter"
+                        },
+                        {
+                          "length" : 5,
+                          "offset" : 0,
+                          "style" : "COLOR:rgb(0, 0, 0)"
+                        },
+                        {
+                          "length" : 5,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 5,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 5,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        }
+                      ],
+                      "key" : "n2tf",
+                      "text" : "Plant",
+                      "type" : "unstyled"
+                    }
+                  ],
+                  "entityMap" : {
+
+                  }
+                },
+                "textVerticalAlignment" : "top",
+                "top" : 24,
+                "visible" : true,
+                "width" : 262,
+                "widthType" : 0
+              }
+            ],
             "clip" : true,
-            "codeComponentIdentifier" : ".\/DataComponent.tsx_DataComponent",
-            "codeComponentPackageVersion" : "1.76.0",
-            "codeOverrideEnabled" : true,
-            "codeOverrideFile" : ".\/Examples.tsx",
-            "codeOverrideIdentifier" : ".\/Examples.tsx_SearchProductList",
-            "codeOverrideName" : "SearchProductList",
+            "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
             "duplicatedFrom" : [
-              "BgdyvAJb0",
-              "Paax8flqP",
-              "Tnq4U1lri",
-              "DcrPVPMd1",
-              "Rm98se736",
-              "qGofFZ5iD"
+              "Ubj9h4BEz"
             ],
             "exportOptions" : [
 
             ],
             "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
+            "fillEnabled" : true,
             "fillImage" : null,
             "fillImageOriginalName" : null,
             "fillImagePixelHeight" : null,
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
             "fillType" : "color",
-            "height" : 576,
+            "framePreset" : null,
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
+            "height" : 85,
             "heightType" : 0,
-            "id" : "MI5ci0hRd",
-            "intrinsicHeight" : 128,
-            "intrinsicWidth" : 240,
-            "left" : -5391,
+            "id" : "h_8NqVXhz",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "isExternalMaster" : null,
+            "isMaster" : false,
+            "isTarget" : false,
+            "left" : -4933,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
@@ -5018,11 +4967,12 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
+            "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
-            "top" : 2301,
+            "top" : 1361,
             "visible" : true,
-            "width" : 343,
+            "width" : 375,
             "widthType" : 0
           }
         ],
