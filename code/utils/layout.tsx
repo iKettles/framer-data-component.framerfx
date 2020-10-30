@@ -64,10 +64,10 @@ export function getListItemWidth(
         return originalListItemWidth
     }
     if (columns === 1) {
-        return width
+        return "100%"
     } else {
         const horizontalSpacingForRow = (columns - 1) * horizontalGap
-        return (width - horizontalSpacingForRow) / columns
+        return `calc((100% - ${horizontalSpacingForRow}px) / ${columns})`
     }
 }
 
@@ -113,7 +113,7 @@ export function getContainerStyle({
 }) {
     let styles: React.CSSProperties = {
         ...containerStyle,
-        width: direction === "horizontal" ? "100%" : width,
+        width: "100%",
         height: direction === "vertical" ? "100%" : height,
     }
 
