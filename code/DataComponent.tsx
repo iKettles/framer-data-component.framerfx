@@ -96,7 +96,7 @@ export function DataComponent(props: DataComponentProps) {
             return []
         }
         return results.map((result, index) => {
-            const layoutStyles = getListItemStyle(
+            const listItemStyles = getListItemStyle(
                 direction,
                 gap,
                 horizontalGap,
@@ -132,7 +132,7 @@ export function DataComponent(props: DataComponentProps) {
                         width: listItemWidth,
                         style: {
                             position: "relative",
-                            ...layoutStyles,
+                            ...listItemStyles,
                             ...connectedListItemProps.style,
                         },
                         ...resultData,
@@ -159,6 +159,10 @@ export function DataComponent(props: DataComponentProps) {
                     initial={"default"}
                     style={{
                         position: "relative",
+                        // If we're rendering with a hover state, the margin must be applied to the container instead of the list item itself
+                        marginBottom: listItemStyles.marginBottom
+                            ? listItemStyles.marginBottom
+                            : 0,
                     }}
                 >
                     {React.cloneElement(
@@ -167,7 +171,7 @@ export function DataComponent(props: DataComponentProps) {
                             key: result.id,
                             width: listItemWidth,
                             style: {
-                                ...layoutStyles,
+                                ...listItemStyles,
                                 ...connectedListItemProps.style,
                             },
                             ...resultData,
@@ -192,7 +196,7 @@ export function DataComponent(props: DataComponentProps) {
                             key: result.id,
                             width: listItemWidth,
                             style: {
-                                ...layoutStyles,
+                                ...listItemStyles,
                                 ...connectedHoverListItemProps.style,
                             },
                             ...resultData,
