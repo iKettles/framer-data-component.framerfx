@@ -256,6 +256,9 @@
                           "type" : "number",
                           "value" : 6
                         },
+                        "$control__hoverListItem" : {
+                          "type" : "componentinstance"
+                        },
                         "$control__httpAuthorizationHeader" : {
                           "type" : "string",
                           "value" : ""
@@ -682,6 +685,9 @@
                         "$control__horizontalGap" : {
                           "type" : "number",
                           "value" : 6
+                        },
+                        "$control__hoverListItem" : {
+                          "type" : "componentinstance"
                         },
                         "$control__httpAuthorizationHeader" : {
                           "type" : "string",
@@ -1115,6 +1121,9 @@
                         "$control__horizontalGap" : {
                           "type" : "number",
                           "value" : 6
+                        },
+                        "$control__hoverListItem" : {
+                          "type" : "componentinstance"
                         },
                         "$control__httpAuthorizationHeader" : {
                           "type" : "string",
@@ -1552,6 +1561,9 @@
                           "type" : "number",
                           "value" : 6
                         },
+                        "$control__hoverListItem" : {
+                          "type" : "componentinstance"
+                        },
                         "$control__httpAuthorizationHeader" : {
                           "type" : "string",
                           "value" : ""
@@ -1988,6 +2000,9 @@
                         "$control__horizontalGap" : {
                           "type" : "number",
                           "value" : 6
+                        },
+                        "$control__hoverListItem" : {
+                          "type" : "componentinstance"
                         },
                         "$control__httpAuthorizationHeader" : {
                           "type" : "string",
@@ -2428,6 +2443,9 @@
                         "$control__horizontalGap" : {
                           "type" : "number",
                           "value" : 6
+                        },
+                        "$control__hoverListItem" : {
+                          "type" : "componentinstance"
                         },
                         "$control__httpAuthorizationHeader" : {
                           "type" : "string",
@@ -3021,6 +3039,9 @@
                           "type" : "number",
                           "value" : 8
                         },
+                        "$control__hoverListItem" : {
+                          "type" : "componentinstance"
+                        },
                         "$control__httpAuthorizationHeader" : {
                           "type" : "string",
                           "value" : ""
@@ -3412,6 +3433,9 @@
               "type" : "number",
               "value" : 42
             },
+            "$control__hoverListItem" : {
+              "type" : "componentinstance"
+            },
             "$control__httpAuthorizationHeader" : {
               "type" : "string",
               "value" : ""
@@ -3669,6 +3693,9 @@
               "type" : "number",
               "value" : 42
             },
+            "$control__hoverListItem" : {
+              "type" : "componentinstance"
+            },
             "$control__httpAuthorizationHeader" : {
               "type" : "string",
               "value" : ""
@@ -3881,12 +3908,12 @@
               {
                 "__class" : "TextNode",
                 "autoSize" : true,
-                "bottom" : null,
+                "bottom" : 219,
                 "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.50094517958412099,
                 "clip" : true,
                 "codeOverrideEnabled" : false,
-                "constraintsLocked" : false,
+                "constraintsLocked" : true,
                 "duplicatedFrom" : null,
                 "exportOptions" : [
 
@@ -3895,7 +3922,7 @@
                 "heightType" : 0,
                 "id" : "KkjzMqr97",
                 "isTarget" : false,
-                "left" : null,
+                "left" : 100,
                 "locked" : false,
                 "name" : null,
                 "opacity" : 1,
@@ -4359,11 +4386,21 @@
                 },
                 "$control__gap" : {
                   "type" : "number",
-                  "value" : 16
+                  "value" : 10
                 },
                 "$control__horizontalGap" : {
                   "type" : "number",
                   "value" : 12
+                },
+                "$control__hoverListItem" : {
+                  "type" : "componentinstance",
+                  "value" : [
+                    {
+                      "id" : "o5aszC_LJ",
+                      "type" : "componentinstance",
+                      "value" : "YL_fdEBlh"
+                    }
+                  ]
                 },
                 "$control__httpAuthorizationHeader" : {
                   "type" : "string",
@@ -4403,9 +4440,9 @@
                   "type" : "componentinstance",
                   "value" : [
                     {
-                      "id" : "j1vv9gQHH",
+                      "id" : "s3uq5QyeE",
                       "type" : "componentinstance",
-                      "value" : "h_8NqVXhz"
+                      "value" : "qyk88Mo9a"
                     }
                   ]
                 },
@@ -4414,14 +4451,7 @@
                   "value" : 0
                 },
                 "$control__loadingState" : {
-                  "type" : "componentinstance",
-                  "value" : [
-                    {
-                      "id" : "migrated_array_value_qGofFZ5iD_loadingState_0",
-                      "type" : "componentinstance",
-                      "value" : "Rq3aNxEw2"
-                    }
-                  ]
+                  "type" : "componentinstance"
                 },
                 "$control__mode" : {
                   "type" : "enum",
@@ -4844,21 +4874,22 @@
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
                 "duplicatedFrom" : [
-                  "HxmP9Uo_O"
+                  "HxmP9Uo_O",
+                  "Sf8yBlbZR"
                 ],
                 "exportOptions" : [
 
                 ],
                 "height" : 27,
                 "heightType" : 0,
-                "id" : "Sf8yBlbZR",
+                "id" : "rLFfxF4mb",
                 "isTarget" : true,
                 "left" : 59,
                 "locked" : false,
                 "name" : "plant",
                 "opacity" : 1,
                 "originalid" : null,
-                "parentid" : "h_8NqVXhz",
+                "parentid" : "qyk88Mo9a",
                 "right" : 54,
                 "rotation" : 0,
                 "styledText" : {
@@ -4925,7 +4956,8 @@
             "codeOverrideEnabled" : false,
             "constraintsLocked" : false,
             "duplicatedFrom" : [
-              "Ubj9h4BEz"
+              "Ubj9h4BEz",
+              "h_8NqVXhz"
             ],
             "exportOptions" : [
 
@@ -4947,7 +4979,7 @@
             ],
             "height" : 85,
             "heightType" : 0,
-            "id" : "h_8NqVXhz",
+            "id" : "qyk88Mo9a",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
             "isExternalMaster" : null,
@@ -4970,9 +5002,268 @@
             "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
-            "top" : 1361,
+            "top" : 1254,
             "visible" : true,
             "width" : 375,
+            "widthType" : 0
+          },
+          {
+            "__class" : "FrameNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0,
+            "centerAnchorY" : 0,
+            "children" : [
+              {
+                "__class" : "TextNode",
+                "autoSize" : false,
+                "bottom" : 21,
+                "centerAnchorX" : 1.0506666666666666,
+                "centerAnchorY" : 0.59411764705882353,
+                "clip" : true,
+                "codeOverrideEnabled" : false,
+                "constraintsLocked" : false,
+                "duplicatedFrom" : [
+                  "HxmP9Uo_O",
+                  "Sf8yBlbZR"
+                ],
+                "exportOptions" : [
+
+                ],
+                "height" : 27,
+                "heightType" : 0,
+                "id" : "tpNAielQo",
+                "isTarget" : true,
+                "left" : null,
+                "locked" : false,
+                "name" : "plant",
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "YL_fdEBlh",
+                "right" : -150,
+                "rotation" : 0,
+                "styledText" : {
+                  "__class" : "StyledTextDraft",
+                  "blocks" : [
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "FONT:Inter",
+                          "COLOR:rgb(0, 0, 0)",
+                          "SIZE:16",
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 5,
+                          "offset" : 0,
+                          "style" : "FONT:Inter"
+                        },
+                        {
+                          "length" : 5,
+                          "offset" : 0,
+                          "style" : "COLOR:rgb(0, 0, 0)"
+                        },
+                        {
+                          "length" : 5,
+                          "offset" : 0,
+                          "style" : "SIZE:16"
+                        },
+                        {
+                          "length" : 5,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 5,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        }
+                      ],
+                      "key" : "n2tf",
+                      "text" : "Plant",
+                      "type" : "unstyled"
+                    }
+                  ],
+                  "entityMap" : {
+
+                  }
+                },
+                "textVerticalAlignment" : "top",
+                "top" : null,
+                "visible" : true,
+                "width" : 262,
+                "widthType" : 0
+              }
+            ],
+            "clip" : true,
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : [
+              "Ubj9h4BEz",
+              "h_8NqVXhz"
+            ],
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "hsl(0, 100%, 50%)",
+            "fillEnabled" : true,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "framePreset" : null,
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
+            "height" : 85,
+            "heightType" : 0,
+            "id" : "YL_fdEBlh",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "isExternalMaster" : null,
+            "isMaster" : false,
+            "isTarget" : false,
+            "left" : -4933,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "V5lpMrB3K-page",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "replicaInfo" : null,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 1468,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "$control__alignment" : {
+              "type" : "enum",
+              "value" : "start"
+            },
+            "$control__children" : {
+              "type" : "array"
+            },
+            "$control__contentHeight" : {
+              "type" : "enum",
+              "value" : "stretch"
+            },
+            "$control__contentWidth" : {
+              "type" : "enum",
+              "value" : "stretch"
+            },
+            "$control__currentPage" : {
+              "type" : "number",
+              "value" : 0
+            },
+            "$control__defaultEffect" : {
+              "type" : "enum",
+              "value" : "none"
+            },
+            "$control__direction" : {
+              "type" : "enum",
+              "value" : "horizontal"
+            },
+            "$control__directionLock" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__dragEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__gap" : {
+              "type" : "number",
+              "value" : 0
+            },
+            "$control__momentum" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "$control__padding" : {
+              "isFused" : false,
+              "type" : "fusednumber",
+              "value" : {
+                "fused" : [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "single" : 0
+              }
+            },
+            "$control__wheelEnabled" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0,
+            "centerAnchorY" : 0,
+            "clip" : true,
+            "codeComponentIdentifier" : "framer\/Page",
+            "codeComponentPackageVersion" : null,
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 591,
+            "heightType" : 0,
+            "id" : "moijQM333",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : -5469,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "V5lpMrB3K-page",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 2257,
+            "visible" : true,
+            "width" : 560,
             "widthType" : 0
           }
         ],

@@ -69,6 +69,7 @@ export interface DataComponentProps {
     horizontalGap: number
     verticalGap: number
     listItem?: React.ReactNode
+    hoverListItem?: React.ReactNode
     loadingState?: React.ReactNode
     loadingDelay: number
     emptyState?: React.ReactNode
