@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Loading } from "@framer/framer.default/code/Loading"
 import {
     getDataSourceUrl,
     formatDataSourceTitle,
@@ -210,7 +211,18 @@ function Placeholder(props: PlaceholderProps) {
     }
 
     if (props.mode === "loading") {
-        return <div style={loadingContainerStyle}>{"..."}</div>
+        return (
+            <div style={loadingContainerStyle}>
+                <div style={{ width: 32, height: 32 }}>
+                    <Loading
+                        indicator={"Material"}
+                        hasDuration={false}
+                        color={"#888"}
+                        fadeOut={true}
+                    />
+                </div>
+            </div>
+        )
     }
 
     return undefined
