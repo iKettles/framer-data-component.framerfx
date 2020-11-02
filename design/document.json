@@ -3908,12 +3908,12 @@
               {
                 "__class" : "TextNode",
                 "autoSize" : true,
-                "bottom" : null,
+                "bottom" : 219,
                 "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.50094517958412099,
                 "clip" : true,
                 "codeOverrideEnabled" : false,
-                "constraintsLocked" : false,
+                "constraintsLocked" : true,
                 "duplicatedFrom" : null,
                 "exportOptions" : [
 
@@ -3922,7 +3922,7 @@
                 "heightType" : 0,
                 "id" : "KkjzMqr97",
                 "isTarget" : false,
-                "left" : null,
+                "left" : 100,
                 "locked" : false,
                 "name" : null,
                 "opacity" : 1,
@@ -4386,7 +4386,7 @@
                 },
                 "$control__gap" : {
                   "type" : "number",
-                  "value" : 16
+                  "value" : 10
                 },
                 "$control__horizontalGap" : {
                   "type" : "number",
@@ -4451,18 +4451,11 @@
                   "value" : 0
                 },
                 "$control__loadingState" : {
-                  "type" : "componentinstance",
-                  "value" : [
-                    {
-                      "id" : "migrated_array_value_qGofFZ5iD_loadingState_0",
-                      "type" : "componentinstance",
-                      "value" : "Rq3aNxEw2"
-                    }
-                  ]
+                  "type" : "componentinstance"
                 },
                 "$control__mode" : {
                   "type" : "enum",
-                  "value" : "help"
+                  "value" : "default"
                 },
                 "$control__onItemLongPress" : {
                   "type" : "eventhandler"
