@@ -451,13 +451,13 @@ addPropertyControls(DataComponent, {
         defaultValue: true,
     },
     isDragScrollEnabled: {
-        title: indentPropertyControlTitle("Drag scroll"),
+        title: indentPropertyControlTitle("Drag"),
         type: ControlType.Boolean,
         defaultValue: true,
         hidden: (props) => !props.isScrollEnabled,
     },
     isWheelScrollEnabled: {
-        title: indentPropertyControlTitle("Wheel scroll"),
+        title: indentPropertyControlTitle("Wheel"),
         type: ControlType.Boolean,
         defaultValue: true,
         hidden: (props) => !props.isScrollEnabled,
