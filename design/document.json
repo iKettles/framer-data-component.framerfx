@@ -4439,7 +4439,11 @@
                 "$control__listItem" : {
                   "type" : "componentinstance",
                   "value" : [
-
+                    {
+                      "id" : "s3uq5QyeE",
+                      "type" : "componentinstance",
+                      "value" : "qyk88Mo9a"
+                    }
                   ]
                 },
                 "$control__loadingDelay" : {
@@ -4458,7 +4462,7 @@
                 },
                 "$control__mode" : {
                   "type" : "enum",
-                  "value" : "default"
+                  "value" : "help"
                 },
                 "$control__onItemLongPress" : {
                   "type" : "eventhandler"
@@ -5158,6 +5162,115 @@
             "top" : 1468,
             "visible" : true,
             "width" : 375,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "$control__alignment" : {
+              "type" : "enum",
+              "value" : "start"
+            },
+            "$control__children" : {
+              "type" : "array"
+            },
+            "$control__contentHeight" : {
+              "type" : "enum",
+              "value" : "stretch"
+            },
+            "$control__contentWidth" : {
+              "type" : "enum",
+              "value" : "stretch"
+            },
+            "$control__currentPage" : {
+              "type" : "number",
+              "value" : 0
+            },
+            "$control__defaultEffect" : {
+              "type" : "enum",
+              "value" : "none"
+            },
+            "$control__direction" : {
+              "type" : "enum",
+              "value" : "horizontal"
+            },
+            "$control__directionLock" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__dragEnabled" : {
+              "type" : "boolean",
+              "value" : true
+            },
+            "$control__gap" : {
+              "type" : "number",
+              "value" : 0
+            },
+            "$control__momentum" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "$control__padding" : {
+              "isFused" : false,
+              "type" : "fusednumber",
+              "value" : {
+                "fused" : [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "single" : 0
+              }
+            },
+            "$control__wheelEnabled" : {
+              "type" : "boolean",
+              "value" : false
+            },
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0,
+            "centerAnchorY" : 0,
+            "clip" : true,
+            "codeComponentIdentifier" : "framer\/Page",
+            "codeComponentPackageVersion" : null,
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 591,
+            "heightType" : 0,
+            "id" : "moijQM333",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : -5469,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "V5lpMrB3K-page",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : null,
+            "rotation" : 0,
+            "top" : 2257,
+            "visible" : true,
+            "width" : 560,
             "widthType" : 0
           }
         ],

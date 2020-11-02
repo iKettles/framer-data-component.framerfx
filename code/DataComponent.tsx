@@ -245,7 +245,10 @@ export function DataComponent(props: DataComponentProps) {
                 {...props}
                 mode={"help"}
                 results={results}
-                isDesignComponentConnected={!!connectedListItem}
+                isListItemConnected={!!connectedListItem}
+                isHoverListItemConnected={!!connectedHoverListItem}
+                isEmptyStateConnected={!!connectedEmptyState}
+                isLoadingStateConnected={!!connectedLoadingState}
             />
         )
     }

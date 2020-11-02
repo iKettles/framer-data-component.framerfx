@@ -10,18 +10,19 @@ import { DataSource } from "./utils/types"
 const instructionsStyle: React.CSSProperties = {
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     flexDirection: "column",
     width: "100%",
     height: "100%",
-    fontSize: 13,
-    fontWeight: 500,
     textAlign: "center",
-    color: "#bb88ff",
-    backgroundColor: "#2f2546",
-    border: "4px solid #8855ff",
+    border: "1px dashed #8855ff",
+    borderRadius: "6px",
+    fontSize: "13px",
+    fontWeight: 500,
+    color: "#8855ff",
+    backgroundColor: "rgba(136, 85, 255, 0.2)",
     padding: 16,
-    overflow: "hidden",
+    overflow: "scroll",
 }
 
 const errorStyle: React.CSSProperties = {
@@ -60,19 +61,63 @@ const codeStyle: React.CSSProperties = {
 // @TODO Use more specific types
 type PlaceholderProps = any
 
+function getCompletionStatusHint(condition: boolean) {
+    return condition ? `✅` : `❌`
+}
+
+function DataSourceHints(props) {
+    const dataSourceUrl = getDataSourceUrl(
+        props.dataSource,
+        props.dataSourceFileType,
+        {
+            api: props.apiUrl,
+            airtable: props.airtableUrl,
+            json: props.jsonUrl,
+            csv: props.csvUrl,
+            tsv: props.tsvUrl,
+        }
+    )
+
+    let connectDataSourceHint = ""
+
+    if (props.dataSource === "api" || props.dataSource === "airtable") {
+        connectDataSourceHint = `${getCompletionStatusHint(
+            !!dataSourceUrl
+        )} Enter an ${formatDataSourceTitle(props.dataSource)} URL`
+    } else if (props.dataSource === "file") {
+        connectDataSourceHint = `${getCompletionStatusHint(
+            !!dataSourceUrl
+        )} Add a ${formatFileTypeTitle(props.dataSourceFileType)} file`
+    }
+
+    return (
+        <>
+            <h3>Connect to your data source</h3>
+            {connectDataSourceHint}
+        </>
+    )
+}
+
 function ConnectDesignComponentHints(props) {
     return (
         <>
+            <h3>Connect your UI</h3>
+            {getCompletionStatusHint(props.isListItemConnected)} 1. Connect this
+            component to your list item component <br />
             <br />
-            Connect this component to a design component using either the
-            properties panel or the connector on the right side of this
-            component.
+            {getCompletionStatusHint(props.isHoverListItemConnected)} 2. Need a
+            hover state? Connect to the layer you want to be shown for the hover
+            state. We'll automatically show it when that list item is being
+            hovered.
             <br />
             <br />
-            Once you've connected a design component it will be used as the list
-            item when this component renders a list of data.
+            {getCompletionStatusHint(props.isLoadingStateConnected)} 3. Connect
+            a loading state. A material spinner will be shown by default.
             <br />
             <br />
+            {getCompletionStatusHint(props.isEmptyStateConnected)} 4. Connect an
+            empty state. This will be displayed if no data is returned, or a
+            search yields no results.
             <DesignComponentKeyHints results={props.results} />
         </>
     )
@@ -84,17 +129,21 @@ function DesignComponentKeyHints(props) {
     }
     return (
         <>
+            <h3>How are the fields in my component populated?</h3>
             When you create a design component, Framer will automatically
             recognise both text and image layers within that component. You'll
-            see some checkboxes next to these fields in the properties panel,
+            see some checkboxes next to these fields in the properties panel.
             check these boxes to allow those values to be populated by this
-            component. The text box for each field allows you to set a name to
-            give this field. You need to ensure that the names you give match
-            the following properties:
+            component.
+            <br />
+            <br />
+            The text box for each field allows you to set a "variable" for that
+            field. You need to ensure that the names you give match the
+            following properties:
             <br />
             <br />
             {Object.keys(props.results[0]).map((key) => (
-                <div key={key}>{key}</div>
+                <b key={key}>{key}</b>
             ))}
         </>
     )
@@ -119,9 +168,18 @@ function Placeholder(props: PlaceholderProps) {
     }
     if (props.mode === "debug") {
         return (
-            <pre style={codeStyle}>
-                {JSON.stringify(props.results, null, 2)}
-            </pre>
+            <div
+                style={{
+                    ...instructionsStyle,
+                    textAlign: "left",
+                    display: "block",
+                    overflow: "scroll",
+                }}
+            >
+                <pre style={codeStyle}>
+                    {JSON.stringify(props.results, null, 2)}
+                </pre>
+            </div>
         )
     }
     if (props.mode === "api-url") {
@@ -137,45 +195,16 @@ function Placeholder(props: PlaceholderProps) {
     if (props.mode === "connect-list-item") {
         return (
             <div style={instructionsStyle}>
-                <ConnectDesignComponentHints results={props.results} />
+                <ConnectDesignComponentHints {...props} />
             </div>
         )
     }
 
-    const dataSourceUrl = getDataSourceUrl(
-        props.dataSource,
-        props.dataSourceFileType,
-        {
-            api: props.apiUrl,
-            airtable: props.airtableUrl,
-            json: props.jsonUrl,
-            csv: props.csvUrl,
-            tsv: props.tsvUrl,
-        }
-    )
-
     if (props.mode === "help") {
         return (
             <div style={instructionsStyle}>
-                <br />
-                {props.isDesignComponentConnected ? (
-                    `✅ Connect a design component`
-                ) : (
-                    <ConnectDesignComponentHints results={props.results} />
-                )}
-                <br />
-                {props.dataSource === "api" || props.dataSource === "airtable"
-                    ? `${
-                          dataSourceUrl ? "✅" : "❌"
-                      } Enter an ${formatDataSourceTitle(props.dataSource)} URL`
-                    : `${
-                          dataSourceUrl ? "✅" : "❌"
-                      } Add a ${formatFileTypeTitle(
-                          props.dataSourceFileType
-                      )} file`}
-                <br />
-                <br />
-                <DesignComponentKeyHints results={props.results} />
+                <DataSourceHints {...props} />
+                <ConnectDesignComponentHints {...props} />
             </div>
         )
     }
