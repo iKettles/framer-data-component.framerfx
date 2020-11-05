@@ -20,8 +20,8 @@ const instructionsStyle: React.CSSProperties = {
     borderRadius: "6px",
     fontSize: "13px",
     fontWeight: 500,
-    color: "#8855ff",
-    backgroundColor: "rgba(136, 85, 255, 0.2)",
+    color: "#fff",
+    backgroundColor: "rgba(107, 87, 152, 0.8)",
     padding: 16,
     overflow: "scroll",
 }
@@ -100,6 +100,7 @@ function DataSourceHints(props) {
 }
 
 function ConnectDesignComponentHints(props) {
+    console.log(props)
     return (
         <>
             <h3>Connect your UI</h3>
