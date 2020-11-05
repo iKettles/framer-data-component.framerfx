@@ -258,15 +258,43 @@ export function DataComponent(props: DataComponentProps) {
     }
 
     if (mode === "debug") {
-        return <Placeholder mode={"debug"} results={results} />
+        return (
+            <Placeholder
+                {...props}
+                mode={"debug"}
+                results={results}
+                isListItemConnected={!!connectedListItem}
+                isHoverListItemConnected={!!connectedHoverListItem}
+                isEmptyStateConnected={!!connectedEmptyState}
+                isLoadingStateConnected={!!connectedLoadingState}
+            />
+        )
     }
 
     if (!connectedListItem) {
-        return <Placeholder mode={"connect-list-item"} />
+        return (
+            <Placeholder
+                {...props}
+                mode={"connect-list-item"}
+                isListItemConnected={!!connectedListItem}
+                isHoverListItemConnected={!!connectedHoverListItem}
+                isEmptyStateConnected={!!connectedEmptyState}
+                isLoadingStateConnected={!!connectedLoadingState}
+            />
+        )
     }
 
     if (!apiUrl) {
-        return <Placeholder mode={"api-url"} />
+        return (
+            <Placeholder
+                {...props}
+                mode={"api-url"}
+                isListItemConnected={!!connectedListItem}
+                isHoverListItemConnected={!!connectedHoverListItem}
+                isEmptyStateConnected={!!connectedEmptyState}
+                isLoadingStateConnected={!!connectedLoadingState}
+            />
+        )
     }
 
     if (isLoading) {
@@ -279,7 +307,16 @@ export function DataComponent(props: DataComponentProps) {
                 }
             )
         }
-        return <Placeholder mode={"loading"} />
+        return (
+            <Placeholder
+                {...props}
+                mode={"loading"}
+                isListItemConnected={!!connectedListItem}
+                isHoverListItemConnected={!!connectedHoverListItem}
+                isEmptyStateConnected={!!connectedEmptyState}
+                isLoadingStateConnected={!!connectedLoadingState}
+            />
+        )
     }
 
     if (resultItems.length === 0 && !!connectedEmptyState) {
