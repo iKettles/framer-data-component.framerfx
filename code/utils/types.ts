@@ -9,6 +9,16 @@ export type FlexDistribution =
     | "space-between"
     | "space-around"
     | "space-evenly"
+export interface LayoutConfig {
+    width: number
+    height: number
+    direction: FlexDirection
+    wrap: FlexWrap
+    columns: number
+    verticalAlignment: FlexAlignment
+    verticalDistribution: FlexDistribution
+    padding: string
+}
 
 // Component Props
 export type ComponentMode = "default" | "help" | "debug"
@@ -65,6 +75,12 @@ export interface DataComponentProps {
     verticalDistribution: FlexDistribution
     columns: number
     gap: number
+    paddingPerSide: boolean
+    padding: number
+    paddingTop: number
+    paddingRight: number
+    paddingBottom: number
+    paddingLeft: number
     wrap: FlexWrap
     horizontalGap: number
     verticalGap: number

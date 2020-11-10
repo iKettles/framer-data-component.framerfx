@@ -42,6 +42,12 @@ export function DataComponent(props: DataComponentProps) {
         sortKey,
         columns,
         gap,
+        paddingPerSide,
+        padding,
+        paddingTop,
+        paddingRight,
+        paddingBottom,
+        paddingLeft,
         wrap,
         verticalAlignment,
         verticalDistribution,
@@ -239,6 +245,20 @@ export function DataComponent(props: DataComponentProps) {
         onItemTap,
     ])
 
+    const containerPadding = React.useMemo(() => {
+        if (paddingPerSide) {
+            return `${paddingTop}px ${paddingRight}px ${paddingBottom}px ${paddingLeft}px`
+        }
+        return `${padding}px`
+    }, [
+        paddingPerSide,
+        padding,
+        paddingTop,
+        paddingRight,
+        paddingBottom,
+        paddingLeft,
+    ])
+
     if (errorMessage) {
         return (
             <Placeholder
@@ -340,6 +360,7 @@ export function DataComponent(props: DataComponentProps) {
         columns,
         verticalAlignment,
         verticalDistribution,
+        padding: containerPadding,
     })
 
     if (!isScrollEnabled) {
@@ -450,6 +471,20 @@ addPropertyControls(DataComponent, {
             (props.columns > 1 ||
                 isVerticalGapControlledByContainer(props.verticalDistribution))
     ),
+    padding: {
+        title: indentPropertyControlTitle("Padding"),
+        type: ControlType.FusedNumber,
+        toggleKey: "paddingPerSide",
+        toggleTitles: ["Padding", "Padding per side"],
+        valueKeys: [
+            "paddingTop",
+            "paddingRight",
+            "paddingBottom",
+            "paddingLeft",
+        ],
+        valueLabels: ["T", "R", "B", "L"],
+        min: 0,
+    },
     horizontalGap: gapControl<DataComponentProps>(
         indentPropertyControlTitle("Gap (↔)"),
         (props) => !(props.direction === "vertical" && props.columns > 1)
