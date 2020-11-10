@@ -115,13 +115,20 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
+### **1.29.0 - 10/11/2020**
+
+- Added support for applying padding to the container that wraps list items
+- Fixed a bug that caused multiple columns to not render correctly when a hover state was being used
+- Fixed a duplicate key error when using a hover state
+- Added a small performance improvement when calculating the width of a list item
+
+## Previous Releases
+
 ### **1.28.0 - 05/11/2020**
 
 - Added a Hover List Item property control, allowing you to attach a hover state to your prototype.
 - Improved documentation and guidance on the canvas
 - The Material loading indicator from Framer's Default Components is now used as the default loading state.
-
-## Previous Releases
 
 ### **1.27.0 - 30/10/2020**
 
