@@ -150,6 +150,9 @@ export function DataComponent(props: DataComponentProps) {
                 props: connectedHoverListItemProps,
             } = connectedHoverListItem as any
 
+            // When we're using a hover state, the right margin should be applied to the wrapper, and not to the list item itself
+            const { marginRight, ...adjustedListItemStyles } = listItemStyles
+
             return (
                 <Frame
                     key={`wrapper-${result.id}`}
@@ -160,9 +163,10 @@ export function DataComponent(props: DataComponentProps) {
                     initial={"default"}
                     style={{
                         position: "relative",
+                        marginRight,
                         // If we're rendering with a hover state, the margin must be applied to the container instead of the list item itself
-                        marginBottom: listItemStyles.marginBottom
-                            ? listItemStyles.marginBottom
+                        marginBottom: adjustedListItemStyles.marginBottom
+                            ? adjustedListItemStyles.marginBottom
                             : 0,
                     }}
                 >
@@ -170,9 +174,10 @@ export function DataComponent(props: DataComponentProps) {
                         connectedListItem as React.ReactElement,
                         {
                             key: result.id,
-                            width: listItemWidth,
+                            // When we have a hover state, the list item can just span 100% of the width. The hover wrapper has the correct calculated width
+                            width: "100%",
                             style: {
-                                ...listItemStyles,
+                                ...adjustedListItemStyles,
                                 ...connectedListItemProps.style,
                             },
                             ...resultData,
@@ -195,9 +200,9 @@ export function DataComponent(props: DataComponentProps) {
                         connectedHoverListItem as React.ReactElement,
                         {
                             key: result.id,
-                            width: listItemWidth,
+                            width: "100%",
                             style: {
-                                ...listItemStyles,
+                                ...adjustedListItemStyles,
                                 ...connectedHoverListItemProps.style,
                             },
                             ...resultData,
