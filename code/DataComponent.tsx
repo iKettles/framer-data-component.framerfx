@@ -42,6 +42,12 @@ export function DataComponent(props: DataComponentProps) {
         sortKey,
         columns,
         gap,
+        paddingPerSide,
+        padding,
+        paddingTop,
+        paddingRight,
+        paddingBottom,
+        paddingLeft,
         wrap,
         verticalAlignment,
         verticalDistribution,
@@ -95,6 +101,15 @@ export function DataComponent(props: DataComponentProps) {
         if (!connectedListItem) {
             return []
         }
+        const { props: connectedListItemProps } = connectedListItem as any
+        const listItemWidth = getListItemWidth(
+            direction,
+            rest.width,
+            columns,
+            horizontalGap,
+            connectedListItemProps.width
+        )
+
         return results.map((result, index) => {
             const listItemStyles = getListItemStyle(
                 direction,
@@ -104,14 +119,6 @@ export function DataComponent(props: DataComponentProps) {
                 columns,
                 index,
                 results.length
-            )
-            const { props: connectedListItemProps } = connectedListItem as any
-            const listItemWidth = getListItemWidth(
-                direction,
-                rest.width,
-                columns,
-                horizontalGap,
-                connectedListItemProps.width
             )
 
             const resultData = Object.keys(result).reduce((acc, key) => {
@@ -149,6 +156,9 @@ export function DataComponent(props: DataComponentProps) {
                 props: connectedHoverListItemProps,
             } = connectedHoverListItem as any
 
+            // When we're using a hover state, the right margin should be applied to the wrapper, and not to the list item itself
+            const { marginRight, ...adjustedListItemStyles } = listItemStyles
+
             return (
                 <Frame
                     key={`wrapper-${result.id}`}
@@ -159,9 +169,10 @@ export function DataComponent(props: DataComponentProps) {
                     initial={"default"}
                     style={{
                         position: "relative",
+                        marginRight,
                         // If we're rendering with a hover state, the margin must be applied to the container instead of the list item itself
-                        marginBottom: listItemStyles.marginBottom
-                            ? listItemStyles.marginBottom
+                        marginBottom: adjustedListItemStyles.marginBottom
+                            ? adjustedListItemStyles.marginBottom
                             : 0,
                     }}
                 >
@@ -169,9 +180,10 @@ export function DataComponent(props: DataComponentProps) {
                         connectedListItem as React.ReactElement,
                         {
                             key: result.id,
-                            width: listItemWidth,
+                            // When we have a hover state, the list item can just span 100% of the width. The hover wrapper has the correct calculated width
+                            width: "100%",
                             style: {
-                                ...listItemStyles,
+                                ...adjustedListItemStyles,
                                 ...connectedListItemProps.style,
                             },
                             ...resultData,
@@ -193,10 +205,10 @@ export function DataComponent(props: DataComponentProps) {
                     {React.cloneElement(
                         connectedHoverListItem as React.ReactElement,
                         {
-                            key: result.id,
-                            width: listItemWidth,
+                            key: `hover-${result.id}`,
+                            width: "100%",
                             style: {
-                                ...listItemStyles,
+                                ...adjustedListItemStyles,
                                 ...connectedHoverListItemProps.style,
                             },
                             ...resultData,
@@ -231,6 +243,20 @@ export function DataComponent(props: DataComponentProps) {
         sortKey,
         direction,
         onItemTap,
+    ])
+
+    const containerPadding = React.useMemo(() => {
+        if (paddingPerSide) {
+            return `${paddingTop}px ${paddingRight}px ${paddingBottom}px ${paddingLeft}px`
+        }
+        return `${padding}px`
+    }, [
+        paddingPerSide,
+        padding,
+        paddingTop,
+        paddingRight,
+        paddingBottom,
+        paddingLeft,
     ])
 
     if (errorMessage) {
@@ -334,6 +360,7 @@ export function DataComponent(props: DataComponentProps) {
         columns,
         verticalAlignment,
         verticalDistribution,
+        padding: containerPadding,
     })
 
     if (!isScrollEnabled) {
@@ -444,6 +471,20 @@ addPropertyControls(DataComponent, {
             (props.columns > 1 ||
                 isVerticalGapControlledByContainer(props.verticalDistribution))
     ),
+    padding: {
+        title: indentPropertyControlTitle("Padding"),
+        type: ControlType.FusedNumber,
+        toggleKey: "paddingPerSide",
+        toggleTitles: ["Padding", "Padding per side"],
+        valueKeys: [
+            "paddingTop",
+            "paddingRight",
+            "paddingBottom",
+            "paddingLeft",
+        ],
+        valueLabels: ["T", "R", "B", "L"],
+        min: 0,
+    },
     horizontalGap: gapControl<DataComponentProps>(
         indentPropertyControlTitle("Gap (↔)"),
         (props) => !(props.direction === "vertical" && props.columns > 1)

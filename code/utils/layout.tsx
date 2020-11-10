@@ -1,10 +1,5 @@
 import * as React from "react"
-import {
-    FlexDirection,
-    FlexWrap,
-    FlexAlignment,
-    FlexDistribution,
-} from "./types"
+import { FlexDirection, FlexDistribution, LayoutConfig } from "./types"
 
 const containerStyle: React.CSSProperties = {
     display: "flex",
@@ -73,25 +68,9 @@ export function getListItemWidth(
 
 export function renderContainer(
     resultItems: React.ReactElement[],
-    layoutConfig: {
-        width: number
-        height: number
-        direction: FlexDirection
-        wrap: FlexWrap
-        columns: number
-        verticalAlignment: FlexAlignment
-        verticalDistribution: FlexDistribution
-    }
+    layoutConfig: LayoutConfig
 ) {
-    return (
-        <div
-            style={{
-                ...getContainerStyle(layoutConfig),
-            }}
-        >
-            {resultItems}
-        </div>
-    )
+    return <div style={getContainerStyle(layoutConfig)}>{resultItems}</div>
 }
 
 export function getContainerStyle({
@@ -102,19 +81,13 @@ export function getContainerStyle({
     columns,
     verticalAlignment,
     verticalDistribution,
-}: {
-    width: number
-    height: number
-    direction: FlexDirection
-    wrap: FlexWrap
-    columns: number
-    verticalAlignment: FlexAlignment
-    verticalDistribution: FlexDistribution
-}) {
+    padding,
+}: LayoutConfig) {
     let styles: React.CSSProperties = {
         ...containerStyle,
         width: "100%",
         height: direction === "vertical" ? "100%" : height,
+        padding,
     }
 
     if (direction === "vertical") {
