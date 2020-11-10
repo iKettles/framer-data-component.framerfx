@@ -95,6 +95,15 @@ export function DataComponent(props: DataComponentProps) {
         if (!connectedListItem) {
             return []
         }
+        const { props: connectedListItemProps } = connectedListItem as any
+        const listItemWidth = getListItemWidth(
+            direction,
+            rest.width,
+            columns,
+            horizontalGap,
+            connectedListItemProps.width
+        )
+
         return results.map((result, index) => {
             const listItemStyles = getListItemStyle(
                 direction,
@@ -104,14 +113,6 @@ export function DataComponent(props: DataComponentProps) {
                 columns,
                 index,
                 results.length
-            )
-            const { props: connectedListItemProps } = connectedListItem as any
-            const listItemWidth = getListItemWidth(
-                direction,
-                rest.width,
-                columns,
-                horizontalGap,
-                connectedListItemProps.width
             )
 
             const resultData = Object.keys(result).reduce((acc, key) => {
