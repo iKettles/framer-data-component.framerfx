@@ -205,7 +205,7 @@ export function DataComponent(props: DataComponentProps) {
                     {React.cloneElement(
                         connectedHoverListItem as React.ReactElement,
                         {
-                            key: result.id,
+                            key: `hover-${result.id}`,
                             width: "100%",
                             style: {
                                 ...adjustedListItemStyles,
