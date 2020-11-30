@@ -121,11 +121,11 @@ export function useCuratedDataSource(
                 } else {
                     setData(
                         body.map((item) => ({
-                            id: item.id || nanoid(5),
                             ...Object.keys(item).reduce((acc, key) => {
                                 acc[sanitizePropertyName(key)] = item[key]
                                 return acc
                             }, {}),
+                            id: item.id || nanoid(5),
                         }))
                     )
                 }
@@ -253,7 +253,13 @@ async function parseResponse(
         // @TODO normalize airtable fields
         return ((await response.json()) as AirtableResponse).records.map(
             (record) => {
-                return normalizeAirtableFields(record.fields, airtableImageSize)
+                return {
+                    ...normalizeAirtableFields(
+                        record.fields,
+                        airtableImageSize
+                    ),
+                    id: record.id,
+                }
             }
         )
     }
