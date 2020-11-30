@@ -295,10 +295,14 @@ function normalizeAirtableFields(
         } else if (
             Array.isArray(value) &&
             value.length > 0 &&
-            !!value[0].thumbnails
+            // This is an image field
+            value[0].thumbnails &&
+            value[0].thumbnails[imageSize]
         ) {
             // If there is a photo field, extract the first photo's URL using the specified image size
             acc[key] = value[0]["thumbnails"][imageSize]["url"]
+        } else {
+            acc[key] = value
         }
 
         return acc

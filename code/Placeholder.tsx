@@ -100,7 +100,6 @@ function DataSourceHints(props) {
 }
 
 function ConnectDesignComponentHints(props) {
-    console.log(props)
     return (
         <>
             <h3>Connect your UI</h3>
