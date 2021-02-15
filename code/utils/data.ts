@@ -16,7 +16,7 @@ export function normalizeAirtableFields(
         if (
             Array.isArray(value) &&
             value.length > 0 &&
-            typeof value.length[0] === "object" &&
+            typeof value[0] === "object" &&
             // This is an image field
             value[0].thumbnails &&
             value[0].thumbnails[imageSize]
