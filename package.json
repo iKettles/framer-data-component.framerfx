@@ -26,5 +26,5 @@
 		"fork": "scripts/fork"
 	},
 	"name": "@framer/iain.data-component-beta",
-	"version": "1.26.0"
+	"version": "1.28.0"
 }
