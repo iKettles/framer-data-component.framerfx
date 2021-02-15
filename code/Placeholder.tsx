@@ -10,20 +10,41 @@ import { DataSource } from "./utils/types"
 
 const instructionsStyle: React.CSSProperties = {
     display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-start",
     flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 12,
+    backgroundColor: "rgba(137, 86, 255, 0.12)",
+    borderRadius:
+        "calc(4px * var(--framerInternalCanvas-canvasPlaceholderContentScaleFactor, 1))",
+    border:
+        "calc(1px * var(--framerInternalCanvas-canvasPlaceholderContentScaleFactor, 1)) dashed rgb(137, 86, 255)",
     width: "100%",
     height: "100%",
-    textAlign: "center",
-    border: "1px dashed #8855ff",
-    borderRadius: "6px",
-    fontSize: "13px",
-    fontWeight: 500,
-    color: "#fff",
-    backgroundColor: "rgba(107, 87, 152, 0.8)",
-    padding: 16,
+
     overflow: "scroll",
+
+    textOverflow: "ellipsis",
+    textAlign: "center",
+    wordWrap: "normal",
+    color: "rgb(137, 86, 255)",
+    fontFamily: "Inter",
+
+    // display: "flex",
+    // alignItems: "center",
+    // justifyContent: "flex-start",
+    // flexDirection: "column",
+    // width: "100%",
+    // height: "100%",
+    // textAlign: "center",
+    // border: "1px dashed #8855ff",
+    // borderRadius: "6px",
+    // fontSize: "13px",
+    // fontWeight: 500,
+    // color: "#fff",
+    // backgroundColor: "rgba(107, 87, 152, 0.8)",
+    // padding: 16,
+    // overflow: "scroll",
 }
 
 const errorStyle: React.CSSProperties = {
@@ -102,21 +123,18 @@ function DataSourceHints(props) {
 function ConnectDesignComponentHints(props) {
     return (
         <>
-            <h3>Connect your UI</h3>
-            {getCompletionStatusHint(props.isListItemConnected)} 1. Connect this
-            component to your list item component <br />
-            <br />
-            {getCompletionStatusHint(props.isHoverListItemConnected)} 2. Need a
-            hover state? Connect to the layer you want to be shown for the hover
-            state. We'll automatically show it when that list item is being
-            hovered.
+            <h3>Connect your Smart Component</h3>
+            {getCompletionStatusHint(props.isListItemConnected)} 1. Using the
+            connector on the canvas or the properties panel, connect your Smart
+            Component. For every row in your data, this component will be
+            rendered.
             <br />
             <br />
-            {getCompletionStatusHint(props.isLoadingStateConnected)} 3. Connect
+            {getCompletionStatusHint(props.isLoadingStateConnected)} 2. Connect
             a loading state. A material spinner will be shown by default.
             <br />
             <br />
-            {getCompletionStatusHint(props.isEmptyStateConnected)} 4. Connect an
+            {getCompletionStatusHint(props.isEmptyStateConnected)} 3. Connect an
             empty state. This will be displayed if no data is returned, or a
             search yields no results.
             <DesignComponentKeyHints results={props.results} />
@@ -130,17 +148,16 @@ function DesignComponentKeyHints(props) {
     }
     return (
         <>
-            <h3>How are the fields in my component populated?</h3>
-            When you create a design component, Framer will automatically
-            recognise both text and image layers within that component. You'll
-            see some checkboxes next to these fields in the properties panel.
-            check these boxes to allow those values to be populated by this
-            component.
+            <h3>How are the variables in my component populated?</h3>
+            Variables in Smart Components allow you to customise the values of
+            specific properties. When you create a variable, you provide a name
+            for it to be identified by. If you name this variable identically to
+            how the fields in your data are named, it will be automatically
+            populated by your data.
             <br />
             <br />
-            The text box for each field allows you to set a "variable" for that
-            field. You need to ensure that the names you give match the
-            following properties:
+            You need to ensure that the names you assign to your variables match
+            the following properties:
             <br />
             <br />
             {Object.keys(props.results[0]).map((key) => (
