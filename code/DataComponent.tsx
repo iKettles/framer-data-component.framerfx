@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Scroll, Frame, addPropertyControls, ControlType } from "framer"
 import Placeholder from "./Placeholder"
-import { useConnectedComponentInstance } from "./utils/useConnectedComponentInstance"
-import { useCuratedDataSource } from "./utils/data"
+import { useConnectedComponentInstance } from "./hooks/useConnectedComponentInstance"
+import { useCuratedDataSource } from "./hooks/useCuratedDataSource"
 import {
     getListItemStyle,
     getListItemWidth,
