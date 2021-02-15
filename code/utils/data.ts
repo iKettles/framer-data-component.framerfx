@@ -13,12 +13,10 @@ export function normalizeAirtableFields(
     return Object.keys(fields).reduce<DataItem>((acc, key) => {
         const value = fields[key]
 
-        // string fields are passed as-is
-        if (typeof value === "string" || typeof value === "number") {
-            acc[key] = value
-        } else if (
+        if (
             Array.isArray(value) &&
             value.length > 0 &&
+            typeof value.length[0] === "object" &&
             // This is an image field
             value[0].thumbnails &&
             value[0].thumbnails[imageSize]
