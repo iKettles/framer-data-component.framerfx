@@ -137,6 +137,8 @@ export function DataComponent(props: DataComponentProps) {
                         key: result.id,
                         width: listItemWidth,
                         style: {
+                            width: listItemWidth,
+                            height: connectedListItem.props.height,
                             position: "relative",
                             ...listItemStyles,
                             ...connectedListItem.props.style,
