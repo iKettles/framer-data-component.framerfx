@@ -1,6 +1,7 @@
 import * as React from "react"
 import * as Papa from "papaparse"
 import { nanoid } from "nanoid"
+import * as _ from "lodash"
 import { getDataSourceUrl, sanitizePropertyName } from "../utils/data"
 import { AUTH_ERROR_MESSAGE } from "../utils/errors"
 import { parseHttpHeaders } from "../utils/helpers"
@@ -169,14 +170,20 @@ async function parseResponse(
 ): Promise<DataItem[]> {
     if (dataSource === "api") {
         const body = await response.json()
+
         if (!apiResponseDataKey) {
             return body as APIResponse
-        } else if (!body[apiResponseDataKey]) {
+        }
+
+        const pickedValues = _.at(body, apiResponseDataKey)
+
+        if (!pickedValues.length) {
             throw new Error(
                 `Data key ${apiResponseDataKey} doesn't exist on response body`
             )
         }
-        return body[apiResponseDataKey] as APIResponse
+
+        return pickedValues[0]
     }
     if (dataSource === "airtable") {
         // @TODO normalize airtable fields
