@@ -1,6 +1,10 @@
 # Framer Data Component
 
-Drawing inspiration from the [Data Stack](https://packages.framer.com/package/fhur/data-stack) and [Airtable](https://packages.framer.com/package/aroagb/airtable) packages, the Framer Data Component allows you to seamlessly integrate data into your prototypes. By connecting a Design Component you've visually created on Framer's canvas, you can render a list of components in your prototype that are populated by a real data source.
+Drawing inspiration from the [Data Stack](https://packages.framer.com/package/fhur/data-stack) and [Airtable](https://packages.framer.com/package/aroagb/airtable) packages, the Framer Data Component allows you to seamlessly integrate data into your prototypes. By connecting a [Smart Component](https://www.framer.com/blog/posts/announcing-smart-components/) you've built in Framer, you can render a list of components in your prototype that are populated by a real data source.
+
+## Breaking Changes
+
+This component will be overhauled soon to make best use of Framer's new features. This will mean the property controls will be rewritten to be more friendly and powerful, as well as the removal of properties such as the hover state, as Framer supports this natively. This will be a breaking change for any projects which use the Data Component. If you have any concerns over this, please message me on [Twitter](https://twitter.com/iKettles) and I will let you know when the update is released. I'm also happy to guide you through this migration.
 
 ## The Workflow
 
@@ -22,13 +26,13 @@ If you're prototyping for a very specific use case, you may find the out of the 
 
 Dealing with a deeply nested data structure and wondering how to map those values to the fields in your components? Maybe you want more control over how sorting/searching is handled? You probably want a custom adapter that gives you full control over this. Don't worry, it's pretty easy to build! [Click here](https://framer.com/projects/new?duplicate=fXHamZqD4CB4e80R0Ldu) to open the example project in Framer Web and check out Example 6.
 
-### Connecting a Design Component
+### Connecting a Smart Component
 
-Once you've decided on your data source, you're ready to start populating your prototype with real data. You'll first need to grab the frame you want to use as your list item—this will be the component that's repeated for each item in the data you provide to your prototype. This frame needs to be a [Design Component](https://www.framer.com/support/using-framer/design-components/) so you can assign a name to the properties of your component. This allows the text layers and images within your component to be populated and overridden by the Data Component.
+Once you've decided on your data source, you're ready to start populating your prototype with real data. You'll first need to grab the component you want to use as your list item—this will be the component that's repeated for each item in the list of data you provide. The component you connect can be a Code Component from a package/within your project, or one of Framer's [Smart Components](https://www.framer.com/blog/posts/announcing-smart-components/).
 
-#### Design Component Property Controls
+#### Populating your data
 
-For this component to function, it needs to be connected to a Design Component on Framer's canvas. When you create a Design Component, Framer will show some checkboxes in the properties panel that allow you to control which fields in your prototype can be populated. When you select these checkboxes, you also give them a name, which becomes the "variable" of that field. Providing that name matches the fields in the response from your chosen data source, Framer will populate that field with the value from the data. This works for text fields and for images too.
+Smart Components use [Variables](https://www.framer.com/support/using-framer/variables/) and Code Components use [Property Controls](https://www.framer.com/support/using-framer/property-control-code-component/). These are both ways to configure how your component looks and functions, allowing you to create a generic component that can be configured wherever it's used. The naming of your Variables/Property Controls is important—these names need to match fields in your data for them to be populated correctly. Framer always uses camelCase, meaning a Variable called `First Name` will be referenced as `firstName`. The same goes for the fields in your data, if your [response](https://reqres.in/api/users?page=1) contains a field called `first_name`, it will be automatically transformed into `firstName`. You can use the Help mode in this component to determine what you should name your Variables/Property Control;s.
 
 ## Layout
 
@@ -36,7 +40,7 @@ The layout controls at your disposal vary depending on which direction you choos
 
 ### Horizontal
 
-Lays the items out horizontally from left to right. Preserves the original width of the connected Design Component.
+Lays the items out horizontally from left to right. Preserves the original width of the connected component.
 
 | Horizontal |                                                                             |
 | ---------- | --------------------------------------------------------------------------- |
@@ -45,7 +49,7 @@ Lays the items out horizontally from left to right. Preserves the original width
 
 ### Vertical
 
-Lays the items out vertically from top to bottom. The width of the connected Design Component will be resized to fill the available horizontal space or number of columns selected.
+Lays the items out vertically from top to bottom. The width of the connected component will be resized to fill the available horizontal space or number of columns selected.
 
 | Vertical   | (Single Column)                                  |
 | ---------- | ------------------------------------------------ |
@@ -69,7 +73,7 @@ Using Framer's [Scroll](https://www.framer.com/api/scroll/) component, you can e
 
 ## Empty/Loading States
 
-In the same fashion as connecting a Design Component on the canvas, you can also connect other layers to be used as empty/loading states within your component. As your prototype is now fetching data for real, depending on the user's internet connection you may want to show a helpful loading state. If your data source returns nothing, or perhaps the user is performing a search and doesn't get any results, you can connect an empty state.
+In the same fashion as connecting a component on the canvas, you can also connect other layers to be used as empty/loading states within your component. As your prototype is now fetching data for real, depending on the user's internet connection you may want to show a helpful loading state. If your data source returns nothing, or perhaps the user is performing a search and doesn't get any results, you can connect an empty state.
 
 ### Loading Delay
 
@@ -115,13 +119,18 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
+### **1.31.0 - 18/02/2020**
+
+- Add support for targeting nested keys in the response
+- Add support for Framer Smart Components
+
+## Previous Releases
+
 ### **1.30.0 - 30/11/2020**
 
 - Fixed objects/array types from Airtable being omitted from the response
 - Fixed IDs from Airtable records being overwritten by an auto-generated ID
 - Removed an unnecessary console.log
-
-## Previous Releases
 
 ### **1.29.0 - 10/11/2020**
 
