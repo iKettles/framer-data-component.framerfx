@@ -1,10 +1,18 @@
 import * as React from "react"
 import { RenderTarget } from "framer"
 
+type ComponentInstance = React.ReactNode & {
+    props: {
+        width: string | number
+        height: string | number
+        style: React.CSSProperties
+    }
+}
+
 export function useConnectedComponentInstance(
     listItem: React.ReactNode
-): [React.ReactNode] {
-    const connectedListItem = React.useMemo(() => {
+): [ComponentInstance] {
+    const connectedListItem = React.useMemo<ComponentInstance>(() => {
         const listItemAsArray = React.Children.toArray(listItem)
         if (!listItemAsArray || !listItemAsArray.length) {
             return null

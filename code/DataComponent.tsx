@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Scroll, Frame, addPropertyControls, ControlType } from "framer"
 import Placeholder from "./Placeholder"
-import { useConnectedComponentInstance } from "./utils/useConnectedComponentInstance"
-import { useCuratedDataSource } from "./utils/data"
+import { useConnectedComponentInstance } from "./hooks/useConnectedComponentInstance"
+import { useCuratedDataSource } from "./hooks/useCuratedDataSource"
 import {
     getListItemStyle,
     getListItemWidth,
@@ -101,13 +101,12 @@ export function DataComponent(props: DataComponentProps) {
         if (!connectedListItem) {
             return []
         }
-        const { props: connectedListItemProps } = connectedListItem as any
         const listItemWidth = getListItemWidth(
             direction,
             rest.width,
             columns,
             horizontalGap,
-            connectedListItemProps.width
+            connectedListItem.props.width
         )
 
         return results.map((result, index) => {
@@ -138,9 +137,11 @@ export function DataComponent(props: DataComponentProps) {
                         key: result.id,
                         width: listItemWidth,
                         style: {
+                            width: listItemWidth,
+                            height: connectedListItem.props.height,
                             position: "relative",
                             ...listItemStyles,
-                            ...connectedListItemProps.style,
+                            ...connectedListItem.props.style,
                         },
                         ...resultData,
                         index,
@@ -163,7 +164,7 @@ export function DataComponent(props: DataComponentProps) {
                 <Frame
                     key={`wrapper-${result.id}`}
                     width={listItemWidth}
-                    height={connectedListItemProps.height}
+                    height={connectedListItem.props.height}
                     background={"transparent"}
                     whileHover={"hover"}
                     initial={"default"}
@@ -184,7 +185,7 @@ export function DataComponent(props: DataComponentProps) {
                             width: "100%",
                             style: {
                                 ...adjustedListItemStyles,
-                                ...connectedListItemProps.style,
+                                ...connectedListItem.props.style,
                             },
                             ...resultData,
                             index,
