@@ -22,6 +22,7 @@
 		"nanoid": "^3.1.12",
 		"papaparse": "^5.2.0"
 	},
+  "keywords": ["data", "component", "api", "airtable", "iain"],
 	"name": "@framer/iain.data-component",
 	"version": "1.31.0"
 }
