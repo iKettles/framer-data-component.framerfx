@@ -119,12 +119,16 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
+### **1.32.0 - 24/02/2020**
+
+- Improved search ranking in Framer's Insert Menu
+
+## Previous Releases
+
 ### **1.31.0 - 18/02/2020**
 
 - Add support for targeting nested keys in the response
 - Add support for Framer Smart Components
-
-## Previous Releases
 
 ### **1.30.0 - 30/11/2020**
 
