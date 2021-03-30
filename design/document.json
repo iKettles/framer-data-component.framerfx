@@ -828,7 +828,6 @@
             "children" : [
               {
                 "__class" : "TextNode",
-                "autoSize" : true,
                 "bottom" : 219,
                 "centerAnchorX" : 0.5,
                 "centerAnchorY" : 0.50094517958412099,
@@ -840,7 +839,7 @@
 
                 ],
                 "height" : 90,
-                "heightType" : 0,
+                "heightType" : 2,
                 "id" : "KkjzMqr97",
                 "isTarget" : false,
                 "left" : 100,
@@ -908,7 +907,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 285,
-                "widthType" : 0
+                "widthType" : 2
               }
             ],
             "clip" : true,
@@ -972,7 +971,6 @@
             "children" : [
               {
                 "__class" : "TextNode",
-                "autoSize" : true,
                 "bottom" : null,
                 "centerAnchorX" : 0.50309278350515463,
                 "centerAnchorY" : 0.50094517958412099,
@@ -986,7 +984,7 @@
 
                 ],
                 "height" : 90,
-                "heightType" : 0,
+                "heightType" : 2,
                 "id" : "aofxcQdZk",
                 "isTarget" : false,
                 "left" : null,
@@ -1054,7 +1052,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 226,
-                "widthType" : 0
+                "widthType" : 2
               }
             ],
             "clip" : true,
@@ -1783,7 +1781,6 @@
             "children" : [
               {
                 "__class" : "TextNode",
-                "autoSize" : false,
                 "bottom" : null,
                 "centerAnchorX" : 0.50666666666666671,
                 "centerAnchorY" : 0.44117647058823528,
@@ -1933,7 +1930,6 @@
             "children" : [
               {
                 "__class" : "TextNode",
-                "autoSize" : false,
                 "bottom" : 21,
                 "centerAnchorX" : 1.0506666666666666,
                 "centerAnchorY" : 0.59411764705882353,
@@ -2205,6 +2201,7 @@
     "name" : null,
     "originalid" : null,
     "parentid" : null,
+    "thumbnailNodeId" : "WB2xjWSnx",
     "tokens" : {
 
     },
@@ -2213,5 +2210,5 @@
     ],
     "visible" : false
   },
-  "version" : 75
+  "version" : 78
 }
