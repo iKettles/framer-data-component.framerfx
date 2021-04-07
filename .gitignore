@@ -15,3 +15,4 @@ node_modules
 .npmrc
 .yarnrc
 *.framerxproj
+/design/images

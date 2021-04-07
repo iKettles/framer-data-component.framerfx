@@ -41,7 +41,7 @@ export function getListItemStyle(
                 styles.marginBottom = verticalGap
             }
         } else {
-            styles.marginBottom = gap
+            styles.marginBottom = verticalGap
         }
     }
 

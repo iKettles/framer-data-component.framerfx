@@ -29,22 +29,6 @@ const instructionsStyle: React.CSSProperties = {
     wordWrap: "normal",
     color: "rgb(137, 86, 255)",
     fontFamily: "Inter",
-
-    // display: "flex",
-    // alignItems: "center",
-    // justifyContent: "flex-start",
-    // flexDirection: "column",
-    // width: "100%",
-    // height: "100%",
-    // textAlign: "center",
-    // border: "1px dashed #8855ff",
-    // borderRadius: "6px",
-    // fontSize: "13px",
-    // fontWeight: 500,
-    // color: "#fff",
-    // backgroundColor: "rgba(107, 87, 152, 0.8)",
-    // padding: 16,
-    // overflow: "scroll",
 }
 
 const errorStyle: React.CSSProperties = {
