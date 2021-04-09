@@ -572,7 +572,7 @@
             },
             "$control__columns" : {
               "type" : "number",
-              "value" : 2
+              "value" : 4
             },
             "$control__csvFileUrl" : {
               "type" : "file",
@@ -588,7 +588,7 @@
             },
             "$control__direction" : {
               "type" : "segmentedenum",
-              "value" : "horizontal"
+              "value" : "vertical"
             },
             "$control__emptyState" : {
               "type" : "componentinstance",
@@ -644,7 +644,11 @@
             "$control__listItem" : {
               "type" : "componentinstance",
               "value" : [
-
+                {
+                  "id" : "hcHRrY0h2",
+                  "type" : "componentinstance",
+                  "value" : "BOXdIXl6L"
+                }
               ]
             },
             "$control__loadingDelay" : {
@@ -659,7 +663,7 @@
             },
             "$control__mode" : {
               "type" : "enum",
-              "value" : "help"
+              "value" : "default"
             },
             "$control__onItemLongPress" : {
               "type" : "eventhandler"
@@ -2177,6 +2181,67 @@
             "top" : 2257,
             "visible" : true,
             "width" : 560,
+            "widthType" : 0
+          },
+          {
+            "__class" : "FrameNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0,
+            "centerAnchorY" : 0,
+            "children" : [
+
+            ],
+            "clip" : true,
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "duplicatedFrom" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "hsl(0, 100%, 50%)",
+            "fillEnabled" : true,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "framePreset" : null,
+            "guidesX" : [
+
+            ],
+            "guidesY" : [
+
+            ],
+            "height" : 301,
+            "heightType" : 0,
+            "id" : "BOXdIXl6L",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "isExternalMaster" : null,
+            "isMaster" : false,
+            "isTarget" : false,
+            "left" : -1556,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "V5lpMrB3K-page",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "replicaInfo" : null,
+            "right" : null,
+            "rotation" : 0,
+            "top" : -89,
+            "visible" : true,
+            "width" : 196,
             "widthType" : 0
           }
         ],
