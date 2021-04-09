@@ -137,10 +137,10 @@ export function DataComponent(props: DataComponentProps) {
                         key: result.id,
                         width: listItemWidth,
                         style: {
-                            width: listItemWidth,
                             position: "relative",
                             ...listItemStyles,
                             ...connectedListItem.props.style,
+                            width: listItemWidth,
                             height: connectedListItem.props.height,
                         },
                         ...resultData,
