@@ -15,6 +15,7 @@ import {
     uploadFileControl,
     indentPropertyControlTitle,
 } from "./utils/propertyControls"
+import { useConnectedSmartComponent } from "./hooks/useConnectedSmartComponent"
 
 export function DataComponent(props: DataComponentProps) {
     const {
@@ -90,7 +91,10 @@ export function DataComponent(props: DataComponentProps) {
             unparsedHeaders: httpHeaders,
         }
     )
-    const [connectedListItem] = useConnectedComponentInstance(listItem)
+    const [
+        connectedListItemContainer,
+        connectedListItem,
+    ] = useConnectedSmartComponent(listItem)
     const [connectedLoadingState] = useConnectedComponentInstance(loadingState)
     const [connectedEmptyState] = useConnectedComponentInstance(emptyState)
     const resultItems = React.useMemo(() => {
@@ -126,22 +130,46 @@ export function DataComponent(props: DataComponentProps) {
                 return acc
             }, {})
 
-            return React.cloneElement(connectedListItem as React.ReactElement, {
+            const listItemProps = {
                 key: result.id,
-                width: listItemWidth,
+                id: `${result.id}-${index}`,
+                ...resultData,
                 style: {
                     position: "relative",
                     ...listItemStyles,
-                    ...connectedListItem.props.style,
-                    width: listItemWidth,
-                    height: connectedListItem.props.height,
+                    width: "100%",
                 },
-                ...resultData,
                 index,
-                id: `${result.id}—${index}`,
                 onTap() {
                     onItemTap(result)
                 },
+            }
+
+            /**
+             * Connected item is a legacy design component and is not wrapped in a container.
+             * We need to set the width directly, instead of via the component container like
+             * we have for smart components/code components
+             */
+            if (!connectedListItemContainer) {
+                return React.cloneElement(connectedListItem, {
+                    ...listItemProps,
+                    style: {
+                        ...listItemProps.style,
+                        width: listItemWidth,
+                    },
+                })
+            }
+
+            return React.cloneElement(connectedListItemContainer, {
+                key: `wrapper-${result.id}`,
+                style: {
+                    position: "relative",
+                    ...listItemStyles,
+                    width: listItemWidth,
+                },
+                children: React.cloneElement(connectedListItem, {
+                    ...listItemProps,
+                }),
             })
         })
     }, [
@@ -150,6 +178,7 @@ export function DataComponent(props: DataComponentProps) {
         gap,
         horizontalGap,
         verticalGap,
+        connectedListItemContainer,
         connectedListItem,
         shouldSort,
         sortDirection,
