@@ -136,6 +136,7 @@ export function DataComponent(props: DataComponentProps) {
                 ...resultData,
                 style: {
                     position: "relative",
+                    ...connectedListItem.props.style,
                     ...listItemStyles,
                     width: "100%",
                 },
