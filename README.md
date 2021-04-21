@@ -119,6 +119,15 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
+### **1.37.0 - 21/04/2020**
+
+- Remove Hover List Item functionality
+- Fixed a variety of layout issues with Smart Components in different circumstances
+
+### **1.36.0 - 30/03/2020**
+
+- Fix width of list item not being set correctly
+
 ### **1.32.0 - 24/02/2020**
 
 - Improved search ranking in Framer's Insert Menu
