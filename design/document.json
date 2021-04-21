@@ -23,6 +23,9 @@
               "type" : "string",
               "value" : "https:\/\/reqres.in\/api\/users?page=1"
             },
+            "$control__children" : {
+              "type" : "componentinstance"
+            },
             "$control__columns" : {
               "type" : "number",
               "value" : 2
@@ -295,6 +298,9 @@
             "$control__apiUrl" : {
               "type" : "string",
               "value" : "https:\/\/reqres.in\/api\/users?page=1"
+            },
+            "$control__children" : {
+              "type" : "componentinstance"
             },
             "$control__columns" : {
               "type" : "number",
@@ -569,6 +575,9 @@
             "$control__apiUrl" : {
               "type" : "string",
               "value" : "https:\/\/reqres.in\/api\/users?page=1"
+            },
+            "$control__children" : {
+              "type" : "componentinstance"
             },
             "$control__columns" : {
               "type" : "number",
@@ -1258,6 +1267,9 @@
                 "$control__apiUrl" : {
                   "type" : "string",
                   "value" : "https:\/\/reqres.in\/api\/users?page=1"
+                },
+                "$control__children" : {
+                  "type" : "componentinstance"
                 },
                 "$control__columns" : {
                   "type" : "number",
