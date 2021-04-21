@@ -15,6 +15,7 @@ import {
     uploadFileControl,
     indentPropertyControlTitle,
 } from "./utils/propertyControls"
+import { useConnectedSmartComponent } from "./hooks/useConnectedSmartComponent"
 
 export function DataComponent(props: DataComponentProps) {
     const {
@@ -31,7 +32,6 @@ export function DataComponent(props: DataComponentProps) {
         httpAuthorizationHeader,
         httpHeaders,
         listItem,
-        hoverListItem,
         loadingState,
         loadingDelay,
         emptyState,
@@ -91,10 +91,10 @@ export function DataComponent(props: DataComponentProps) {
             unparsedHeaders: httpHeaders,
         }
     )
-    const [connectedHoverListItem] = useConnectedComponentInstance(
-        hoverListItem
-    )
-    const [connectedListItem] = useConnectedComponentInstance(listItem)
+    const [
+        connectedListItemContainer,
+        connectedListItem,
+    ] = useConnectedSmartComponent(listItem)
     const [connectedLoadingState] = useConnectedComponentInstance(loadingState)
     const [connectedEmptyState] = useConnectedComponentInstance(emptyState)
     const resultItems = React.useMemo(() => {
@@ -130,106 +130,47 @@ export function DataComponent(props: DataComponentProps) {
                 return acc
             }, {})
 
-            if (!connectedHoverListItem) {
-                return React.cloneElement(
-                    connectedListItem as React.ReactElement,
-                    {
-                        key: result.id,
-                        width: listItemWidth,
-                        style: {
-                            position: "relative",
-                            ...listItemStyles,
-                            ...connectedListItem.props.style,
-                            width: listItemWidth,
-                            height: connectedListItem.props.height,
-                        },
-                        ...resultData,
-                        index,
-                        id: `${result.id}—${index}`,
-                        onTap() {
-                            onItemTap(result)
-                        },
-                    }
-                )
+            const listItemProps = {
+                key: result.id,
+                id: `${result.id}-${index}`,
+                ...resultData,
+                style: {
+                    position: "relative",
+                    ...listItemStyles,
+                    width: "100%",
+                },
+                index,
+                onTap() {
+                    onItemTap(result)
+                },
             }
 
-            const {
-                props: connectedHoverListItemProps,
-            } = connectedHoverListItem as any
+            /**
+             * Connected item is a legacy design component and is not wrapped in a container.
+             * We need to set the width directly, instead of via the component container like
+             * we have for smart components/code components
+             */
+            if (!connectedListItemContainer) {
+                return React.cloneElement(connectedListItem, {
+                    ...listItemProps,
+                    style: {
+                        ...listItemProps.style,
+                        width: listItemWidth,
+                    },
+                })
+            }
 
-            // When we're using a hover state, the right margin should be applied to the wrapper, and not to the list item itself
-            const { marginRight, ...adjustedListItemStyles } = listItemStyles
-
-            return (
-                <Frame
-                    key={`wrapper-${result.id}`}
-                    width={listItemWidth}
-                    height={connectedListItem.props.height}
-                    background={"transparent"}
-                    whileHover={"hover"}
-                    initial={"default"}
-                    style={{
-                        position: "relative",
-                        marginRight,
-                        // If we're rendering with a hover state, the margin must be applied to the container instead of the list item itself
-                        marginBottom: adjustedListItemStyles.marginBottom
-                            ? adjustedListItemStyles.marginBottom
-                            : 0,
-                    }}
-                >
-                    {React.cloneElement(
-                        connectedListItem as React.ReactElement,
-                        {
-                            key: result.id,
-                            // When we have a hover state, the list item can just span 100% of the width. The hover wrapper has the correct calculated width
-                            width: "100%",
-                            style: {
-                                ...adjustedListItemStyles,
-                                ...connectedListItem.props.style,
-                            },
-                            ...resultData,
-                            index,
-                            id: `${result.id}—${index}`,
-                            variants: {
-                                hover: {
-                                    visibility: "hidden",
-                                },
-                                default: {
-                                    visibility: "visible",
-                                },
-                            },
-                            onTap() {
-                                onItemTap(result)
-                            },
-                        }
-                    )}
-                    {React.cloneElement(
-                        connectedHoverListItem as React.ReactElement,
-                        {
-                            key: `hover-${result.id}`,
-                            width: "100%",
-                            style: {
-                                ...adjustedListItemStyles,
-                                ...connectedHoverListItemProps.style,
-                            },
-                            ...resultData,
-                            index,
-                            id: `${result.id}—${index}-hover`,
-                            variants: {
-                                hover: {
-                                    visibility: "visible",
-                                },
-                                default: {
-                                    visibility: "hidden",
-                                },
-                            },
-                            onTap() {
-                                onItemTap(result)
-                            },
-                        }
-                    )}
-                </Frame>
-            )
+            return React.cloneElement(connectedListItemContainer, {
+                key: `wrapper-${result.id}`,
+                style: {
+                    position: "relative",
+                    ...listItemStyles,
+                    width: listItemWidth,
+                },
+                children: React.cloneElement(connectedListItem, {
+                    ...listItemProps,
+                }),
+            })
         })
     }, [
         results,
@@ -237,8 +178,8 @@ export function DataComponent(props: DataComponentProps) {
         gap,
         horizontalGap,
         verticalGap,
+        connectedListItemContainer,
         connectedListItem,
-        connectedHoverListItem,
         shouldSort,
         sortDirection,
         sortKey,
@@ -277,7 +218,6 @@ export function DataComponent(props: DataComponentProps) {
                 mode={"help"}
                 results={results}
                 isListItemConnected={!!connectedListItem}
-                isHoverListItemConnected={!!connectedHoverListItem}
                 isEmptyStateConnected={!!connectedEmptyState}
                 isLoadingStateConnected={!!connectedLoadingState}
             />
@@ -291,7 +231,6 @@ export function DataComponent(props: DataComponentProps) {
                 mode={"debug"}
                 results={results}
                 isListItemConnected={!!connectedListItem}
-                isHoverListItemConnected={!!connectedHoverListItem}
                 isEmptyStateConnected={!!connectedEmptyState}
                 isLoadingStateConnected={!!connectedLoadingState}
             />
@@ -304,7 +243,6 @@ export function DataComponent(props: DataComponentProps) {
                 {...props}
                 mode={"connect-list-item"}
                 isListItemConnected={!!connectedListItem}
-                isHoverListItemConnected={!!connectedHoverListItem}
                 isEmptyStateConnected={!!connectedEmptyState}
                 isLoadingStateConnected={!!connectedLoadingState}
             />
@@ -317,7 +255,6 @@ export function DataComponent(props: DataComponentProps) {
                 {...props}
                 mode={"api-url"}
                 isListItemConnected={!!connectedListItem}
-                isHoverListItemConnected={!!connectedHoverListItem}
                 isEmptyStateConnected={!!connectedEmptyState}
                 isLoadingStateConnected={!!connectedLoadingState}
             />
@@ -339,7 +276,6 @@ export function DataComponent(props: DataComponentProps) {
                 {...props}
                 mode={"loading"}
                 isListItemConnected={!!connectedListItem}
-                isHoverListItemConnected={!!connectedHoverListItem}
                 isEmptyStateConnected={!!connectedEmptyState}
                 isLoadingStateConnected={!!connectedLoadingState}
             />
@@ -543,10 +479,6 @@ addPropertyControls(DataComponent, {
     },
     listItem: {
         title: "List Item",
-        type: ControlType.ComponentInstance,
-    },
-    hoverListItem: {
-        title: "Hover List Item",
         type: ControlType.ComponentInstance,
     },
     loadingState: {
