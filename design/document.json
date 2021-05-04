@@ -1273,7 +1273,7 @@
                 },
                 "$control__columns" : {
                   "type" : "number",
-                  "value" : 2
+                  "value" : 1
                 },
                 "$control__csvFileUrl" : {
                   "type" : "file",
@@ -1303,7 +1303,7 @@
                 },
                 "$control__gap" : {
                   "type" : "number",
-                  "value" : 0
+                  "value" : 4
                 },
                 "$control__horizontalGap" : {
                   "type" : "number",
@@ -1468,7 +1468,7 @@
                 },
                 "$control__verticalDistribution" : {
                   "type" : "enum",
-                  "value" : "flex-start"
+                  "value" : "space-evenly"
                 },
                 "$control__verticalGap" : {
                   "type" : "number",
