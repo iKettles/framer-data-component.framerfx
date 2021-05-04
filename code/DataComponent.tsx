@@ -450,7 +450,7 @@ addPropertyControls(DataComponent, {
             "space-around",
             "space-evenly",
         ],
-        defaultValue: "space-around",
+        defaultValue: "flex-start",
         hidden: (props) => props.direction !== "vertical" || props.columns > 1,
     },
     wrap: {
