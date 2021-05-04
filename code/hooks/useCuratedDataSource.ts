@@ -76,8 +76,19 @@ export function useCuratedDataSource(
                 })
 
                 if (!url) {
-                    setData([])
-                    return
+                    return setData([])
+                }
+
+                /**
+                 * If the data is being overridden and there's no loading delay, immediately return the data
+                 * to avoid unnecessary loading when this component re-renders.
+                 */
+                if (dataOverride && !loadingDelay) {
+                    return setData(
+                        onFormatData
+                            ? onFormatData(dataOverride)
+                            : sanitizeResponseBody(dataOverride)
+                    )
                 }
 
                 setIsLoading(true)
@@ -113,19 +124,11 @@ export function useCuratedDataSource(
                     await delay(remainingLoadingDuration)
                 }
 
-                if (onFormatData) {
-                    setData(onFormatData(body))
-                } else {
-                    setData(
-                        body.map((item) => ({
-                            ...Object.keys(item).reduce((acc, key) => {
-                                acc[sanitizePropertyName(key)] = item[key]
-                                return acc
-                            }, {}),
-                            id: item.id || nanoid(5),
-                        }))
-                    )
-                }
+                setData(
+                    onFormatData
+                        ? onFormatData(body)
+                        : sanitizeResponseBody(body)
+                )
 
                 setErrorMessage(null)
             } catch (err) {
@@ -254,4 +257,14 @@ function getRemainingLoadingDuration(
     const roundTripDuration = timeFinished - timeStarted
 
     return minimumLoadingDuration - roundTripDuration
+}
+
+function sanitizeResponseBody(body: Record<string, any>[]) {
+    return body.map((item) => ({
+        ...Object.keys(item).reduce((acc, key) => {
+            acc[sanitizePropertyName(key)] = item[key]
+            return acc
+        }, {}),
+        id: item.id || nanoid(5),
+    }))
 }
