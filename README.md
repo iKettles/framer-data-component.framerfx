@@ -119,6 +119,16 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
+### **1.39.0 - 04/05/2020**
+
+- You can now provide the property "data" via a Code Override or a Code Component. This allows you to connect the Data Component to arrays of data within your project, rather than needing to connect to an API/a file.
+
+## Previous Releases
+
+### **1.38.0 - 04/05/2020**
+
+- The Distribute property now defaults to Start
+
 ### **1.37.0 - 21/04/2020**
 
 - Remove Hover List Item functionality
@@ -131,8 +141,6 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 ### **1.32.0 - 24/02/2020**
 
 - Improved search ranking in Framer's Insert Menu
-
-## Previous Releases
 
 ### **1.31.0 - 18/02/2020**
 
