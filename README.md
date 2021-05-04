@@ -119,11 +119,15 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
-### **1.39.0 - 04/05/2020**
+### **1.40.0 - 04/05/2020**
 
-- You can now provide the property "data" via a Code Override or a Code Component. This allows you to connect the Data Component to arrays of data within your project, rather than needing to connect to an API/a file.
+- A loading state will no longer be shown when overriding the `data` property unless a `loadingDelay` property has been provided.
 
 ## Previous Releases
+
+### **1.39.0 - 04/05/2020**
+
+- You can now provide the property `data` via a Code Override or a Code Component. This allows you to connect the Data Component to arrays of data within your project, rather than needing to connect to an API/a file.
 
 ### **1.38.0 - 04/05/2020**
 
