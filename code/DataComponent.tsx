@@ -19,6 +19,7 @@ import { useConnectedSmartComponent } from "./hooks/useConnectedSmartComponent"
 
 export function DataComponent(props: DataComponentProps) {
     const {
+        data,
         dataSource,
         apiUrl,
         apiResponseDataKey,
@@ -66,6 +67,7 @@ export function DataComponent(props: DataComponentProps) {
         ...rest
     } = props
     const [results, isLoading, errorMessage] = useCuratedDataSource(
+        data,
         dataSource,
         dataSourceFileType,
         apiResponseDataKey,
@@ -250,7 +252,7 @@ export function DataComponent(props: DataComponentProps) {
         )
     }
 
-    if (!apiUrl) {
+    if (!apiUrl && !data) {
         return (
             <Placeholder
                 {...props}

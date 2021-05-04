@@ -12,6 +12,7 @@ import {
     APIResponse,
     CSVResponse,
     DataItem,
+    DataOverride,
     DataSource,
     DataSourceFileType,
     FormatDataCallback,
@@ -24,6 +25,7 @@ import { useSortedSearchResults } from "./useSortedSearchResults"
 import { delay } from "../utils"
 
 export function useCuratedDataSource(
+    dataOverride: DataOverride,
     dataSource: DataSource,
     dataSourceFileType: DataSourceFileType,
     apiResponseDataKey: string | null,
@@ -91,29 +93,21 @@ export function useCuratedDataSource(
 
                 const timeStarted = Date.now()
 
-                const response = await fetch(url, {
-                    headers: parsedHttpHeaders,
-                })
+                const body = dataOverride
+                    ? dataOverride
+                    : await fetchData(
+                          url,
+                          dataSource,
+                          dataSourceFileType,
+                          apiResponseDataKey,
+                          airtableImageSize,
+                          parsedHttpHeaders
+                      )
 
-                if (!response.ok) {
-                    if (response.status === 401 || response.status === 403) {
-                        throw new Error(AUTH_ERROR_MESSAGE)
-                    }
-                }
-
-                const body = await parseResponse(
-                    response,
-                    dataSource,
-                    dataSourceFileType,
-                    apiResponseDataKey,
-                    airtableImageSize
+                const remainingLoadingDuration = getRemainingLoadingDuration(
+                    loadingDelay,
+                    timeStarted
                 )
-
-                const timeFinished = Date.now()
-                const minimumLoadingDuration = loadingDelay * 1000
-                const roundTripDuration = timeFinished - timeStarted
-                const remainingLoadingDuration =
-                    minimumLoadingDuration - roundTripDuration
 
                 if (remainingLoadingDuration > 0) {
                     await delay(remainingLoadingDuration)
@@ -222,4 +216,42 @@ async function parseResponse(
     throw new Error(
         `Unknown data source or file type: ${dataSource} / ${dataSourceFileType}`
     )
+}
+
+async function fetchData(
+    url: string,
+    dataSource: DataSource,
+    dataSourceFileType: DataSourceFileType,
+    apiResponseDataKey: string | null,
+    airtableImageSize: AirtableImageSize,
+    parsedHttpHeaders: Record<string, string>
+) {
+    const response = await fetch(url, {
+        headers: parsedHttpHeaders,
+    })
+
+    if (!response.ok && (response.status === 401 || response.status === 403)) {
+        throw new Error(AUTH_ERROR_MESSAGE)
+    }
+
+    const body = await parseResponse(
+        response,
+        dataSource,
+        dataSourceFileType,
+        apiResponseDataKey,
+        airtableImageSize
+    )
+
+    return body
+}
+
+function getRemainingLoadingDuration(
+    loadingDelay: number,
+    timeStarted: number
+) {
+    const timeFinished = Date.now()
+    const minimumLoadingDuration = loadingDelay * 1000
+    const roundTripDuration = timeFinished - timeStarted
+
+    return minimumLoadingDuration - roundTripDuration
 }

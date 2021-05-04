@@ -51,6 +51,7 @@ export type SortDataCallback = (
     sortKey: SortKey
 ) => any
 export type SearchDataCallback = (data: any, searchTerm: string) => any
+export type DataOverride = Record<string, any>[] | undefined
 
 // Component
 export interface DataComponentProps {
@@ -68,6 +69,7 @@ export interface DataComponentProps {
     jsonFileUrl: string | null
     csvFileUrl: string | null
     tsvFileUrl: string | null
+    data?: DataOverride
 
     // List items layout
     direction: FlexDirection
