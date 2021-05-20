@@ -93,10 +93,8 @@ export function DataComponent(props: DataComponentProps) {
             unparsedHeaders: httpHeaders,
         }
     )
-    const [
-        connectedListItemContainer,
-        connectedListItem,
-    ] = useConnectedSmartComponent(listItem)
+    const [connectedListItemContainer, connectedListItem] =
+        useConnectedSmartComponent(listItem)
     const [connectedLoadingState] = useConnectedComponentInstance(loadingState)
     const [connectedEmptyState] = useConnectedComponentInstance(emptyState)
     const resultItems = React.useMemo(() => {
@@ -143,6 +141,12 @@ export function DataComponent(props: DataComponentProps) {
                     width: "100%",
                 },
                 index,
+                /**
+                 * We need to pseudo-randomize the layout ID to avoid elements disappearing on hover. Framer Motion
+                 * expects a layoutId in the tree to be unique — if there is duplicates we'll get weird behaviour.
+                 * We'll also apply this to the container below (if necessary)
+                 */
+                layoutId: `${connectedListItem.props.layoutId}-${index}`,
                 onTap() {
                     onItemTap(result)
                 },
@@ -170,6 +174,7 @@ export function DataComponent(props: DataComponentProps) {
                     ...listItemStyles,
                     width: listItemWidth,
                 },
+                layoutId: `${connectedListItemContainer.props.layoutId}-${index}`,
                 children: React.cloneElement(connectedListItem, {
                     ...listItemProps,
                 }),
