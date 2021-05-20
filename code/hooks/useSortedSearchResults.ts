@@ -2,6 +2,7 @@ import Fuse from "fuse.js"
 import * as React from "react"
 import {
     DataItem,
+    SearchConfig,
     SearchDataCallback,
     SortDataCallback,
     SortDirection,
@@ -12,6 +13,7 @@ export function useSortedSearchResults(
     data: DataItem[],
     isSearchEnabled: boolean,
     searchTerm: string | null,
+    searchConfig: SearchConfig,
     shouldSort: boolean,
     sortKey: SortKey,
     sortDirection: SortDirection,
@@ -33,10 +35,13 @@ export function useSortedSearchResults(
             if (onSearchData) {
                 dataToSort = onSearchData(data, searchTerm)
             } else {
-                dataToSort = new Fuse([...data], {
-                    includeScore: true,
-                    keys: keysToSearch,
-                })
+                dataToSort = new Fuse(
+                    [...data],
+                    searchConfig || {
+                        includeScore: true,
+                        keys: keysToSearch,
+                    }
+                )
                     .search(searchTerm)
                     .map((result) => result.item)
             }

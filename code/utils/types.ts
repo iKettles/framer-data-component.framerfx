@@ -1,3 +1,5 @@
+import Fuse from "fuse.js"
+
 // Layout
 export type FlexDirection = "horizontal" | "vertical"
 export type FlexAlignment = "start" | "center" | "end"
@@ -51,6 +53,7 @@ export type SortDataCallback = (
     sortKey: SortKey
 ) => any
 export type SearchDataCallback = (data: any, searchTerm: string) => any
+export type SearchConfig = Fuse.IFuseOptions<DataItem>
 export type DataOverride = Record<string, any>[] | undefined
 
 // Component
@@ -99,6 +102,7 @@ export interface DataComponentProps {
     // Search functionality
     isSearchEnabled: boolean
     searchTerm: string
+    searchConfig: SearchConfig | undefined
 
     // Sorting
     shouldSort: boolean
