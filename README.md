@@ -1,10 +1,6 @@
 # Framer Data Component
 
-Drawing inspiration from the [Data Stack](https://packages.framer.com/package/fhur/data-stack) and [Airtable](https://packages.framer.com/package/aroagb/airtable) packages, the Framer Data Component allows you to seamlessly integrate data into your prototypes. By connecting a [Smart Component](https://www.framer.com/blog/posts/announcing-smart-components/) you've built in Framer, you can render a list of components in your prototype that are populated by a real data source.
-
-## Breaking Changes
-
-This component will be overhauled soon to make best use of Framer's new features. This will mean the property controls will be rewritten to be more friendly and powerful, as well as the removal of properties such as the hover state, as Framer supports this natively. This will be a breaking change for any projects which use the Data Component. If you have any concerns over this, please message me on [Twitter](https://twitter.com/iKettles) and I will let you know when the update is released. I'm also happy to guide you through this migration.
+The Data Component allows you to seamlessly integrate data into your prototypes. By connecting a [Smart Component](https://www.framer.com/blog/posts/announcing-smart-components/) you've built in Framer, you can render a list of components in your prototype that are populated by a real data source.
 
 ## The Workflow
 
@@ -32,7 +28,7 @@ Once you've decided on your data source, you're ready to start populating your p
 
 #### Populating your data
 
-Smart Components use [Variables](https://www.framer.com/support/using-framer/variables/) and Code Components use [Property Controls](https://www.framer.com/support/using-framer/property-control-code-component/). These are both ways to configure how your component looks and functions, allowing you to create a generic component that can be configured wherever it's used. The naming of your Variables/Property Controls is important—these names need to match fields in your data for them to be populated correctly. Framer always uses camelCase, meaning a Variable called `First Name` will be referenced as `firstName`. The same goes for the fields in your data, if your [response](https://reqres.in/api/users?page=1) contains a field called `first_name`, it will be automatically transformed into `firstName`. You can use the Help mode in this component to determine what you should name your Variables/Property Control;s.
+Smart Components use [Variables](https://www.framer.com/support/using-framer/variables/) and Code Components use [Property Controls](https://www.framer.com/support/using-framer/property-control-code-component/). These are both ways to configure how your component looks and functions, allowing you to create a generic component that can be configured wherever it's used. The naming of your Variables/Property Controls is important—these names need to match fields in your data for them to be populated correctly. Framer always uses camelCase, meaning a Variable called `First Name` will be referenced as `firstName`. The same goes for the fields in your data, if your [response](https://reqres.in/api/users?page=1) contains a field called `first_name`, it will be automatically transformed into `firstName`. You can use the Help mode in this component to determine what you should name your Variables/Property Controls.
 
 ## Layout
 
@@ -119,34 +115,38 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
-### **1.40.0 - 04/05/2020**
+### **1.41.0 - 20/05/2021**
 
-- A loading state will no longer be shown when overriding the `data` property unless a `loadingDelay` property has been provided.
+- Fixed an issue that would cause the component to disappear when used inside a hover state in a Smart Component.
 
 ## Previous Releases
 
-### **1.39.0 - 04/05/2020**
+### **1.40.0 - 04/05/2021**
+
+- A loading state will no longer be shown when overriding the `data` property unless a `loadingDelay` property has been provided.
+
+### **1.39.0 - 04/05/2021**
 
 - You can now provide the property `data` via a Code Override or a Code Component. This allows you to connect the Data Component to arrays of data within your project, rather than needing to connect to an API/a file.
 
-### **1.38.0 - 04/05/2020**
+### **1.38.0 - 04/05/2021**
 
 - The Distribute property now defaults to Start
 
-### **1.37.0 - 21/04/2020**
+### **1.37.0 - 21/04/2021**
 
 - Remove Hover List Item functionality
 - Fixed a variety of layout issues with Smart Components in different circumstances
 
-### **1.36.0 - 30/03/2020**
+### **1.36.0 - 30/03/2021**
 
 - Fix width of list item not being set correctly
 
-### **1.32.0 - 24/02/2020**
+### **1.32.0 - 24/02/2021**
 
 - Improved search ranking in Framer's Insert Menu
 
-### **1.31.0 - 18/02/2020**
+### **1.31.0 - 18/02/2021**
 
 - Add support for targeting nested keys in the response
 - Add support for Framer Smart Components
