@@ -563,7 +563,7 @@ addPropertyControls(DataComponent, {
     httpHeaders: {
         title: indentPropertyControlTitle("HTTP Headers"),
         type: ControlType.Array,
-        propertyControl: {
+        control: {
             type: ControlType.String,
         },
         hidden: (props) => !props.overrideHttpHeaders,
