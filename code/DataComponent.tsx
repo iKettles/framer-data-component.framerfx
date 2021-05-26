@@ -184,8 +184,11 @@ export function DataComponent(props: DataComponentProps) {
                     ...listItemStyles,
                     width: listItemWidth,
                 },
-                // Randomize the layoutId for the container
-                layoutId: `container-${result.id}-${index}`,
+                /**
+                 * Randomize the layoutId for the container. We don't want to use the ID of the result here,
+                 * as the position of containers is always the same when it is based on the index.
+                 */
+                layoutId: `container-${index}`,
                 children: React.cloneElement(connectedListItem, {
                     ...listItemProps,
                 }),
