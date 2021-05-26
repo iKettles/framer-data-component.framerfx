@@ -178,7 +178,7 @@ export function DataComponent(props: DataComponentProps) {
             }
 
             return React.cloneElement(connectedListItemContainer, {
-                key: `wrapper-${result.id}`,
+                key: `container-${result.id}-${index}`,
                 style: {
                     position: "relative",
                     ...listItemStyles,
