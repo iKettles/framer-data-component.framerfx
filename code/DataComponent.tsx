@@ -146,9 +146,17 @@ export function DataComponent(props: DataComponentProps) {
                 /**
                  * We need to pseudo-randomize the layout ID to avoid elements disappearing on hover. Framer Motion
                  * expects a layoutId in the tree to be unique — if there is duplicates we'll get weird behaviour.
-                 * We'll also apply this to the container below (if necessary)
+                 * We'll also apply this to the container below (if necessary).
+                 *
+                 * Originally, we were re-using the layoutId from the original component. However, this isnt' reliably
+                 * here anymore, so we'll instead use a combination of the ID of the result and its index. If we just
+                 * use the ID/index we'll get strange issues when sorting/filtering as you'll have elements which
+                 * are projected to their old position despite their position changing in the order of results. By
+                 * combining both the ID and the index, we ensure this layoutID will always be different regardless
+                 * of the sort order/filtering properties changing. If for some reason the source data has duplicate
+                 * IDs, this will create weird issues, but there's not much we can do.
                  */
-                layoutId: `${connectedListItem.props.layoutId}-${index}`,
+                layoutId: `component-${result.id}-${index}`,
                 onTap() {
                     onItemTap(result)
                 },
@@ -176,7 +184,8 @@ export function DataComponent(props: DataComponentProps) {
                     ...listItemStyles,
                     width: listItemWidth,
                 },
-                layoutId: `${connectedListItemContainer.props.layoutId}-${index}`,
+                // Randomize the layoutId for the container
+                layoutId: `container-${result.id}-${index}`,
                 children: React.cloneElement(connectedListItem, {
                     ...listItemProps,
                 }),
