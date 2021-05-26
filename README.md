@@ -115,11 +115,15 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
+### **1.43.0 - 26/05/2021**
+
+- Fixed a bug where sorting/filtering the results would create strange layout issues.
+
+## Previous Releases
+
 ### **1.42.0 - 20/05/2021**
 
 - Allow passing a custom Fuse.js configuration using the property `searchConfig`
-
-## Previous Releases
 
 ### **1.41.0 - 20/05/2021**
 
