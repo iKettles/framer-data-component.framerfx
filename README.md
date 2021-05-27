@@ -115,11 +115,15 @@ Feel free to leave questions/bugs on the [GitHub repository](https://github.com/
 
 ## Latest Release
 
+### **1.46.0 - 27/05/2021**
+
+- The default Fuse.js search configuration is now merged with the custom configuration
+
+## Previous Releases
+
 ### **1.45.0 - 26/05/2021**
 
 - Second attempt at fixing a bug where Smart Components could disappear when being re-sorted
-
-## Previous Releases
 
 ### **1.44.0 - 26/05/2021**
 
