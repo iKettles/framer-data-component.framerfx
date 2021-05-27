@@ -35,13 +35,11 @@ export function useSortedSearchResults(
             if (onSearchData) {
                 dataToSort = onSearchData(data, searchTerm)
             } else {
-                dataToSort = new Fuse(
-                    [...data],
-                    searchConfig || {
-                        includeScore: true,
-                        keys: keysToSearch,
-                    }
-                )
+                dataToSort = new Fuse([...data], {
+                    includeScore: true,
+                    keys: keysToSearch,
+                    ...(searchConfig || {}),
+                })
                     .search(searchTerm)
                     .map((result) => result.item)
             }
