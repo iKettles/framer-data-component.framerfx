@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Loading } from "@framer/framer.default/code/Loading"
 import {
     getDataSourceUrl,
     formatDataSourceTitle,
@@ -7,6 +6,7 @@ import {
 } from "./utils/data"
 import { AUTH_ERROR_MESSAGE } from "./utils/errors"
 import { DataSource } from "./utils/types"
+import Loading from "./Loading"
 
 const instructionsStyle: React.CSSProperties = {
     display: "flex",
@@ -17,34 +17,15 @@ const instructionsStyle: React.CSSProperties = {
     backgroundColor: "rgba(137, 86, 255, 0.12)",
     borderRadius:
         "calc(4px * var(--framerInternalCanvas-canvasPlaceholderContentScaleFactor, 1))",
-    border:
-        "calc(1px * var(--framerInternalCanvas-canvasPlaceholderContentScaleFactor, 1)) dashed rgb(137, 86, 255)",
+    border: "calc(1px * var(--framerInternalCanvas-canvasPlaceholderContentScaleFactor, 1)) dashed rgb(137, 86, 255)",
     width: "100%",
     height: "100%",
-
     overflow: "scroll",
-
     textOverflow: "ellipsis",
     textAlign: "center",
     wordWrap: "normal",
     color: "rgb(137, 86, 255)",
     fontFamily: "Inter",
-
-    // display: "flex",
-    // alignItems: "center",
-    // justifyContent: "flex-start",
-    // flexDirection: "column",
-    // width: "100%",
-    // height: "100%",
-    // textAlign: "center",
-    // border: "1px dashed #8855ff",
-    // borderRadius: "6px",
-    // fontSize: "13px",
-    // fontWeight: 500,
-    // color: "#fff",
-    // backgroundColor: "rgba(107, 87, 152, 0.8)",
-    // padding: 16,
-    // overflow: "scroll",
 }
 
 const errorStyle: React.CSSProperties = {
@@ -232,7 +213,6 @@ function Placeholder(props: PlaceholderProps) {
             <div style={loadingContainerStyle}>
                 <div style={{ width: 32, height: 32 }}>
                     <Loading
-                        indicator={"Material"}
                         hasDuration={false}
                         color={"#888"}
                         fadeOut={true}

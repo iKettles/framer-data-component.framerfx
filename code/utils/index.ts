@@ -3,3 +3,8 @@ export async function delay(duration: number) {
         setTimeout(resolve, duration)
     })
 }
+
+export function handleTimeout(duration: number, callback: () => void) {
+    const id = setTimeout(callback, duration * 1000)
+    return () => clearTimeout(id)
+}
